@@ -1,0 +1,36 @@
+version: 2.1
+#
+# SPDX-FileCopyrightText: (c) 2023 Robert Di Pardo
+# SPDX-License-Identifier: GPL-3.0-or-later
+#
+# Permitted usage is detailed in the COPYING file.
+#
+orbs:
+  lazarus: rdipardo/lazarus@2
+jobs:
+  linux-make-all:
+    machine:
+      image: ubuntu-2204:current
+      resource_class: medium
+    steps:
+      - checkout
+      - lazarus/install:
+          lazarus-version: '3.0.0'
+          platform: 'linux'
+      - run:
+          name: Fetch Geany source tree
+          command: |
+            git reset --hard
+            git submodule sync --recursive
+            git submodule update --init --recursive
+      - run:
+          name: Build Geany
+          command: bash ../.circleci/build_geany.sh
+          working_directory: geany
+      - run:
+          name: Build package and sample project
+          command: make
+workflows:
+  test-deploy:
+    jobs:
+      - linux-make-all

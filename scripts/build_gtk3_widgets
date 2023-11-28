@@ -1,0 +1,21 @@
+#!/usr/bin/sh
+#
+# (Re/B)uild the LCL package for GTK3 and pass the output path to FPC.
+#
+# SPDX-FileCopyrightText: (c) 2023 Robert Di Pardo
+# SPDX-License-Identifier: GPL-3.0-or-later
+#
+# Permitted usage is detailed in the COPYING file.
+#
+BASE_PATH="$(pwd)/$(dirname "$0")"
+FPC_CFG="$BASE_PATH/../gtk3.cfg"
+[ -f "$FPC_CFG" ] && exit 0
+echo "Building LCL for GTK3. To rebuild, delete $FPC_CFG".
+LPK=$(lazbuild --add-package lcl --verbose | awk -F '"' '/(adding package)/{print $2}')
+CMDLINE="lazbuild -B --bm=${1:-Release} $LPK --ws=gtk3 --verbose"
+OUT=$(${CMDLINE}| awk -F '"' '/(\(lazarus\) Param.*="-FU)/{print $2}')
+[ ! -f "${OUT#-FU}/gtk3int.ppu" ] && \
+  echo 'Cannot build the LCL package!' && \
+  echo "Commandline was: ${CMDLINE}" && \
+  exit 2
+echo -Fu"${OUT#-FU}" > "$FPC_CFG"

@@ -1,0 +1,3 @@
+[submodule "geany"]
+	path = geany
+	url = https://github.com/geany/geany.git

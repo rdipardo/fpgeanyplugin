@@ -1,0 +1,202 @@
+diff --git a/src/geanybindings.inc b/src/geanybindings.inc
+index 196dac3..148c9ee 100644
+--- a/src/geanybindings.inc
++++ b/src/geanybindings.inc
+@@ -57,7 +57,7 @@ type
+   ;cdecl;
+   PSci_CharacterRange = ^TSci_CharacterRange;
+   TSci_CharacterRange = record
+-    cpMin : TSci_PositionCR;cdecl;
++    cpMin : TSci_PositionCR;
+     cpMax : TSci_PositionCR;
+   end;
+ 
+@@ -447,6 +447,24 @@ function editor_get_type: TGType;cdecl;external External_library name 'editor_ge
+ 
+ type
+   PGeanyEditor = ^TGeanyEditor;
++  PGeanyDocument = ^TGeanyDocument;
++  TGeanyDocument = record
++    is_valid : gboolean;
++    index : gint;
++    has_tags : gboolean;
++    file_name : Pgchar;
++    encoding : Pgchar;
++    has_bom : gboolean;
++    editor : PGeanyEditor;
++    file_type : PGeanyFiletype;
++    tm_file : PTMSourceFile;
++    readonly : gboolean;
++    changed : gboolean;
++    real_path : Pgchar;
++    id : guint;
++    priv : PGeanyDocumentPrivate;
++  end;
++
+   TGeanyEditor = record
+     document : PGeanyDocument;
+     sci : PScintillaObject;
+@@ -556,26 +574,6 @@ type
+   end;
+ 
+ function document_get_type: TGType;cdecl;external External_library name 'document_get_type';
+-
+-type
+-  PGeanyDocument = ^TGeanyDocument;
+-  TGeanyDocument = record
+-    is_valid : gboolean;
+-    index : gint;
+-    has_tags : gboolean;
+-    file_name : Pgchar;
+-    encoding : Pgchar;
+-    has_bom : gboolean;
+-    editor : PGeanyEditor;
+-    file_type : PGeanyFiletype;
+-    tm_file : PTMSourceFile;
+-    readonly : gboolean;
+-    changed : gboolean;
+-    real_path : Pgchar;
+-    id : guint;
+-    priv : PGeanyDocumentPrivate;
+-  end;
+-
+ function document_new_file(filename:Pgchar; var ft:TGeanyFiletype; text:Pgchar): PGeanyDocument;cdecl;external
+ External_library name 'document_new_file';
+ function document_get_current: PGeanyDocument;cdecl;external External_library name 'document_get_current';
+@@ -708,14 +706,16 @@ type
+ 
+   TGeanyKeyGroupCallback = function (key_id:guint): gboolean;cdecl;
+ 
+-  TGeanyKeyGroupFunc = function (var group:TGeanyKeyGroup; key_id:guint; user_data:gpointer): gboolean;cdecl;
++  PGeanyKeyGroup = ^TGeanyKeyGroup;
++  TGeanyKeyGroupFunc = function (group:PGeanyKeyGroup; key_id:guint; user_data:gpointer): gboolean;cdecl;
+ 
+   TGeanyKeyCallback = procedure (key_id:guint);cdecl;
+ 
+-  TGeanyKeyBindingFunc = function (var key:TGeanyKeyBinding; key_id:guint; user_data:gpointer): gboolean;cdecl;
+   PGeanyKeyBinding = ^TGeanyKeyBinding;
++  TGeanyKeyBindingFunc = function (key:PGeanyKeyBinding; key_id:guint; user_data:gpointer): gboolean;cdecl;
++
+   TGeanyKeyBinding = record
+-    key : guint;cdecl;
++    key : guint;
+     mods : TGdkModifierType;
+     name : Pgchar;
+     _label : Pgchar;
+@@ -729,6 +729,19 @@ type
+     cb_data_destroy : TGDestroyNotify;
+   end;
+ 
++  TGeanyKeyGroup = record
++    name : Pgchar;
++    _label : Pgchar;
++    callback : TGeanyKeyGroupCallback;
++    plugin : gboolean;
++    key_items : PGPtrArray;
++    plugin_key_count : gsize;
++    plugin_keys : PGeanyKeyBinding;
++    cb_func : TGeanyKeyGroupFunc;
++    cb_data : gpointer;
++    cb_data_destroy : TGDestroyNotify;
++  end;
++
+   TGeanyKeyGroupID = (GEANY_KEY_GROUP_FILE,GEANY_KEY_GROUP_PROJECT,
+                       GEANY_KEY_GROUP_EDITOR,GEANY_KEY_GROUP_CLIPBOARD,
+                       GEANY_KEY_GROUP_SELECT,GEANY_KEY_GROUP_FORMAT,
+@@ -843,20 +856,6 @@ function keybindings_get_modifiers(mods:TGdkModifierType): TGdkModifierType;cdec
+ procedure keybindings_load_keyfile;cdecl;external External_library name 'keybindings_load_keyfile';
+ 
+ type
+-  PGeanyKeyGroup = ^TGeanyKeyGroup;
+-  TGeanyKeyGroup = record
+-    name : Pgchar;
+-    _label : Pgchar;
+-    callback : TGeanyKeyGroupCallback;
+-    plugin : gboolean;
+-    key_items : PGPtrArray;
+-    plugin_key_count : gsize;
+-    plugin_keys : PGeanyKeyBinding;
+-    cb_func : TGeanyKeyGroupFunc;
+-    cb_data : gpointer;
+-    cb_data_destroy : TGDestroyNotify;
+-  end;
+-
+ 
+   PGeanyLexerStyle = ^TGeanyLexerStyle;
+   TGeanyLexerStyle = record
+@@ -1033,10 +1032,13 @@ function spawn_kill_process(pid:TGPid; var error:PGError): gboolean;cdecl;extern
+ function spawn_async(working_directory:Pgchar; command_line:Pgchar; argv:PPgchar; envp:PPgchar; var child_pid:TGPid;
+                      var error:PGError): gboolean;cdecl;external External_library name 'spawn_async';
+ 
++const
++  SPAWN_LINE_BUFFERED = $00;
++
+ type
+   PSpawnFlags = ^TSpawnFlags;
+   TSpawnFlags = (SPAWN_ASYNC := $00,SPAWN_SYNC := $01,
+-                 SPAWN_LINE_BUFFERED := $00,SPAWN_STDOUT_UNBUFFERED := $02,
++                 SPAWN_STDOUT_UNBUFFERED := $02,
+                  SPAWN_STDERR_UNBUFFERED := $04,SPAWN_UNBUFFERED := $06,
+                  SPAWN_STDIN_RECURSIVE := $08,SPAWN_STDOUT_RECURSIVE := $10,
+                  SPAWN_STDERR_RECURSIVE := $20,SPAWN_RECURSIVE := $38
+@@ -1364,6 +1366,8 @@ type
+     _object : PGObject;
+   end;
+ 
++  PGeanyPluginFuncs = ^TGeanyPluginFuncs;
++  PGeanyProxyFuncs = ^TGeanyProxyFuncs;
+   PGeanyPlugin = ^TGeanyPlugin;
+   TGeanyPlugin = record
+     info : PPluginInfo;
+@@ -1373,6 +1377,21 @@ type
+     priv : PGeanyPluginPrivate;
+   end;
+ 
++  TGeanyPluginFuncs = record
++    callbacks : PPluginCallback;
++    init : function (var plugin:TGeanyPlugin; pdata:gpointer): gboolean;cdecl;
++    configure : function (var plugin:TGeanyPlugin; var dialog:TGtkDialog; pdata:gpointer): PGtkWidget;cdecl;
++    help : procedure (var plugin:TGeanyPlugin; pdata:gpointer);cdecl;
++    cleanup : procedure (var plugin:TGeanyPlugin; pdata:gpointer);cdecl;
++  end;
++
++  TGeanyProxyFuncs = record
++    probe : function (var proxy:TGeanyPlugin; filename:Pgchar; pdata:gpointer): gint;cdecl;
++    load : function (var proxy:TGeanyPlugin; var subplugin:TGeanyPlugin; filename:Pgchar; pdata:gpointer): gpointer;
++    cdecl;
++    unload : procedure (var proxy:TGeanyPlugin; var subplugin:TGeanyPlugin; load_data:gpointer; pdata:gpointer);cdecl;
++  end;
++
+ function plugin_version_check(abi_ver:gint): gint;cdecl;external External_library name 'plugin_version_check';
+ procedure plugin_set_info(var info:TPluginInfo);cdecl;external External_library name 'plugin_set_info';
+ procedure plugin_init(var data:TGeanyData);cdecl;external External_library name 'plugin_init';
+@@ -1382,15 +1401,6 @@ procedure plugin_help;cdecl;external External_library name 'plugin_help';
+ procedure plugin_cleanup;cdecl;external External_library name 'plugin_cleanup';
+ procedure geany_load_module(var plugin:TGeanyPlugin);cdecl;external External_library name 'geany_load_module';
+ 
+-type
+-  PGeanyPluginFuncs = ^TGeanyPluginFuncs;
+-  TGeanyPluginFuncs = record
+-    callbacks : PPluginCallback;
+-    init : function (var plugin:TGeanyPlugin; pdata:gpointer): gboolean;cdecl;
+-    configure : function (var plugin:TGeanyPlugin; var dialog:TGtkDialog; pdata:gpointer): PGtkWidget;cdecl;
+-    help : procedure (var plugin:TGeanyPlugin; pdata:gpointer);cdecl;
+-    cleanup : procedure (var plugin:TGeanyPlugin; pdata:gpointer);cdecl;
+-  end;
+ 
+ 
+ function geany_plugin_register(var plugin:TGeanyPlugin; api_version:gint; min_api_version:gint; abi_version:gint):
+@@ -1409,13 +1419,6 @@ type
+   PGeanyProxyProbeResults = ^TGeanyProxyProbeResults;
+   TGeanyProxyProbeResults = (GEANY_PROXY_IGNORE,GEANY_PROXY_MATCH,
+                              GEANY_PROXY_RELATED := GEANY_PROXY_MATCH or $100);
+-  PGeanyProxyFuncs = ^TGeanyProxyFuncs;
+-  TGeanyProxyFuncs = record
+-    probe : function (var proxy:TGeanyPlugin; filename:Pgchar; pdata:gpointer): gint;cdecl;
+-    load : function (var proxy:TGeanyPlugin; var subplugin:TGeanyPlugin; filename:Pgchar; pdata:gpointer): gpointer;
+-    cdecl;
+-    unload : procedure (var proxy:TGeanyPlugin; var subplugin:TGeanyPlugin; load_data:gpointer; pdata:gpointer);cdecl;
+-  end;
+ 
+ 
+ function geany_plugin_register_proxy(var plugin:TGeanyPlugin; extensions:PPgchar): gint;cdecl;external External_library

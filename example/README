@@ -1,0 +1,40 @@
+Free Pascal Plugin Demo
+=======================
+
+About
+-----
+
+A simple Geany plugin using Free Pascal bindings to GTK3
+
+Features
+--------
+
+* Adds a new button to Geany's toolbar
+
+Building
+--------
+
+* `Install Lazarus`_
+
+:NOTE: You will need at least version 3.0. The required GTK3 bindings
+       may also be available in a stable 2.2.x distribution, but they
+       are broken on Windows (`<https://gitlab.com/freepascal.org/lazarus/lazarus/-/issues/39578>`_)
+
+.. _Install Lazarus: https://wiki.freepascal.org/Installing_Lazarus_on_Linux#FPC_and_Lazarus_from_SourceForge
+
+* Open a terminal and run::
+
+    lazbuild --ws=gtk3 fpgeanyplugindemo.lpr
+
+* Move ``fpgeanyplugindemo.so`` (Linux, macOS) or ``fpgeanyplugindemo.dll`` (Windows) into Geany's plugin directory
+
+* Start Geany and select "Free Pascal Plugin Demo" from the menu at ``Tools > Plugin Manager``
+
+Requirements
+------------
+
+* geany >= 2.0, or, with ``-dFPGEANY_LEGACY_API``, geany >= 1.38, < 2.0
+* lazarus >= 3.0
+* fpc >= 3.2
+
+.. vim: ft=rst

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Package Version="5">
+    <PathDelim Value="\"/>
+    <Name Value="fpgeanyplugin"/>
+    <Type Value="RunTimeOnly"/>
+    <AddToProjectUsesSection Value="True"/>
+    <Author Value="Robert Di Pardo &lt;dipardo.r@gmail.com&gt;"/>
+    <CompilerOptions>
+      <Version Value="11"/>
+      <PathDelim Value="\"/>
+      <SearchPaths>
+        <OtherUnitFiles Value="src"/>
+        <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
+      </SearchPaths>
+      <Parsing>
+        <SyntaxOptions>
+          <UseAnsiStrings Value="False"/>
+          <CStyleMacros Value="True"/>
+        </SyntaxOptions>
+      </Parsing>
+      <CodeGeneration>
+        <SmartLinkUnit Value="True"/>
+        <Optimizations>
+          <OptimizationLevel Value="2"/>
+        </Optimizations>
+        <SmallerCode Value="True"/>
+      </CodeGeneration>
+      <Other>
+        <CustomOptions Value="-dgtk3 -vm5023"/>
+      </Other>
+    </CompilerOptions>
+    <Description Value="Free Pascal bindings for Geany&apos;s plugin API"/>
+    <License Value="GPL-3.0"/>
+    <Version Release="1"/>
+    <Files Count="2">
+      <Item1>
+        <Filename Value="src\geanyplugin.pp"/>
+        <UnitName Value="geanyplugin"/>
+      </Item1>
+      <Item2>
+        <Filename Value="src\geanyplugin240.pp"/>
+        <UnitName Value="geanyplugin240"/>
+      </Item2>
+    </Files>
+    <CompatibilityMode Value="True"/>
+    <RequiredPkgs Count="1">
+      <Item1>
+        <PackageName Value="LCL"/>
+        <MinVersion Major="3" Valid="True"/>
+      </Item1>
+    </RequiredPkgs>
+    <UsageOptions>
+      <UnitPath Value="$(PkgOutDir)"/>
+    </UsageOptions>
+    <PublishOptions>
+      <Version Value="2"/>
+      <UseFileFilters Value="True"/>
+    </PublishOptions>
+  </Package>
+</CONFIG>

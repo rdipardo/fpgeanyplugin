@@ -1,0 +1,4 @@
+* text eol=lf
+*.inc  linguist-language=Pascal
+*.png  binary
+*.ico  binary
