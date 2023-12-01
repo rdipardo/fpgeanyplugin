@@ -1,0 +1,329 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<title>TGRegexError</title>
+<link rel="stylesheet" href="../fpdoc.css" type="text/css">
+
+</head>
+<body>
+<table class="bar" width="100%" border="0" cellpadding="4" cellspacing="0">
+<tr>
+<td><b>[<a href="../lazglib2/index.html">Overview</a>][<a href="../lazglib2/index-2.html">Constants</a>][<a href="../lazglib2/index-3.html">Types</a>][<a href="../lazglib2/index-4.html">Classes</a>][<a href="../lazglib2/index-5.html">Procedures and functions</a>][<a href="../lazglib2/index-8.html">Index</a>]</b></td>
+<td align="right"><span class="bartitle">Reference for unit 'LazGLib2' (<a href="../index.html">#lcl</a>)</span></td>
+</tr>
+</table>
+<h1>TGRegexError</h1>
+<p></p>
+<h2>Declaration</h2>
+<p>Source position: lazglib2.pas line 696</p>
+<table cellpadding="0" cellspacing="0">
+<tr>
+<td><p><tt><span class="code"><span class="kw">type </span>TGRegexError<span class="sym"> = </span><span class="sym">(</span></span></tt></p></td>
+</tr>
+<tr>
+<td valign="top"><p><tt><span class="code">&nbsp;&nbsp;TGRegexErrorMinValue <span class="sym">=</span> <span class="sym">-</span> <span class="num">$7FFFFFFF</span><span class="sym">,</span></span></tt></p></td>
+<td><p>&nbsp;&nbsp;</p></td>
+<td><p class="cmt"></p></td>
+</tr>
+<tr>
+<td valign="top"><p><tt><span class="code">&nbsp;&nbsp;G_REGEX_ERROR_COMPILE <span class="sym">=</span> <span class="num">0</span><span class="sym">,</span></span></tt></p></td>
+<td><p>&nbsp;&nbsp;</p></td>
+<td><p class="cmt"></p></td>
+</tr>
+<tr>
+<td valign="top"><p><tt><span class="code">&nbsp;&nbsp;G_REGEX_ERROR_OPTIMIZE <span class="sym">=</span> <span class="num">1</span><span class="sym">,</span></span></tt></p></td>
+<td><p>&nbsp;&nbsp;</p></td>
+<td><p class="cmt"></p></td>
+</tr>
+<tr>
+<td valign="top"><p><tt><span class="code">&nbsp;&nbsp;G_REGEX_ERROR_REPLACE <span class="sym">=</span> <span class="num">2</span><span class="sym">,</span></span></tt></p></td>
+<td><p>&nbsp;&nbsp;</p></td>
+<td><p class="cmt"></p></td>
+</tr>
+<tr>
+<td valign="top"><p><tt><span class="code">&nbsp;&nbsp;G_REGEX_ERROR_MATCH <span class="sym">=</span> <span class="num">3</span><span class="sym">,</span></span></tt></p></td>
+<td><p>&nbsp;&nbsp;</p></td>
+<td><p class="cmt"></p></td>
+</tr>
+<tr>
+<td valign="top"><p><tt><span class="code">&nbsp;&nbsp;G_REGEX_ERROR_INTERNAL <span class="sym">=</span> <span class="num">4</span><span class="sym">,</span></span></tt></p></td>
+<td><p>&nbsp;&nbsp;</p></td>
+<td><p class="cmt"></p></td>
+</tr>
+<tr>
+<td valign="top"><p><tt><span class="code">&nbsp;&nbsp;G_REGEX_ERROR_STRAY_BACKSLASH <span class="sym">=</span> <span class="num">101</span><span class="sym">,</span></span></tt></p></td>
+<td><p>&nbsp;&nbsp;</p></td>
+<td><p class="cmt"></p></td>
+</tr>
+<tr>
+<td valign="top"><p><tt><span class="code">&nbsp;&nbsp;G_REGEX_ERROR_MISSING_CONTROL_CHAR <span class="sym">=</span> <span class="num">102</span><span class="sym">,</span></span></tt></p></td>
+<td><p>&nbsp;&nbsp;</p></td>
+<td><p class="cmt"></p></td>
+</tr>
+<tr>
+<td valign="top"><p><tt><span class="code">&nbsp;&nbsp;G_REGEX_ERROR_UNRECOGNIZED_ESCAPE <span class="sym">=</span> <span class="num">103</span><span class="sym">,</span></span></tt></p></td>
+<td><p>&nbsp;&nbsp;</p></td>
+<td><p class="cmt"></p></td>
+</tr>
+<tr>
+<td valign="top"><p><tt><span class="code">&nbsp;&nbsp;G_REGEX_ERROR_QUANTIFIERS_OUT_OF_ORDER <span class="sym">=</span> <span class="num">104</span><span class="sym">,</span></span></tt></p></td>
+<td><p>&nbsp;&nbsp;</p></td>
+<td><p class="cmt"></p></td>
+</tr>
+<tr>
+<td valign="top"><p><tt><span class="code">&nbsp;&nbsp;G_REGEX_ERROR_QUANTIFIER_TOO_BIG <span class="sym">=</span> <span class="num">105</span><span class="sym">,</span></span></tt></p></td>
+<td><p>&nbsp;&nbsp;</p></td>
+<td><p class="cmt"></p></td>
+</tr>
+<tr>
+<td valign="top"><p><tt><span class="code">&nbsp;&nbsp;G_REGEX_ERROR_UNTERMINATED_CHARACTER_CLASS <span class="sym">=</span> <span class="num">106</span><span class="sym">,</span></span></tt></p></td>
+<td><p>&nbsp;&nbsp;</p></td>
+<td><p class="cmt"></p></td>
+</tr>
+<tr>
+<td valign="top"><p><tt><span class="code">&nbsp;&nbsp;G_REGEX_ERROR_INVALID_ESCAPE_IN_CHARACTER_CLASS <span class="sym">=</span> <span class="num">107</span><span class="sym">,</span></span></tt></p></td>
+<td><p>&nbsp;&nbsp;</p></td>
+<td><p class="cmt"></p></td>
+</tr>
+<tr>
+<td valign="top"><p><tt><span class="code">&nbsp;&nbsp;G_REGEX_ERROR_RANGE_OUT_OF_ORDER <span class="sym">=</span> <span class="num">108</span><span class="sym">,</span></span></tt></p></td>
+<td><p>&nbsp;&nbsp;</p></td>
+<td><p class="cmt"></p></td>
+</tr>
+<tr>
+<td valign="top"><p><tt><span class="code">&nbsp;&nbsp;G_REGEX_ERROR_NOTHING_TO_REPEAT <span class="sym">=</span> <span class="num">109</span><span class="sym">,</span></span></tt></p></td>
+<td><p>&nbsp;&nbsp;</p></td>
+<td><p class="cmt"></p></td>
+</tr>
+<tr>
+<td valign="top"><p><tt><span class="code">&nbsp;&nbsp;G_REGEX_ERROR_UNRECOGNIZED_CHARACTER <span class="sym">=</span> <span class="num">112</span><span class="sym">,</span></span></tt></p></td>
+<td><p>&nbsp;&nbsp;</p></td>
+<td><p class="cmt"></p></td>
+</tr>
+<tr>
+<td valign="top"><p><tt><span class="code">&nbsp;&nbsp;G_REGEX_ERROR_POSIX_NAMED_CLASS_OUTSIDE_CLASS <span class="sym">=</span> <span class="num">113</span><span class="sym">,</span></span></tt></p></td>
+<td><p>&nbsp;&nbsp;</p></td>
+<td><p class="cmt"></p></td>
+</tr>
+<tr>
+<td valign="top"><p><tt><span class="code">&nbsp;&nbsp;G_REGEX_ERROR_UNMATCHED_PARENTHESIS <span class="sym">=</span> <span class="num">114</span><span class="sym">,</span></span></tt></p></td>
+<td><p>&nbsp;&nbsp;</p></td>
+<td><p class="cmt"></p></td>
+</tr>
+<tr>
+<td valign="top"><p><tt><span class="code">&nbsp;&nbsp;G_REGEX_ERROR_INEXISTENT_SUBPATTERN_REFERENCE <span class="sym">=</span> <span class="num">115</span><span class="sym">,</span></span></tt></p></td>
+<td><p>&nbsp;&nbsp;</p></td>
+<td><p class="cmt"></p></td>
+</tr>
+<tr>
+<td valign="top"><p><tt><span class="code">&nbsp;&nbsp;G_REGEX_ERROR_UNTERMINATED_COMMENT <span class="sym">=</span> <span class="num">118</span><span class="sym">,</span></span></tt></p></td>
+<td><p>&nbsp;&nbsp;</p></td>
+<td><p class="cmt"></p></td>
+</tr>
+<tr>
+<td valign="top"><p><tt><span class="code">&nbsp;&nbsp;G_REGEX_ERROR_EXPRESSION_TOO_LARGE <span class="sym">=</span> <span class="num">120</span><span class="sym">,</span></span></tt></p></td>
+<td><p>&nbsp;&nbsp;</p></td>
+<td><p class="cmt"></p></td>
+</tr>
+<tr>
+<td valign="top"><p><tt><span class="code">&nbsp;&nbsp;G_REGEX_ERROR_MEMORY_ERROR <span class="sym">=</span> <span class="num">121</span><span class="sym">,</span></span></tt></p></td>
+<td><p>&nbsp;&nbsp;</p></td>
+<td><p class="cmt"></p></td>
+</tr>
+<tr>
+<td valign="top"><p><tt><span class="code">&nbsp;&nbsp;G_REGEX_ERROR_VARIABLE_LENGTH_LOOKBEHIND <span class="sym">=</span> <span class="num">125</span><span class="sym">,</span></span></tt></p></td>
+<td><p>&nbsp;&nbsp;</p></td>
+<td><p class="cmt"></p></td>
+</tr>
+<tr>
+<td valign="top"><p><tt><span class="code">&nbsp;&nbsp;G_REGEX_ERROR_MALFORMED_CONDITION <span class="sym">=</span> <span class="num">126</span><span class="sym">,</span></span></tt></p></td>
+<td><p>&nbsp;&nbsp;</p></td>
+<td><p class="cmt"></p></td>
+</tr>
+<tr>
+<td valign="top"><p><tt><span class="code">&nbsp;&nbsp;G_REGEX_ERROR_TOO_MANY_CONDITIONAL_BRANCHES <span class="sym">=</span> <span class="num">127</span><span class="sym">,</span></span></tt></p></td>
+<td><p>&nbsp;&nbsp;</p></td>
+<td><p class="cmt"></p></td>
+</tr>
+<tr>
+<td valign="top"><p><tt><span class="code">&nbsp;&nbsp;G_REGEX_ERROR_ASSERTION_EXPECTED <span class="sym">=</span> <span class="num">128</span><span class="sym">,</span></span></tt></p></td>
+<td><p>&nbsp;&nbsp;</p></td>
+<td><p class="cmt"></p></td>
+</tr>
+<tr>
+<td valign="top"><p><tt><span class="code">&nbsp;&nbsp;G_REGEX_ERROR_UNKNOWN_POSIX_CLASS_NAME <span class="sym">=</span> <span class="num">130</span><span class="sym">,</span></span></tt></p></td>
+<td><p>&nbsp;&nbsp;</p></td>
+<td><p class="cmt"></p></td>
+</tr>
+<tr>
+<td valign="top"><p><tt><span class="code">&nbsp;&nbsp;G_REGEX_ERROR_POSIX_COLLATING_ELEMENTS_NOT_SUPPORTED <span class="sym">=</span> <span class="num">131</span><span class="sym">,</span></span></tt></p></td>
+<td><p>&nbsp;&nbsp;</p></td>
+<td><p class="cmt"></p></td>
+</tr>
+<tr>
+<td valign="top"><p><tt><span class="code">&nbsp;&nbsp;G_REGEX_ERROR_HEX_CODE_TOO_LARGE <span class="sym">=</span> <span class="num">134</span><span class="sym">,</span></span></tt></p></td>
+<td><p>&nbsp;&nbsp;</p></td>
+<td><p class="cmt"></p></td>
+</tr>
+<tr>
+<td valign="top"><p><tt><span class="code">&nbsp;&nbsp;G_REGEX_ERROR_INVALID_CONDITION <span class="sym">=</span> <span class="num">135</span><span class="sym">,</span></span></tt></p></td>
+<td><p>&nbsp;&nbsp;</p></td>
+<td><p class="cmt"></p></td>
+</tr>
+<tr>
+<td valign="top"><p><tt><span class="code">&nbsp;&nbsp;G_REGEX_ERROR_SINGLE_BYTE_MATCH_IN_LOOKBEHIND <span class="sym">=</span> <span class="num">136</span><span class="sym">,</span></span></tt></p></td>
+<td><p>&nbsp;&nbsp;</p></td>
+<td><p class="cmt"></p></td>
+</tr>
+<tr>
+<td valign="top"><p><tt><span class="code">&nbsp;&nbsp;G_REGEX_ERROR_INFINITE_LOOP <span class="sym">=</span> <span class="num">140</span><span class="sym">,</span></span></tt></p></td>
+<td><p>&nbsp;&nbsp;</p></td>
+<td><p class="cmt"></p></td>
+</tr>
+<tr>
+<td valign="top"><p><tt><span class="code">&nbsp;&nbsp;G_REGEX_ERROR_MISSING_SUBPATTERN_NAME_TERMINATOR <span class="sym">=</span> <span class="num">142</span><span class="sym">,</span></span></tt></p></td>
+<td><p>&nbsp;&nbsp;</p></td>
+<td><p class="cmt"></p></td>
+</tr>
+<tr>
+<td valign="top"><p><tt><span class="code">&nbsp;&nbsp;G_REGEX_ERROR_DUPLICATE_SUBPATTERN_NAME <span class="sym">=</span> <span class="num">143</span><span class="sym">,</span></span></tt></p></td>
+<td><p>&nbsp;&nbsp;</p></td>
+<td><p class="cmt"></p></td>
+</tr>
+<tr>
+<td valign="top"><p><tt><span class="code">&nbsp;&nbsp;G_REGEX_ERROR_MALFORMED_PROPERTY <span class="sym">=</span> <span class="num">146</span><span class="sym">,</span></span></tt></p></td>
+<td><p>&nbsp;&nbsp;</p></td>
+<td><p class="cmt"></p></td>
+</tr>
+<tr>
+<td valign="top"><p><tt><span class="code">&nbsp;&nbsp;G_REGEX_ERROR_UNKNOWN_PROPERTY <span class="sym">=</span> <span class="num">147</span><span class="sym">,</span></span></tt></p></td>
+<td><p>&nbsp;&nbsp;</p></td>
+<td><p class="cmt"></p></td>
+</tr>
+<tr>
+<td valign="top"><p><tt><span class="code">&nbsp;&nbsp;G_REGEX_ERROR_SUBPATTERN_NAME_TOO_LONG <span class="sym">=</span> <span class="num">148</span><span class="sym">,</span></span></tt></p></td>
+<td><p>&nbsp;&nbsp;</p></td>
+<td><p class="cmt"></p></td>
+</tr>
+<tr>
+<td valign="top"><p><tt><span class="code">&nbsp;&nbsp;G_REGEX_ERROR_TOO_MANY_SUBPATTERNS <span class="sym">=</span> <span class="num">149</span><span class="sym">,</span></span></tt></p></td>
+<td><p>&nbsp;&nbsp;</p></td>
+<td><p class="cmt"></p></td>
+</tr>
+<tr>
+<td valign="top"><p><tt><span class="code">&nbsp;&nbsp;G_REGEX_ERROR_INVALID_OCTAL_VALUE <span class="sym">=</span> <span class="num">151</span><span class="sym">,</span></span></tt></p></td>
+<td><p>&nbsp;&nbsp;</p></td>
+<td><p class="cmt"></p></td>
+</tr>
+<tr>
+<td valign="top"><p><tt><span class="code">&nbsp;&nbsp;G_REGEX_ERROR_TOO_MANY_BRANCHES_IN_DEFINE <span class="sym">=</span> <span class="num">154</span><span class="sym">,</span></span></tt></p></td>
+<td><p>&nbsp;&nbsp;</p></td>
+<td><p class="cmt"></p></td>
+</tr>
+<tr>
+<td valign="top"><p><tt><span class="code">&nbsp;&nbsp;G_REGEX_ERROR_DEFINE_REPETION <span class="sym">=</span> <span class="num">155</span><span class="sym">,</span></span></tt></p></td>
+<td><p>&nbsp;&nbsp;</p></td>
+<td><p class="cmt"></p></td>
+</tr>
+<tr>
+<td valign="top"><p><tt><span class="code">&nbsp;&nbsp;G_REGEX_ERROR_INCONSISTENT_NEWLINE_OPTIONS <span class="sym">=</span> <span class="num">156</span><span class="sym">,</span></span></tt></p></td>
+<td><p>&nbsp;&nbsp;</p></td>
+<td><p class="cmt"></p></td>
+</tr>
+<tr>
+<td valign="top"><p><tt><span class="code">&nbsp;&nbsp;G_REGEX_ERROR_MISSING_BACK_REFERENCE <span class="sym">=</span> <span class="num">157</span><span class="sym">,</span></span></tt></p></td>
+<td><p>&nbsp;&nbsp;</p></td>
+<td><p class="cmt"></p></td>
+</tr>
+<tr>
+<td valign="top"><p><tt><span class="code">&nbsp;&nbsp;G_REGEX_ERROR_INVALID_RELATIVE_REFERENCE <span class="sym">=</span> <span class="num">158</span><span class="sym">,</span></span></tt></p></td>
+<td><p>&nbsp;&nbsp;</p></td>
+<td><p class="cmt"></p></td>
+</tr>
+<tr>
+<td valign="top"><p><tt><span class="code">&nbsp;&nbsp;G_REGEX_ERROR_BACKTRACKING_CONTROL_VERB_ARGUMENT_FORBIDDEN <span class="sym">=</span> <span class="num">159</span><span class="sym">,</span></span></tt></p></td>
+<td><p>&nbsp;&nbsp;</p></td>
+<td><p class="cmt"></p></td>
+</tr>
+<tr>
+<td valign="top"><p><tt><span class="code">&nbsp;&nbsp;G_REGEX_ERROR_UNKNOWN_BACKTRACKING_CONTROL_VERB <span class="sym">=</span> <span class="num">160</span><span class="sym">,</span></span></tt></p></td>
+<td><p>&nbsp;&nbsp;</p></td>
+<td><p class="cmt"></p></td>
+</tr>
+<tr>
+<td valign="top"><p><tt><span class="code">&nbsp;&nbsp;G_REGEX_ERROR_NUMBER_TOO_BIG <span class="sym">=</span> <span class="num">161</span><span class="sym">,</span></span></tt></p></td>
+<td><p>&nbsp;&nbsp;</p></td>
+<td><p class="cmt"></p></td>
+</tr>
+<tr>
+<td valign="top"><p><tt><span class="code">&nbsp;&nbsp;G_REGEX_ERROR_MISSING_SUBPATTERN_NAME <span class="sym">=</span> <span class="num">162</span><span class="sym">,</span></span></tt></p></td>
+<td><p>&nbsp;&nbsp;</p></td>
+<td><p class="cmt"></p></td>
+</tr>
+<tr>
+<td valign="top"><p><tt><span class="code">&nbsp;&nbsp;G_REGEX_ERROR_MISSING_DIGIT <span class="sym">=</span> <span class="num">163</span><span class="sym">,</span></span></tt></p></td>
+<td><p>&nbsp;&nbsp;</p></td>
+<td><p class="cmt"></p></td>
+</tr>
+<tr>
+<td valign="top"><p><tt><span class="code">&nbsp;&nbsp;G_REGEX_ERROR_INVALID_DATA_CHARACTER <span class="sym">=</span> <span class="num">164</span><span class="sym">,</span></span></tt></p></td>
+<td><p>&nbsp;&nbsp;</p></td>
+<td><p class="cmt"></p></td>
+</tr>
+<tr>
+<td valign="top"><p><tt><span class="code">&nbsp;&nbsp;G_REGEX_ERROR_EXTRA_SUBPATTERN_NAME <span class="sym">=</span> <span class="num">165</span><span class="sym">,</span></span></tt></p></td>
+<td><p>&nbsp;&nbsp;</p></td>
+<td><p class="cmt"></p></td>
+</tr>
+<tr>
+<td valign="top"><p><tt><span class="code">&nbsp;&nbsp;G_REGEX_ERROR_BACKTRACKING_CONTROL_VERB_ARGUMENT_REQUIRED <span class="sym">=</span> <span class="num">166</span><span class="sym">,</span></span></tt></p></td>
+<td><p>&nbsp;&nbsp;</p></td>
+<td><p class="cmt"></p></td>
+</tr>
+<tr>
+<td valign="top"><p><tt><span class="code">&nbsp;&nbsp;G_REGEX_ERROR_INVALID_CONTROL_CHAR <span class="sym">=</span> <span class="num">168</span><span class="sym">,</span></span></tt></p></td>
+<td><p>&nbsp;&nbsp;</p></td>
+<td><p class="cmt"></p></td>
+</tr>
+<tr>
+<td valign="top"><p><tt><span class="code">&nbsp;&nbsp;G_REGEX_ERROR_MISSING_NAME <span class="sym">=</span> <span class="num">169</span><span class="sym">,</span></span></tt></p></td>
+<td><p>&nbsp;&nbsp;</p></td>
+<td><p class="cmt"></p></td>
+</tr>
+<tr>
+<td valign="top"><p><tt><span class="code">&nbsp;&nbsp;G_REGEX_ERROR_NOT_SUPPORTED_IN_CLASS <span class="sym">=</span> <span class="num">171</span><span class="sym">,</span></span></tt></p></td>
+<td><p>&nbsp;&nbsp;</p></td>
+<td><p class="cmt"></p></td>
+</tr>
+<tr>
+<td valign="top"><p><tt><span class="code">&nbsp;&nbsp;G_REGEX_ERROR_TOO_MANY_FORWARD_REFERENCES <span class="sym">=</span> <span class="num">172</span><span class="sym">,</span></span></tt></p></td>
+<td><p>&nbsp;&nbsp;</p></td>
+<td><p class="cmt"></p></td>
+</tr>
+<tr>
+<td valign="top"><p><tt><span class="code">&nbsp;&nbsp;G_REGEX_ERROR_NAME_TOO_LONG <span class="sym">=</span> <span class="num">175</span><span class="sym">,</span></span></tt></p></td>
+<td><p>&nbsp;&nbsp;</p></td>
+<td><p class="cmt"></p></td>
+</tr>
+<tr>
+<td valign="top"><p><tt><span class="code">&nbsp;&nbsp;G_REGEX_ERROR_CHARACTER_VALUE_TOO_LARGE <span class="sym">=</span> <span class="num">176</span><span class="sym">,</span></span></tt></p></td>
+<td><p>&nbsp;&nbsp;</p></td>
+<td><p class="cmt"></p></td>
+</tr>
+<tr>
+<td valign="top"><p><tt><span class="code">&nbsp;&nbsp;TGRegexErrorMaxValue <span class="sym">=</span> <span class="num">$7FFFFFFF</span></span></tt></p></td>
+<td><p>&nbsp;&nbsp;</p></td>
+<td><p class="cmt"></p></td>
+</tr>
+<tr>
+<td><p><tt><span class="code"><span class="sym">);</span></span></tt></p></td>
+</tr>
+</table>
+<br>
+
+<hr>
+
+<i>Generated 2023-11-30 by FPDoc 3.2.2 from the Lazarus Component Library (LCL). See the file <a href="https://gitlab.com/freepascal.org/lazarus/lazarus/-/raw/main/COPYING.modifiedLGPL.txt" target="_blank">COPYING.modifiedLGPL.txt</a> for details about the license.</i>
+</body>
+</html>

@@ -1,0 +1,529 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<title></title>
+<link rel="stylesheet" href="../fpdoc.css" type="text/css">
+
+</head>
+<body>
+<table cellpadding="0" cellspacing="0">
+<tr>
+<td colspan="3"><p><tt><span class="code"><b><a href="../lazgio2/tgsocket.html" onClick="opener.location.href = '../lazgio2/tgsocket.html'; return false;">TGSocket</a></b></span></tt></p></td>
+<td></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgsocket.new.html" onClick="opener.location.href = '../lazgio2/tgsocket.new.html'; return false;">new</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgsocket.new_from_fd.html" onClick="opener.location.href = '../lazgio2/tgsocket.new_from_fd.html'; return false;">new_from_fd</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgsocket.accept.html" onClick="opener.location.href = '../lazgio2/tgsocket.accept.html'; return false;">accept</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgsocket.bind.html" onClick="opener.location.href = '../lazgio2/tgsocket.bind.html'; return false;">bind</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgsocket.check_connect_result.html" onClick="opener.location.href = '../lazgio2/tgsocket.check_connect_result.html'; return false;">check_connect_result</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgsocket.close.html" onClick="opener.location.href = '../lazgio2/tgsocket.close.html'; return false;">close</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgsocket.condition_check.html" onClick="opener.location.href = '../lazgio2/tgsocket.condition_check.html'; return false;">condition_check</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgsocket.condition_timed_wait.html" onClick="opener.location.href = '../lazgio2/tgsocket.condition_timed_wait.html'; return false;">condition_timed_wait</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgsocket.condition_wait.html" onClick="opener.location.href = '../lazgio2/tgsocket.condition_wait.html'; return false;">condition_wait</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgsocket.connect.html" onClick="opener.location.href = '../lazgio2/tgsocket.connect.html'; return false;">connect</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgsocket.connection_factory_create_connection.html" onClick="opener.location.href = '../lazgio2/tgsocket.connection_factory_create_connection.html'; return false;">connection_factory_create_connection</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgsocket.create_source.html" onClick="opener.location.href = '../lazgio2/tgsocket.create_source.html'; return false;">create_source</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgsocket.get_available_bytes.html" onClick="opener.location.href = '../lazgio2/tgsocket.get_available_bytes.html'; return false;">get_available_bytes</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgsocket.get_blocking.html" onClick="opener.location.href = '../lazgio2/tgsocket.get_blocking.html'; return false;">get_blocking</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgsocket.get_broadcast.html" onClick="opener.location.href = '../lazgio2/tgsocket.get_broadcast.html'; return false;">get_broadcast</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgsocket.get_credentials.html" onClick="opener.location.href = '../lazgio2/tgsocket.get_credentials.html'; return false;">get_credentials</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgsocket.get_family.html" onClick="opener.location.href = '../lazgio2/tgsocket.get_family.html'; return false;">get_family</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgsocket.get_fd.html" onClick="opener.location.href = '../lazgio2/tgsocket.get_fd.html'; return false;">get_fd</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgsocket.get_keepalive.html" onClick="opener.location.href = '../lazgio2/tgsocket.get_keepalive.html'; return false;">get_keepalive</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgsocket.get_listen_backlog.html" onClick="opener.location.href = '../lazgio2/tgsocket.get_listen_backlog.html'; return false;">get_listen_backlog</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgsocket.get_local_address.html" onClick="opener.location.href = '../lazgio2/tgsocket.get_local_address.html'; return false;">get_local_address</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgsocket.get_multicast_loopback.html" onClick="opener.location.href = '../lazgio2/tgsocket.get_multicast_loopback.html'; return false;">get_multicast_loopback</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgsocket.get_multicast_ttl.html" onClick="opener.location.href = '../lazgio2/tgsocket.get_multicast_ttl.html'; return false;">get_multicast_ttl</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgsocket.get_option.html" onClick="opener.location.href = '../lazgio2/tgsocket.get_option.html'; return false;">get_option</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgsocket.get_protocol.html" onClick="opener.location.href = '../lazgio2/tgsocket.get_protocol.html'; return false;">get_protocol</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgsocket.get_remote_address.html" onClick="opener.location.href = '../lazgio2/tgsocket.get_remote_address.html'; return false;">get_remote_address</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgsocket.get_socket_type.html" onClick="opener.location.href = '../lazgio2/tgsocket.get_socket_type.html'; return false;">get_socket_type</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgsocket.get_timeout.html" onClick="opener.location.href = '../lazgio2/tgsocket.get_timeout.html'; return false;">get_timeout</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgsocket.get_ttl.html" onClick="opener.location.href = '../lazgio2/tgsocket.get_ttl.html'; return false;">get_ttl</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgsocket.is_closed.html" onClick="opener.location.href = '../lazgio2/tgsocket.is_closed.html'; return false;">is_closed</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgsocket.is_connected.html" onClick="opener.location.href = '../lazgio2/tgsocket.is_connected.html'; return false;">is_connected</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgsocket.join_multicast_group.html" onClick="opener.location.href = '../lazgio2/tgsocket.join_multicast_group.html'; return false;">join_multicast_group</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgsocket.join_multicast_group_ssm.html" onClick="opener.location.href = '../lazgio2/tgsocket.join_multicast_group_ssm.html'; return false;">join_multicast_group_ssm</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgsocket.leave_multicast_group.html" onClick="opener.location.href = '../lazgio2/tgsocket.leave_multicast_group.html'; return false;">leave_multicast_group</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgsocket.leave_multicast_group_ssm.html" onClick="opener.location.href = '../lazgio2/tgsocket.leave_multicast_group_ssm.html'; return false;">leave_multicast_group_ssm</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgsocket.listen.html" onClick="opener.location.href = '../lazgio2/tgsocket.listen.html'; return false;">listen</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgsocket.receive.html" onClick="opener.location.href = '../lazgio2/tgsocket.receive.html'; return false;">receive</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgsocket.receive_from.html" onClick="opener.location.href = '../lazgio2/tgsocket.receive_from.html'; return false;">receive_from</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgsocket.receive_message.html" onClick="opener.location.href = '../lazgio2/tgsocket.receive_message.html'; return false;">receive_message</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgsocket.receive_messages.html" onClick="opener.location.href = '../lazgio2/tgsocket.receive_messages.html'; return false;">receive_messages</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgsocket.receive_with_blocking.html" onClick="opener.location.href = '../lazgio2/tgsocket.receive_with_blocking.html'; return false;">receive_with_blocking</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgsocket.send.html" onClick="opener.location.href = '../lazgio2/tgsocket.send.html'; return false;">send</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgsocket.send_message.html" onClick="opener.location.href = '../lazgio2/tgsocket.send_message.html'; return false;">send_message</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgsocket.send_message_with_timeout.html" onClick="opener.location.href = '../lazgio2/tgsocket.send_message_with_timeout.html'; return false;">send_message_with_timeout</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgsocket.send_messages.html" onClick="opener.location.href = '../lazgio2/tgsocket.send_messages.html'; return false;">send_messages</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgsocket.send_to.html" onClick="opener.location.href = '../lazgio2/tgsocket.send_to.html'; return false;">send_to</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgsocket.send_with_blocking.html" onClick="opener.location.href = '../lazgio2/tgsocket.send_with_blocking.html'; return false;">send_with_blocking</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgsocket.set_blocking.html" onClick="opener.location.href = '../lazgio2/tgsocket.set_blocking.html'; return false;">set_blocking</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgsocket.set_broadcast.html" onClick="opener.location.href = '../lazgio2/tgsocket.set_broadcast.html'; return false;">set_broadcast</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgsocket.set_keepalive.html" onClick="opener.location.href = '../lazgio2/tgsocket.set_keepalive.html'; return false;">set_keepalive</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgsocket.set_listen_backlog.html" onClick="opener.location.href = '../lazgio2/tgsocket.set_listen_backlog.html'; return false;">set_listen_backlog</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgsocket.set_multicast_loopback.html" onClick="opener.location.href = '../lazgio2/tgsocket.set_multicast_loopback.html'; return false;">set_multicast_loopback</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgsocket.set_multicast_ttl.html" onClick="opener.location.href = '../lazgio2/tgsocket.set_multicast_ttl.html'; return false;">set_multicast_ttl</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgsocket.set_option.html" onClick="opener.location.href = '../lazgio2/tgsocket.set_option.html'; return false;">set_option</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgsocket.set_timeout.html" onClick="opener.location.href = '../lazgio2/tgsocket.set_timeout.html'; return false;">set_timeout</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgsocket.set_ttl.html" onClick="opener.location.href = '../lazgio2/tgsocket.set_ttl.html'; return false;">set_ttl</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgsocket.shutdown.html" onClick="opener.location.href = '../lazgio2/tgsocket.shutdown.html'; return false;">shutdown</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgsocket.speaks_ipv4.html" onClick="opener.location.href = '../lazgio2/tgsocket.speaks_ipv4.html'; return false;">speaks_ipv4</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+</tr>
+<tr>
+<td colspan="3"><p><tt><span class="code"><b><a href="../lazgobject2/tgobject.html" onClick="opener.location.href = '../lazgobject2/tgobject.html'; return false;">TGObject</a></b></span></tt></p></td>
+<td></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgobject2/tgobject.newv.html" onClick="opener.location.href = '../lazgobject2/tgobject.newv.html'; return false;">newv</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgobject2/tgobject.new_with_properties.html" onClick="opener.location.href = '../lazgobject2/tgobject.new_with_properties.html'; return false;">new_with_properties</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgobject2/tgobject.compat_control.html" onClick="opener.location.href = '../lazgobject2/tgobject.compat_control.html'; return false;">compat_control</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgobject2/tgobject.interface_find_property.html" onClick="opener.location.href = '../lazgobject2/tgobject.interface_find_property.html'; return false;">interface_find_property</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgobject2/tgobject.interface_install_property.html" onClick="opener.location.href = '../lazgobject2/tgobject.interface_install_property.html'; return false;">interface_install_property</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgobject2/tgobject.interface_list_properties.html" onClick="opener.location.href = '../lazgobject2/tgobject.interface_list_properties.html'; return false;">interface_list_properties</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgobject2/tgobject.add_toggle_ref.html" onClick="opener.location.href = '../lazgobject2/tgobject.add_toggle_ref.html'; return false;">add_toggle_ref</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgobject2/tgobject.add_weak_pointer.html" onClick="opener.location.href = '../lazgobject2/tgobject.add_weak_pointer.html'; return false;">add_weak_pointer</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgobject2/tgobject.bind_property.html" onClick="opener.location.href = '../lazgobject2/tgobject.bind_property.html'; return false;">bind_property</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgobject2/tgobject.bind_property_full.html" onClick="opener.location.href = '../lazgobject2/tgobject.bind_property_full.html'; return false;">bind_property_full</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgobject2/tgobject.bind_property_with_closures.html" onClick="opener.location.href = '../lazgobject2/tgobject.bind_property_with_closures.html'; return false;">bind_property_with_closures</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgobject2/tgobject.dup_data.html" onClick="opener.location.href = '../lazgobject2/tgobject.dup_data.html'; return false;">dup_data</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgobject2/tgobject.dup_qdata.html" onClick="opener.location.href = '../lazgobject2/tgobject.dup_qdata.html'; return false;">dup_qdata</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgobject2/tgobject.force_floating.html" onClick="opener.location.href = '../lazgobject2/tgobject.force_floating.html'; return false;">force_floating</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgobject2/tgobject.freeze_notify.html" onClick="opener.location.href = '../lazgobject2/tgobject.freeze_notify.html'; return false;">freeze_notify</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgobject2/tgobject.get_data.html" onClick="opener.location.href = '../lazgobject2/tgobject.get_data.html'; return false;">get_data</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgobject2/tgobject.get_property.html" onClick="opener.location.href = '../lazgobject2/tgobject.get_property.html'; return false;">get_property</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgobject2/tgobject.get_qdata.html" onClick="opener.location.href = '../lazgobject2/tgobject.get_qdata.html'; return false;">get_qdata</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgobject2/tgobject.getv.html" onClick="opener.location.href = '../lazgobject2/tgobject.getv.html'; return false;">getv</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgobject2/tgobject.is_floating.html" onClick="opener.location.href = '../lazgobject2/tgobject.is_floating.html'; return false;">is_floating</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgobject2/tgobject.notify.html" onClick="opener.location.href = '../lazgobject2/tgobject.notify.html'; return false;">notify</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgobject2/tgobject.notify_by_pspec.html" onClick="opener.location.href = '../lazgobject2/tgobject.notify_by_pspec.html'; return false;">notify_by_pspec</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgobject2/tgobject.ref.html" onClick="opener.location.href = '../lazgobject2/tgobject.ref.html'; return false;">ref</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgobject2/tgobject.ref_sink.html" onClick="opener.location.href = '../lazgobject2/tgobject.ref_sink.html'; return false;">ref_sink</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgobject2/tgobject.remove_toggle_ref.html" onClick="opener.location.href = '../lazgobject2/tgobject.remove_toggle_ref.html'; return false;">remove_toggle_ref</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgobject2/tgobject.remove_weak_pointer.html" onClick="opener.location.href = '../lazgobject2/tgobject.remove_weak_pointer.html'; return false;">remove_weak_pointer</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgobject2/tgobject.replace_data.html" onClick="opener.location.href = '../lazgobject2/tgobject.replace_data.html'; return false;">replace_data</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgobject2/tgobject.replace_qdata.html" onClick="opener.location.href = '../lazgobject2/tgobject.replace_qdata.html'; return false;">replace_qdata</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgobject2/tgobject.run_dispose.html" onClick="opener.location.href = '../lazgobject2/tgobject.run_dispose.html'; return false;">run_dispose</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgobject2/tgobject.set_data.html" onClick="opener.location.href = '../lazgobject2/tgobject.set_data.html'; return false;">set_data</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgobject2/tgobject.set_data_full.html" onClick="opener.location.href = '../lazgobject2/tgobject.set_data_full.html'; return false;">set_data_full</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgobject2/tgobject.set_property.html" onClick="opener.location.href = '../lazgobject2/tgobject.set_property.html'; return false;">set_property</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgobject2/tgobject.set_qdata.html" onClick="opener.location.href = '../lazgobject2/tgobject.set_qdata.html'; return false;">set_qdata</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgobject2/tgobject.set_qdata_full.html" onClick="opener.location.href = '../lazgobject2/tgobject.set_qdata_full.html'; return false;">set_qdata_full</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgobject2/tgobject.setv.html" onClick="opener.location.href = '../lazgobject2/tgobject.setv.html'; return false;">setv</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgobject2/tgobject.steal_data.html" onClick="opener.location.href = '../lazgobject2/tgobject.steal_data.html'; return false;">steal_data</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgobject2/tgobject.steal_qdata.html" onClick="opener.location.href = '../lazgobject2/tgobject.steal_qdata.html'; return false;">steal_qdata</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgobject2/tgobject.thaw_notify.html" onClick="opener.location.href = '../lazgobject2/tgobject.thaw_notify.html'; return false;">thaw_notify</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgobject2/tgobject.unref.html" onClick="opener.location.href = '../lazgobject2/tgobject.unref.html'; return false;">unref</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgobject2/tgobject.watch_closure.html" onClick="opener.location.href = '../lazgobject2/tgobject.watch_closure.html'; return false;">watch_closure</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgobject2/tgobject.weak_ref.html" onClick="opener.location.href = '../lazgobject2/tgobject.weak_ref.html'; return false;">weak_ref</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgobject2/tgobject.weak_unref.html" onClick="opener.location.href = '../lazgobject2/tgobject.weak_unref.html'; return false;">weak_unref</a></p></td>
+</tr>
+</table>
+<br>
+
+<hr>
+
+<i>Generated 2023-11-30 by FPDoc 3.2.2 from the Lazarus Component Library (LCL). See the file <a href="https://gitlab.com/freepascal.org/lazarus/lazarus/-/raw/main/COPYING.modifiedLGPL.txt" target="_blank">COPYING.modifiedLGPL.txt</a> for details about the license.</i>
+</body>
+</html>

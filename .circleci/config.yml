@@ -1,0 +1,18 @@
+version: 2.1
+#
+# SPDX-FileCopyrightText: (c) 2023 Robert Di Pardo
+# SPDX-License-Identifier: GPL-3.0-or-later
+#
+# Permitted usage is detailed in the COPYING file.
+#
+jobs:
+  check-in-docs:
+    machine:
+      image: ubuntu-2204:current
+      resource_class: small
+    steps:
+      - checkout
+workflows:
+  push-branch:
+    jobs:
+      - check-in-docs

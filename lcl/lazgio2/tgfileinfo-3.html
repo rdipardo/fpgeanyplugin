@@ -1,0 +1,554 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<title></title>
+<link rel="stylesheet" href="../fpdoc.css" type="text/css">
+
+</head>
+<body>
+<table cellpadding="0" cellspacing="0">
+<tr>
+<td colspan="3"><p><tt><span class="code"><b><a href="../lazgio2/tgfileinfo.html" onClick="opener.location.href = '../lazgio2/tgfileinfo.html'; return false;">TGFileInfo</a></b></span></tt></p></td>
+<td></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgfileinfo.new.html" onClick="opener.location.href = '../lazgio2/tgfileinfo.new.html'; return false;">new</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgfileinfo.clear_status.html" onClick="opener.location.href = '../lazgio2/tgfileinfo.clear_status.html'; return false;">clear_status</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgfileinfo.copy_into.html" onClick="opener.location.href = '../lazgio2/tgfileinfo.copy_into.html'; return false;">copy_into</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgfileinfo.dup.html" onClick="opener.location.href = '../lazgio2/tgfileinfo.dup.html'; return false;">dup</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgfileinfo.get_attribute_as_string.html" onClick="opener.location.href = '../lazgio2/tgfileinfo.get_attribute_as_string.html'; return false;">get_attribute_as_string</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgfileinfo.get_attribute_boolean.html" onClick="opener.location.href = '../lazgio2/tgfileinfo.get_attribute_boolean.html'; return false;">get_attribute_boolean</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgfileinfo.get_attribute_byte_string.html" onClick="opener.location.href = '../lazgio2/tgfileinfo.get_attribute_byte_string.html'; return false;">get_attribute_byte_string</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgfileinfo.get_attribute_data.html" onClick="opener.location.href = '../lazgio2/tgfileinfo.get_attribute_data.html'; return false;">get_attribute_data</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgfileinfo.get_attribute_int32.html" onClick="opener.location.href = '../lazgio2/tgfileinfo.get_attribute_int32.html'; return false;">get_attribute_int32</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgfileinfo.get_attribute_int64.html" onClick="opener.location.href = '../lazgio2/tgfileinfo.get_attribute_int64.html'; return false;">get_attribute_int64</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgfileinfo.get_attribute_object.html" onClick="opener.location.href = '../lazgio2/tgfileinfo.get_attribute_object.html'; return false;">get_attribute_object</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgfileinfo.get_attribute_status.html" onClick="opener.location.href = '../lazgio2/tgfileinfo.get_attribute_status.html'; return false;">get_attribute_status</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgfileinfo.get_attribute_string.html" onClick="opener.location.href = '../lazgio2/tgfileinfo.get_attribute_string.html'; return false;">get_attribute_string</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgfileinfo.get_attribute_stringv.html" onClick="opener.location.href = '../lazgio2/tgfileinfo.get_attribute_stringv.html'; return false;">get_attribute_stringv</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgfileinfo.get_attribute_type.html" onClick="opener.location.href = '../lazgio2/tgfileinfo.get_attribute_type.html'; return false;">get_attribute_type</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgfileinfo.get_attribute_uint32.html" onClick="opener.location.href = '../lazgio2/tgfileinfo.get_attribute_uint32.html'; return false;">get_attribute_uint32</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgfileinfo.get_attribute_uint64.html" onClick="opener.location.href = '../lazgio2/tgfileinfo.get_attribute_uint64.html'; return false;">get_attribute_uint64</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgfileinfo.get_content_type.html" onClick="opener.location.href = '../lazgio2/tgfileinfo.get_content_type.html'; return false;">get_content_type</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgfileinfo.get_deletion_date.html" onClick="opener.location.href = '../lazgio2/tgfileinfo.get_deletion_date.html'; return false;">get_deletion_date</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgfileinfo.get_display_name.html" onClick="opener.location.href = '../lazgio2/tgfileinfo.get_display_name.html'; return false;">get_display_name</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgfileinfo.get_edit_name.html" onClick="opener.location.href = '../lazgio2/tgfileinfo.get_edit_name.html'; return false;">get_edit_name</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgfileinfo.get_etag.html" onClick="opener.location.href = '../lazgio2/tgfileinfo.get_etag.html'; return false;">get_etag</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgfileinfo.get_file_type.html" onClick="opener.location.href = '../lazgio2/tgfileinfo.get_file_type.html'; return false;">get_file_type</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgfileinfo.get_icon.html" onClick="opener.location.href = '../lazgio2/tgfileinfo.get_icon.html'; return false;">get_icon</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgfileinfo.get_is_backup.html" onClick="opener.location.href = '../lazgio2/tgfileinfo.get_is_backup.html'; return false;">get_is_backup</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgfileinfo.get_is_hidden.html" onClick="opener.location.href = '../lazgio2/tgfileinfo.get_is_hidden.html'; return false;">get_is_hidden</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgfileinfo.get_is_symlink.html" onClick="opener.location.href = '../lazgio2/tgfileinfo.get_is_symlink.html'; return false;">get_is_symlink</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgfileinfo.get_modification_date_time.html" onClick="opener.location.href = '../lazgio2/tgfileinfo.get_modification_date_time.html'; return false;">get_modification_date_time</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgfileinfo.get_name.html" onClick="opener.location.href = '../lazgio2/tgfileinfo.get_name.html'; return false;">get_name</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgfileinfo.get_size.html" onClick="opener.location.href = '../lazgio2/tgfileinfo.get_size.html'; return false;">get_size</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgfileinfo.get_sort_order.html" onClick="opener.location.href = '../lazgio2/tgfileinfo.get_sort_order.html'; return false;">get_sort_order</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgfileinfo.get_symbolic_icon.html" onClick="opener.location.href = '../lazgio2/tgfileinfo.get_symbolic_icon.html'; return false;">get_symbolic_icon</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgfileinfo.get_symlink_target.html" onClick="opener.location.href = '../lazgio2/tgfileinfo.get_symlink_target.html'; return false;">get_symlink_target</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgfileinfo.has_attribute.html" onClick="opener.location.href = '../lazgio2/tgfileinfo.has_attribute.html'; return false;">has_attribute</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgfileinfo.has_namespace.html" onClick="opener.location.href = '../lazgio2/tgfileinfo.has_namespace.html'; return false;">has_namespace</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgfileinfo.list_attributes.html" onClick="opener.location.href = '../lazgio2/tgfileinfo.list_attributes.html'; return false;">list_attributes</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgfileinfo.remove_attribute.html" onClick="opener.location.href = '../lazgio2/tgfileinfo.remove_attribute.html'; return false;">remove_attribute</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgfileinfo.set_attribute.html" onClick="opener.location.href = '../lazgio2/tgfileinfo.set_attribute.html'; return false;">set_attribute</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgfileinfo.set_attribute_boolean.html" onClick="opener.location.href = '../lazgio2/tgfileinfo.set_attribute_boolean.html'; return false;">set_attribute_boolean</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgfileinfo.set_attribute_byte_string.html" onClick="opener.location.href = '../lazgio2/tgfileinfo.set_attribute_byte_string.html'; return false;">set_attribute_byte_string</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgfileinfo.set_attribute_int32.html" onClick="opener.location.href = '../lazgio2/tgfileinfo.set_attribute_int32.html'; return false;">set_attribute_int32</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgfileinfo.set_attribute_int64.html" onClick="opener.location.href = '../lazgio2/tgfileinfo.set_attribute_int64.html'; return false;">set_attribute_int64</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgfileinfo.set_attribute_mask.html" onClick="opener.location.href = '../lazgio2/tgfileinfo.set_attribute_mask.html'; return false;">set_attribute_mask</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgfileinfo.set_attribute_object.html" onClick="opener.location.href = '../lazgio2/tgfileinfo.set_attribute_object.html'; return false;">set_attribute_object</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgfileinfo.set_attribute_status.html" onClick="opener.location.href = '../lazgio2/tgfileinfo.set_attribute_status.html'; return false;">set_attribute_status</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgfileinfo.set_attribute_string.html" onClick="opener.location.href = '../lazgio2/tgfileinfo.set_attribute_string.html'; return false;">set_attribute_string</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgfileinfo.set_attribute_stringv.html" onClick="opener.location.href = '../lazgio2/tgfileinfo.set_attribute_stringv.html'; return false;">set_attribute_stringv</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgfileinfo.set_attribute_uint32.html" onClick="opener.location.href = '../lazgio2/tgfileinfo.set_attribute_uint32.html'; return false;">set_attribute_uint32</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgfileinfo.set_attribute_uint64.html" onClick="opener.location.href = '../lazgio2/tgfileinfo.set_attribute_uint64.html'; return false;">set_attribute_uint64</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgfileinfo.set_content_type.html" onClick="opener.location.href = '../lazgio2/tgfileinfo.set_content_type.html'; return false;">set_content_type</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgfileinfo.set_display_name.html" onClick="opener.location.href = '../lazgio2/tgfileinfo.set_display_name.html'; return false;">set_display_name</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgfileinfo.set_edit_name.html" onClick="opener.location.href = '../lazgio2/tgfileinfo.set_edit_name.html'; return false;">set_edit_name</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgfileinfo.set_file_type.html" onClick="opener.location.href = '../lazgio2/tgfileinfo.set_file_type.html'; return false;">set_file_type</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgfileinfo.set_icon.html" onClick="opener.location.href = '../lazgio2/tgfileinfo.set_icon.html'; return false;">set_icon</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgfileinfo.set_is_hidden.html" onClick="opener.location.href = '../lazgio2/tgfileinfo.set_is_hidden.html'; return false;">set_is_hidden</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgfileinfo.set_is_symlink.html" onClick="opener.location.href = '../lazgio2/tgfileinfo.set_is_symlink.html'; return false;">set_is_symlink</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgfileinfo.set_modification_date_time.html" onClick="opener.location.href = '../lazgio2/tgfileinfo.set_modification_date_time.html'; return false;">set_modification_date_time</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgfileinfo.set_name.html" onClick="opener.location.href = '../lazgio2/tgfileinfo.set_name.html'; return false;">set_name</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgfileinfo.set_size.html" onClick="opener.location.href = '../lazgio2/tgfileinfo.set_size.html'; return false;">set_size</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgfileinfo.set_sort_order.html" onClick="opener.location.href = '../lazgio2/tgfileinfo.set_sort_order.html'; return false;">set_sort_order</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgfileinfo.set_symbolic_icon.html" onClick="opener.location.href = '../lazgio2/tgfileinfo.set_symbolic_icon.html'; return false;">set_symbolic_icon</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgfileinfo.set_symlink_target.html" onClick="opener.location.href = '../lazgio2/tgfileinfo.set_symlink_target.html'; return false;">set_symlink_target</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgio2/tgfileinfo.unset_attribute_mask.html" onClick="opener.location.href = '../lazgio2/tgfileinfo.unset_attribute_mask.html'; return false;">unset_attribute_mask</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+</tr>
+<tr>
+<td colspan="3"><p><tt><span class="code"><b><a href="../lazgobject2/tgobject.html" onClick="opener.location.href = '../lazgobject2/tgobject.html'; return false;">TGObject</a></b></span></tt></p></td>
+<td></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgobject2/tgobject.newv.html" onClick="opener.location.href = '../lazgobject2/tgobject.newv.html'; return false;">newv</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgobject2/tgobject.new_with_properties.html" onClick="opener.location.href = '../lazgobject2/tgobject.new_with_properties.html'; return false;">new_with_properties</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgobject2/tgobject.compat_control.html" onClick="opener.location.href = '../lazgobject2/tgobject.compat_control.html'; return false;">compat_control</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgobject2/tgobject.interface_find_property.html" onClick="opener.location.href = '../lazgobject2/tgobject.interface_find_property.html'; return false;">interface_find_property</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgobject2/tgobject.interface_install_property.html" onClick="opener.location.href = '../lazgobject2/tgobject.interface_install_property.html'; return false;">interface_install_property</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgobject2/tgobject.interface_list_properties.html" onClick="opener.location.href = '../lazgobject2/tgobject.interface_list_properties.html'; return false;">interface_list_properties</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgobject2/tgobject.add_toggle_ref.html" onClick="opener.location.href = '../lazgobject2/tgobject.add_toggle_ref.html'; return false;">add_toggle_ref</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgobject2/tgobject.add_weak_pointer.html" onClick="opener.location.href = '../lazgobject2/tgobject.add_weak_pointer.html'; return false;">add_weak_pointer</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgobject2/tgobject.bind_property.html" onClick="opener.location.href = '../lazgobject2/tgobject.bind_property.html'; return false;">bind_property</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgobject2/tgobject.bind_property_full.html" onClick="opener.location.href = '../lazgobject2/tgobject.bind_property_full.html'; return false;">bind_property_full</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgobject2/tgobject.bind_property_with_closures.html" onClick="opener.location.href = '../lazgobject2/tgobject.bind_property_with_closures.html'; return false;">bind_property_with_closures</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgobject2/tgobject.dup_data.html" onClick="opener.location.href = '../lazgobject2/tgobject.dup_data.html'; return false;">dup_data</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgobject2/tgobject.dup_qdata.html" onClick="opener.location.href = '../lazgobject2/tgobject.dup_qdata.html'; return false;">dup_qdata</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgobject2/tgobject.force_floating.html" onClick="opener.location.href = '../lazgobject2/tgobject.force_floating.html'; return false;">force_floating</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgobject2/tgobject.freeze_notify.html" onClick="opener.location.href = '../lazgobject2/tgobject.freeze_notify.html'; return false;">freeze_notify</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgobject2/tgobject.get_data.html" onClick="opener.location.href = '../lazgobject2/tgobject.get_data.html'; return false;">get_data</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgobject2/tgobject.get_property.html" onClick="opener.location.href = '../lazgobject2/tgobject.get_property.html'; return false;">get_property</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgobject2/tgobject.get_qdata.html" onClick="opener.location.href = '../lazgobject2/tgobject.get_qdata.html'; return false;">get_qdata</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgobject2/tgobject.getv.html" onClick="opener.location.href = '../lazgobject2/tgobject.getv.html'; return false;">getv</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgobject2/tgobject.is_floating.html" onClick="opener.location.href = '../lazgobject2/tgobject.is_floating.html'; return false;">is_floating</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgobject2/tgobject.notify.html" onClick="opener.location.href = '../lazgobject2/tgobject.notify.html'; return false;">notify</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgobject2/tgobject.notify_by_pspec.html" onClick="opener.location.href = '../lazgobject2/tgobject.notify_by_pspec.html'; return false;">notify_by_pspec</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgobject2/tgobject.ref.html" onClick="opener.location.href = '../lazgobject2/tgobject.ref.html'; return false;">ref</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgobject2/tgobject.ref_sink.html" onClick="opener.location.href = '../lazgobject2/tgobject.ref_sink.html'; return false;">ref_sink</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgobject2/tgobject.remove_toggle_ref.html" onClick="opener.location.href = '../lazgobject2/tgobject.remove_toggle_ref.html'; return false;">remove_toggle_ref</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgobject2/tgobject.remove_weak_pointer.html" onClick="opener.location.href = '../lazgobject2/tgobject.remove_weak_pointer.html'; return false;">remove_weak_pointer</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgobject2/tgobject.replace_data.html" onClick="opener.location.href = '../lazgobject2/tgobject.replace_data.html'; return false;">replace_data</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgobject2/tgobject.replace_qdata.html" onClick="opener.location.href = '../lazgobject2/tgobject.replace_qdata.html'; return false;">replace_qdata</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgobject2/tgobject.run_dispose.html" onClick="opener.location.href = '../lazgobject2/tgobject.run_dispose.html'; return false;">run_dispose</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgobject2/tgobject.set_data.html" onClick="opener.location.href = '../lazgobject2/tgobject.set_data.html'; return false;">set_data</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgobject2/tgobject.set_data_full.html" onClick="opener.location.href = '../lazgobject2/tgobject.set_data_full.html'; return false;">set_data_full</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgobject2/tgobject.set_property.html" onClick="opener.location.href = '../lazgobject2/tgobject.set_property.html'; return false;">set_property</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgobject2/tgobject.set_qdata.html" onClick="opener.location.href = '../lazgobject2/tgobject.set_qdata.html'; return false;">set_qdata</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgobject2/tgobject.set_qdata_full.html" onClick="opener.location.href = '../lazgobject2/tgobject.set_qdata_full.html'; return false;">set_qdata_full</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgobject2/tgobject.setv.html" onClick="opener.location.href = '../lazgobject2/tgobject.setv.html'; return false;">setv</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgobject2/tgobject.steal_data.html" onClick="opener.location.href = '../lazgobject2/tgobject.steal_data.html'; return false;">steal_data</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgobject2/tgobject.steal_qdata.html" onClick="opener.location.href = '../lazgobject2/tgobject.steal_qdata.html'; return false;">steal_qdata</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgobject2/tgobject.thaw_notify.html" onClick="opener.location.href = '../lazgobject2/tgobject.thaw_notify.html'; return false;">thaw_notify</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgobject2/tgobject.unref.html" onClick="opener.location.href = '../lazgobject2/tgobject.unref.html'; return false;">unref</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgobject2/tgobject.watch_closure.html" onClick="opener.location.href = '../lazgobject2/tgobject.watch_closure.html'; return false;">watch_closure</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgobject2/tgobject.weak_ref.html" onClick="opener.location.href = '../lazgobject2/tgobject.weak_ref.html'; return false;">weak_ref</a></p></td>
+</tr>
+<tr>
+<td><p>&nbsp;</p></td>
+<td></td>
+<td><p><a href="../lazgobject2/tgobject.weak_unref.html" onClick="opener.location.href = '../lazgobject2/tgobject.weak_unref.html'; return false;">weak_unref</a></p></td>
+</tr>
+</table>
+<br>
+
+<hr>
+
+<i>Generated 2023-11-30 by FPDoc 3.2.2 from the Lazarus Component Library (LCL). See the file <a href="https://gitlab.com/freepascal.org/lazarus/lazarus/-/raw/main/COPYING.modifiedLGPL.txt" target="_blank">COPYING.modifiedLGPL.txt</a> for details about the license.</i>
+</body>
+</html>
