@@ -6,7 +6,7 @@ version: 2.1
 # Permitted usage is detailed in the COPYING file.
 #
 orbs:
-  lazarus: rdipardo/lazarus@2
+  lazarus: rdipardo/lazarus@3
 jobs:
   linux-make-all:
     machine:

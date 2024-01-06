@@ -56,10 +56,10 @@ geany-deps:
 	@./scripts/parse_headers $(GEANY_VERSION_TAG)
 
 clean-deps:
-	git clean -dxf src
+	git clean -dxf src && git --git-dir=geany/.git clean -dxf
 
 clean:
-	-rm -rf lib/$(OUT_DIR)/* example/bin/$(OUT_DIR)/*
+	rm -rf lib/$(OUT_DIR)/* example/bin/$(OUT_DIR)/* gtk3.cfg
 
 lib/$(OUT_DIR):
 	@mkdir -p $@

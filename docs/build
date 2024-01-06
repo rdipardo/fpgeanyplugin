@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+#
+# Generate HTML docs for the fpgeanyplugin package and dependencies.
+#
+# SPDX-FileCopyrightText: (c) 2024 Robert Di Pardo
+# SPDX-License-Identifier: GPL-3.0-or-later
+#
+# Permitted usage is detailed in the COPYING file.
+#
+set -e
+cd "$(dirname "$0")"
+[ ! -d 'html' ] && \
+  git clone --depth=1 -b api git@github.com:rdipardo/fpgeanyplugin.git ./html
+for pkg in 'lcl' 'fpgeanyplugin'; do
+  sed "\
+    s/\${DATE}/$(date +%F)/g;\
+    s/\${PUB_YEAR}/$(date +%Y)/g;\
+    s/\${FPDOC}/FPDoc $(fpdoc --help | awk 'BEGIN{IGNORECASE=1}/version\s+([0-9]\.){2}([0-9])/{print $2}')/" \
+    "$pkg/footer.tmpl" > /tmp/footer.html
+  [ "$pkg" = 'lcl' ] && . ./scaffold.sh $pkg
+  fpdoc --package="$pkg" --project="$pkg/project.xml" --footer=/tmp/footer.html --verbose
+done
+find ./html -maxdepth 1 -type f -iname \*.html -exec sed -i '/\[<a href=\"index-[8-9].html\".*a>\]/d' {} +
+touch ./html/.nojekyll && cp favicon.ico ./html 2>/dev/null
+git --git-dir=./html/.git --work-tree=./html commit -a

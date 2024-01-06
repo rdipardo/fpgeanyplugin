@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fpdoc-descriptions>
+<package name="lcl">
+
+<!--
+  ====================================================================
+    LazGModule2
+  ====================================================================
+-->
+
+<module name="LazGModule2">
+<short></short>
+<descr>
+</descr>
+
+<!-- uses unit Visibility: default -->
+<element name="CTypes">
+<short></short>
+</element>
+
+<!-- uses unit Visibility: default -->
+<element name="LazGLib2">
+<short></short>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="LazGModule2_library">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- enumeration type Visibility: default -->
+<element name="TGModuleFlagsIdx">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TGModuleFlagsIdx.TGModuleFlagsIdxMinValue">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TGModuleFlagsIdx.G_MODULE_BIND_LAZY">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TGModuleFlagsIdx.G_MODULE_BIND_LOCAL">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TGModuleFlagsIdx.TGModuleFlagsIdxMaxValue">
+<short></short>
+</element>
+
+<!-- set type Visibility: default -->
+<element name="TGModuleFlags">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="G_MODULE_BIND_MASK">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PPGModule">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PGModule">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PPGModuleFlags">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PGModuleFlags">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- object Visibility: default -->
+<element name="TGModule">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function Visibility: default -->
+<element name="TGModule.close">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGModule.close.Result">
+<short></short>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="TGModule.make_resident">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function Visibility: default -->
+<element name="TGModule.name">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGModule.name.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="TGModule.symbol">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGModule.symbol.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="TGModule.build_path">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGModule.build_path.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="TGModule.error">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGModule.error.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="TGModule.error_quark">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGModule.error_quark.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="TGModule.open">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGModule.open.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="TGModule.supported">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGModule.supported.Result">
+<short></short>
+</element>
+
+<!-- function type Visibility: default -->
+<element name="TGModuleCheckInit">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGModuleCheckInit.Result">
+<short></short>
+</element>
+
+<!-- procedure type Visibility: default -->
+<element name="TGModuleUnload">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function Visibility: default -->
+<element name="g_module_build_path">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="g_module_build_path.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="g_module_close">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="g_module_close.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="g_module_error">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="g_module_error.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="g_module_error_quark">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="g_module_error_quark.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="g_module_name">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="g_module_name.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="g_module_open">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="g_module_open.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="g_module_supported">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="g_module_supported.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="g_module_symbol">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="g_module_symbol.Result">
+<short></short>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="g_module_make_resident">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+</module> <!-- LazGModule2 -->
+
+</package>
+</fpdoc-descriptions>

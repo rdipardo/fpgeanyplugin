@@ -44,6 +44,7 @@
       </Item2>
     </Files>
     <CompatibilityMode Value="True"/>
+    <LazDoc Paths="docs\fpgeanyplugin\units;docs\lcl\units"/>
     <RequiredPkgs Count="1">
       <Item1>
         <PackageName Value="LCL"/>

@@ -3,18 +3,20 @@ fpgeanyplugin package
 
 |fpc| |cci-build-status|
 
-:WARNING: This package depends on the ``gtk3bindings`` units
-          provided by the LCL's `GTK3 interface`_, which is still
+:WARNING: This package depends on the LCL's `GTK3 interface`_, which is still
           considered alpha quality
 
-.. _GTK3 interface: https://wiki.lazarus.freepascal.org/GTK3_Interface
+.. _GTK3 interface: https://wiki.lazarus.freepascal.org/Roadmap#General_status_of_LCL_interfaces
 
 Usage
 ------
 fpgeanyplugin currently provides two units:
 
-* geanyplugin    - compatible with Geany >= 2.0 (API version 247)
-* geanyplugin240 - compatible with Geany >= 1.38, < 2.0 (API version 240)
++--------------------+--------------------------------------------------------+
+| ``geanyplugin``    | compatible with Geany >= 2.0 (API version 247)         |
++--------------------+--------------------------------------------------------+
+| ``geanyplugin240`` | compatible with Geany >= 1.38, < 2.0 (API version 240) |
++--------------------+--------------------------------------------------------+
 
 Include the package in a shared library project and add the appropriate
 unit to the ``uses`` section. A subset of `Geany's plugin API`_ will be
@@ -55,6 +57,7 @@ Requirements
 ------------
 * lazarus >= 3.0
 * fpc >= 3.2
+* gtk >= 3.24.24
 
 .. |cci-build-status| image:: https://circleci.com/gh/rdipardo/fpgeanyplugin.svg?style=svg
    :alt: CircleCI

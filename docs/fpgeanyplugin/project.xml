@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<docproject>
+  <options>
+    <option name="ostarget" value="Linux"/>
+    <option name="cputarget" value="x86_64"/>
+    <option name="format" value="html"/>
+    <option name="hide-protected" value="true"/>
+    <option name="warn-no-node" value="false"/>
+    <option name="show-private" value="false"/>
+    <option name="stop-on-parser-error" value="true"/>
+    <option name="parse-impl" value="false"/>
+    <option name="dont-trim" value="false"/>
+    <option name="emit-notes" value="false"/>
+  </options>
+  <packages>
+    <package name="fpgeanyplugin" output="html/">
+      <units>
+        <unit file="../src/geanyplugin.pp" options="-dSCI_DISABLE_PROVISIONAL"/>
+        <unit file="../src/geanyplugin240.pp" options="-dSCI_DISABLE_PROVISIONAL"/>
+      </units>
+      <descriptions>
+        <description file="fpgeanyplugin/units/geanyplugin.xml"/>
+        <description file="fpgeanyplugin/units/geanyplugin240.xml"/>
+      </descriptions>
+      <imports>
+        <import file="imports/lcl.xct" prefix="lcl/"/>
+      </imports>
+    </package>
+  </packages>
+</docproject>

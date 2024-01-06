@@ -1,0 +1,4804 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fpdoc-descriptions>
+<package name="lcl">
+
+<!--
+  ====================================================================
+    Lazcairo1
+  ====================================================================
+-->
+
+<module name="Lazcairo1">
+<short></short>
+<descr>
+</descr>
+
+<!-- uses unit Visibility: default -->
+<element name="CTypes">
+<short></short>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="Lazcairo1_library">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- enumeration type Visibility: default -->
+<element name="Tcairo_status_t">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_status_t.Tcairo_status_tMinValue">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_status_t.CAIRO_STATUS_SUCCESS">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_status_t.CAIRO_STATUS_NO_MEMORY">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_status_t.CAIRO_STATUS_INVALID_RESTORE">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_status_t.CAIRO_STATUS_INVALID_POP_GROUP">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_status_t.CAIRO_STATUS_NO_CURRENT_POINT">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_status_t.CAIRO_STATUS_INVALID_MATRIX">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_status_t.CAIRO_STATUS_INVALID_STATUS">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_status_t.CAIRO_STATUS_NULL_POINTER">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_status_t.CAIRO_STATUS_INVALID_STRING">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_status_t.CAIRO_STATUS_INVALID_PATH_DATA">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_status_t.CAIRO_STATUS_READ_ERROR">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_status_t.CAIRO_STATUS_WRITE_ERROR">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_status_t.CAIRO_STATUS_SURFACE_FINISHED">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_status_t.CAIRO_STATUS_SURFACE_TYPE_MISMATCH">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_status_t.CAIRO_STATUS_PATTERN_TYPE_MISMATCH">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_status_t.CAIRO_STATUS_INVALID_CONTENT">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_status_t.CAIRO_STATUS_INVALID_FORMAT">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_status_t.CAIRO_STATUS_INVALID_VISUAL">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_status_t.CAIRO_STATUS_FILE_NOT_FOUND">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_status_t.CAIRO_STATUS_INVALID_DASH">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_status_t.CAIRO_STATUS_INVALID_DSC_COMMENT">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_status_t.CAIRO_STATUS_INVALID_INDEX">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_status_t.CAIRO_STATUS_CLIP_NOT_REPRESENTABLE">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_status_t.CAIRO_STATUS_TEMP_FILE_ERROR">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_status_t.CAIRO_STATUS_INVALID_STRIDE">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_status_t.CAIRO_STATUS_FONT_TYPE_MISMATCH">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_status_t.CAIRO_STATUS_USER_FONT_IMMUTABLE">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_status_t.CAIRO_STATUS_USER_FONT_ERROR">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_status_t.CAIRO_STATUS_NEGATIVE_COUNT">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_status_t.CAIRO_STATUS_INVALID_CLUSTERS">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_status_t.CAIRO_STATUS_INVALID_SLANT">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_status_t.CAIRO_STATUS_INVALID_WEIGHT">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_status_t.CAIRO_STATUS_INVALID_SIZE">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_status_t.CAIRO_STATUS_USER_FONT_NOT_IMPLEMENTED">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_status_t.CAIRO_STATUS_DEVICE_TYPE_MISMATCH">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_status_t.CAIRO_STATUS_DEVICE_ERROR">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_status_t.CAIRO_STATUS_INVALID_MESH_CONSTRUCTION">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_status_t.CAIRO_STATUS_DEVICE_FINISHED">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_status_t.CAIRO_STATUS_JBIG2_GLOBAL_MISSING">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_status_t.Tcairo_status_tMaxValue">
+<short></short>
+</element>
+
+<!-- enumeration type Visibility: default -->
+<element name="Tcairo_content_t">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_content_t.Tcairo_content_tMinValue">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_content_t.CAIRO_CONTENT_COLOR">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_content_t.CAIRO_CONTENT_ALPHA">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_content_t.CAIRO_CONTENT_COLOR_ALPHA">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_content_t.Tcairo_content_tMaxValue">
+<short></short>
+</element>
+
+<!-- enumeration type Visibility: default -->
+<element name="Tcairo_operator_t">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_operator_t.Tcairo_operator_tMinValue">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_operator_t.CAIRO_OPERATOR_CLEAR">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_operator_t.CAIRO_OPERATOR_SOURCE">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_operator_t.CAIRO_OPERATOR_OVER">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_operator_t.CAIRO_OPERATOR_IN">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_operator_t.CAIRO_OPERATOR_OUT">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_operator_t.CAIRO_OPERATOR_ATOP">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_operator_t.CAIRO_OPERATOR_DEST">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_operator_t.CAIRO_OPERATOR_DEST_OVER">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_operator_t.CAIRO_OPERATOR_DEST_IN">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_operator_t.CAIRO_OPERATOR_DEST_OUT">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_operator_t.CAIRO_OPERATOR_DEST_ATOP">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_operator_t.CAIRO_OPERATOR_XOR">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_operator_t.CAIRO_OPERATOR_ADD">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_operator_t.CAIRO_OPERATOR_SATURATE">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_operator_t.CAIRO_OPERATOR_MULTIPLY">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_operator_t.CAIRO_OPERATOR_SCREEN">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_operator_t.CAIRO_OPERATOR_OVERLAY">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_operator_t.CAIRO_OPERATOR_DARKEN">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_operator_t.CAIRO_OPERATOR_LIGHTEN">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_operator_t.CAIRO_OPERATOR_COLOR_DODGE">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_operator_t.CAIRO_OPERATOR_COLOR_BURN">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_operator_t.CAIRO_OPERATOR_HARD_LIGHT">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_operator_t.CAIRO_OPERATOR_SOFT_LIGHT">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_operator_t.CAIRO_OPERATOR_DIFFERENCE">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_operator_t.CAIRO_OPERATOR_EXCLUSION">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_operator_t.CAIRO_OPERATOR_HSL_HUE">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_operator_t.CAIRO_OPERATOR_HSL_SATURATION">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_operator_t.CAIRO_OPERATOR_HSL_COLOR">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_operator_t.CAIRO_OPERATOR_HSL_LUMINOSITY">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_operator_t.Tcairo_operator_tMaxValue">
+<short></short>
+</element>
+
+<!-- enumeration type Visibility: default -->
+<element name="Tcairo_antialias_t">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_antialias_t.Tcairo_antialias_tMinValue">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_antialias_t.CAIRO_ANTIALIAS_DEFAULT">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_antialias_t.CAIRO_ANTIALIAS_NONE">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_antialias_t.CAIRO_ANTIALIAS_GRAY">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_antialias_t.CAIRO_ANTIALIAS_SUBPIXEL">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_antialias_t.CAIRO_ANTIALIAS_FAST">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_antialias_t.CAIRO_ANTIALIAS_GOOD">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_antialias_t.CAIRO_ANTIALIAS_BEST">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_antialias_t.Tcairo_antialias_tMaxValue">
+<short></short>
+</element>
+
+<!-- enumeration type Visibility: default -->
+<element name="Tcairo_fill_rule_t">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_fill_rule_t.Tcairo_fill_rule_tMinValue">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_fill_rule_t.CAIRO_FILL_RULE_WINDING">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_fill_rule_t.CAIRO_FILL_RULE_EVEN_ODD">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_fill_rule_t.Tcairo_fill_rule_tMaxValue">
+<short></short>
+</element>
+
+<!-- enumeration type Visibility: default -->
+<element name="Tcairo_line_cap_t">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_line_cap_t.Tcairo_line_cap_tMinValue">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_line_cap_t.CAIRO_LINE_CAP_BUTT">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_line_cap_t.CAIRO_LINE_CAP_ROUND">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_line_cap_t.CAIRO_LINE_CAP_SQUARE">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_line_cap_t.Tcairo_line_cap_tMaxValue">
+<short></short>
+</element>
+
+<!-- enumeration type Visibility: default -->
+<element name="Tcairo_line_join_t">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_line_join_t.Tcairo_line_join_tMinValue">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_line_join_t.CAIRO_LINE_JOIN_MITER">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_line_join_t.CAIRO_LINE_JOIN_ROUND">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_line_join_t.CAIRO_LINE_JOIN_BEVEL">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_line_join_t.Tcairo_line_join_tMaxValue">
+<short></short>
+</element>
+
+<!-- enumeration type Visibility: default -->
+<element name="Tcairo_text_cluster_flags_t">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_text_cluster_flags_t.Tcairo_text_cluster_flags_tMinValue">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_text_cluster_flags_t.CAIRO_TEXT_CLUSTER_FLAG_BACKWARD">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_text_cluster_flags_t.Tcairo_text_cluster_flags_tMaxValue">
+<short></short>
+</element>
+
+<!-- enumeration type Visibility: default -->
+<element name="Tcairo_font_slant_t">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_font_slant_t.Tcairo_font_slant_tMinValue">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_font_slant_t.CAIRO_FONT_SLANT_NORMAL">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_font_slant_t.CAIRO_FONT_SLANT_ITALIC">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_font_slant_t.CAIRO_FONT_SLANT_OBLIQUE">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_font_slant_t.Tcairo_font_slant_tMaxValue">
+<short></short>
+</element>
+
+<!-- enumeration type Visibility: default -->
+<element name="Tcairo_font_weight_t">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_font_weight_t.Tcairo_font_weight_tMinValue">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_font_weight_t.CAIRO_FONT_WEIGHT_NORMAL">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_font_weight_t.CAIRO_FONT_WEIGHT_BOLD">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_font_weight_t.Tcairo_font_weight_tMaxValue">
+<short></short>
+</element>
+
+<!-- enumeration type Visibility: default -->
+<element name="Tcairo_subpixel_order_t">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_subpixel_order_t.Tcairo_subpixel_order_tMinValue">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_subpixel_order_t.CAIRO_SUBPIXEL_ORDER_DEFAULT">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_subpixel_order_t.CAIRO_SUBPIXEL_ORDER_RGB">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_subpixel_order_t.CAIRO_SUBPIXEL_ORDER_BGR">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_subpixel_order_t.CAIRO_SUBPIXEL_ORDER_VRGB">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_subpixel_order_t.CAIRO_SUBPIXEL_ORDER_VBGR">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_subpixel_order_t.Tcairo_subpixel_order_tMaxValue">
+<short></short>
+</element>
+
+<!-- enumeration type Visibility: default -->
+<element name="Tcairo_hint_style_t">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_hint_style_t.Tcairo_hint_style_tMinValue">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_hint_style_t.CAIRO_HINT_STYLE_DEFAULT">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_hint_style_t.CAIRO_HINT_STYLE_NONE">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_hint_style_t.CAIRO_HINT_STYLE_SLIGHT">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_hint_style_t.CAIRO_HINT_STYLE_MEDIUM">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_hint_style_t.CAIRO_HINT_STYLE_FULL">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_hint_style_t.Tcairo_hint_style_tMaxValue">
+<short></short>
+</element>
+
+<!-- enumeration type Visibility: default -->
+<element name="Tcairo_hint_metrics_t">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_hint_metrics_t.Tcairo_hint_metrics_tMinValue">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_hint_metrics_t.CAIRO_HINT_METRICS_DEFAULT">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_hint_metrics_t.CAIRO_HINT_METRICS_OFF">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_hint_metrics_t.CAIRO_HINT_METRICS_ON">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_hint_metrics_t.Tcairo_hint_metrics_tMaxValue">
+<short></short>
+</element>
+
+<!-- enumeration type Visibility: default -->
+<element name="Tcairo_font_type_t">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_font_type_t.Tcairo_font_type_tMinValue">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_font_type_t.CAIRO_FONT_TYPE_TOY">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_font_type_t.CAIRO_FONT_TYPE_FT">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_font_type_t.CAIRO_FONT_TYPE_WIN32">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_font_type_t.CAIRO_FONT_TYPE_QUARTZ">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_font_type_t.CAIRO_FONT_TYPE_USER">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_font_type_t.Tcairo_font_type_tMaxValue">
+<short></short>
+</element>
+
+<!-- enumeration type Visibility: default -->
+<element name="Tcairo_path_data_type_t">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_path_data_type_t.Tcairo_path_data_type_tMinValue">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_path_data_type_t.CAIRO_PATH_MOVE_TO">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_path_data_type_t.CAIRO_PATH_LINE_TO">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_path_data_type_t.CAIRO_PATH_CURVE_TO">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_path_data_type_t.CAIRO_PATH_CLOSE_PATH">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_path_data_type_t.Tcairo_path_data_type_tMaxValue">
+<short></short>
+</element>
+
+<!-- enumeration type Visibility: default -->
+<element name="Tcairo_device_type_t">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_device_type_t.Tcairo_device_type_tMinValue">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_device_type_t.CAIRO_DEVICE_TYPE_INVALID">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_device_type_t.CAIRO_DEVICE_TYPE_DRM">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_device_type_t.CAIRO_DEVICE_TYPE_GL">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_device_type_t.CAIRO_DEVICE_TYPE_SCRIPT">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_device_type_t.CAIRO_DEVICE_TYPE_XCB">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_device_type_t.CAIRO_DEVICE_TYPE_XLIB">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_device_type_t.CAIRO_DEVICE_TYPE_XML">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_device_type_t.CAIRO_DEVICE_TYPE_COGL">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_device_type_t.CAIRO_DEVICE_TYPE_WIN32">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_device_type_t.Tcairo_device_type_tMaxValue">
+<short></short>
+</element>
+
+<!-- enumeration type Visibility: default -->
+<element name="Tcairo_surface_type_t">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_surface_type_t.Tcairo_surface_type_tMinValue">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_surface_type_t.CAIRO_SURFACE_TYPE_IMAGE">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_surface_type_t.CAIRO_SURFACE_TYPE_PDF">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_surface_type_t.CAIRO_SURFACE_TYPE_PS">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_surface_type_t.CAIRO_SURFACE_TYPE_XLIB">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_surface_type_t.CAIRO_SURFACE_TYPE_XCB">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_surface_type_t.CAIRO_SURFACE_TYPE_GLITZ">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_surface_type_t.CAIRO_SURFACE_TYPE_QUARTZ">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_surface_type_t.CAIRO_SURFACE_TYPE_WIN32">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_surface_type_t.CAIRO_SURFACE_TYPE_BEOS">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_surface_type_t.CAIRO_SURFACE_TYPE_DIRECTFB">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_surface_type_t.CAIRO_SURFACE_TYPE_SVG">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_surface_type_t.CAIRO_SURFACE_TYPE_OS2">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_surface_type_t.CAIRO_SURFACE_TYPE_WIN32_PRINTING">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_surface_type_t.CAIRO_SURFACE_TYPE_QUARTZ_IMAGE">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_surface_type_t.CAIRO_SURFACE_TYPE_SCRIPT">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_surface_type_t.CAIRO_SURFACE_TYPE_QT">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_surface_type_t.CAIRO_SURFACE_TYPE_RECORDING">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_surface_type_t.CAIRO_SURFACE_TYPE_VG">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_surface_type_t.CAIRO_SURFACE_TYPE_GL">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_surface_type_t.CAIRO_SURFACE_TYPE_DRM">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_surface_type_t.CAIRO_SURFACE_TYPE_TEE">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_surface_type_t.CAIRO_SURFACE_TYPE_XML">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_surface_type_t.CAIRO_SURFACE_TYPE_SKIA">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_surface_type_t.CAIRO_SURFACE_TYPE_SUBSURFACE">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_surface_type_t.CAIRO_SURFACE_TYPE_COGL">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_surface_type_t.Tcairo_surface_type_tMaxValue">
+<short></short>
+</element>
+
+<!-- enumeration type Visibility: default -->
+<element name="Tcairo_format_t">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_format_t.Tcairo_format_tMinValue">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_format_t.CAIRO_FORMAT_INVALID">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_format_t.CAIRO_FORMAT_ARGB32">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_format_t.CAIRO_FORMAT_RGB24">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_format_t.CAIRO_FORMAT_A8">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_format_t.CAIRO_FORMAT_A1">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_format_t.CAIRO_FORMAT_RGB16_565">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_format_t.CAIRO_FORMAT_RGB30">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_format_t.Tcairo_format_tMaxValue">
+<short></short>
+</element>
+
+<!-- enumeration type Visibility: default -->
+<element name="Tcairo_pattern_type_t">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_pattern_type_t.Tcairo_pattern_type_tMinValue">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_pattern_type_t.CAIRO_PATTERN_TYPE_SOLID">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_pattern_type_t.CAIRO_PATTERN_TYPE_SURFACE">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_pattern_type_t.CAIRO_PATTERN_TYPE_LINEAR">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_pattern_type_t.CAIRO_PATTERN_TYPE_RADIAL">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_pattern_type_t.CAIRO_PATTERN_TYPE_MESH">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_pattern_type_t.CAIRO_PATTERN_TYPE_RASTER_SOURCE">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_pattern_type_t.Tcairo_pattern_type_tMaxValue">
+<short></short>
+</element>
+
+<!-- enumeration type Visibility: default -->
+<element name="Tcairo_extend_t">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_extend_t.Tcairo_extend_tMinValue">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_extend_t.CAIRO_EXTEND_NONE">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_extend_t.CAIRO_EXTEND_REPEAT">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_extend_t.CAIRO_EXTEND_REFLECT">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_extend_t.CAIRO_EXTEND_PAD">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_extend_t.Tcairo_extend_tMaxValue">
+<short></short>
+</element>
+
+<!-- enumeration type Visibility: default -->
+<element name="Tcairo_filter_t">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_filter_t.Tcairo_filter_tMinValue">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_filter_t.CAIRO_FILTER_FAST">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_filter_t.CAIRO_FILTER_GOOD">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_filter_t.CAIRO_FILTER_BEST">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_filter_t.CAIRO_FILTER_NEAREST">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_filter_t.CAIRO_FILTER_BILINEAR">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_filter_t.CAIRO_FILTER_GAUSSIAN">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_filter_t.Tcairo_filter_tMaxValue">
+<short></short>
+</element>
+
+<!-- enumeration type Visibility: default -->
+<element name="Tcairo_region_overlap_t">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_region_overlap_t.Tcairo_region_overlap_tMinValue">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_region_overlap_t.CAIRO_REGION_OVERLAP_IN">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_region_overlap_t.CAIRO_REGION_OVERLAP_OUT">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_region_overlap_t.CAIRO_REGION_OVERLAP_PART">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="Tcairo_region_overlap_t.Tcairo_region_overlap_tMaxValue">
+<short></short>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PPcairo_t">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="Pcairo_t">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- object Visibility: default -->
+<element name="Tcairo_t">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PPcairo_device_t">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="Pcairo_device_t">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- object Visibility: default -->
+<element name="Tcairo_device_t">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PPcairo_surface_t">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="Pcairo_surface_t">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- object Visibility: default -->
+<element name="Tcairo_surface_t">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PPcairo_matrix_t">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="Pcairo_matrix_t">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- record type Visibility: default -->
+<element name="Tcairo_matrix_t">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: default -->
+<element name="Tcairo_matrix_t.xx">
+<short></short>
+</element>
+
+<!-- variable Visibility: default -->
+<element name="Tcairo_matrix_t.yx">
+<short></short>
+</element>
+
+<!-- variable Visibility: default -->
+<element name="Tcairo_matrix_t.xy">
+<short></short>
+</element>
+
+<!-- variable Visibility: default -->
+<element name="Tcairo_matrix_t.yy">
+<short></short>
+</element>
+
+<!-- variable Visibility: default -->
+<element name="Tcairo_matrix_t.x0">
+<short></short>
+</element>
+
+<!-- variable Visibility: default -->
+<element name="Tcairo_matrix_t.y0">
+<short></short>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PPcairo_pattern_t">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="Pcairo_pattern_t">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- object Visibility: default -->
+<element name="Tcairo_pattern_t">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PPcairo_region_t">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="Pcairo_region_t">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- object Visibility: default -->
+<element name="Tcairo_region_t">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PPcairo_status_t">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="Pcairo_status_t">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PPcairo_content_t">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="Pcairo_content_t">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PPcairo_operator_t">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="Pcairo_operator_t">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PPcairo_antialias_t">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="Pcairo_antialias_t">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PPcairo_fill_rule_t">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="Pcairo_fill_rule_t">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PPcairo_line_cap_t">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="Pcairo_line_cap_t">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PPcairo_line_join_t">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="Pcairo_line_join_t">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PPcairo_text_cluster_flags_t">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="Pcairo_text_cluster_flags_t">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PPcairo_font_slant_t">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="Pcairo_font_slant_t">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PPcairo_font_weight_t">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="Pcairo_font_weight_t">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PPcairo_subpixel_order_t">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="Pcairo_subpixel_order_t">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PPcairo_hint_style_t">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="Pcairo_hint_style_t">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PPcairo_hint_metrics_t">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="Pcairo_hint_metrics_t">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PPcairo_font_options_t">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="Pcairo_font_options_t">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- object Visibility: default -->
+<element name="Tcairo_font_options_t">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PPcairo_font_type_t">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="Pcairo_font_type_t">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PPcairo_path_data_type_t">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="Pcairo_path_data_type_t">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PPcairo_device_type_t">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="Pcairo_device_type_t">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PPcairo_surface_type_t">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="Pcairo_surface_type_t">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PPcairo_format_t">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="Pcairo_format_t">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PPcairo_pattern_type_t">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="Pcairo_pattern_type_t">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PPcairo_extend_t">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="Pcairo_extend_t">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PPcairo_filter_t">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="Pcairo_filter_t">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PPcairo_region_overlap_t">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="Pcairo_region_overlap_t">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PPcairo_font_face_t">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="Pcairo_font_face_t">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- object Visibility: default -->
+<element name="Tcairo_font_face_t">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PPcairo_scaled_font_t">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="Pcairo_scaled_font_t">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- object Visibility: default -->
+<element name="Tcairo_scaled_font_t">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PPcairo_path_t">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="Pcairo_path_t">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- record type Visibility: default -->
+<element name="Tcairo_path_t">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PPcairo_rectangle_t">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="Pcairo_rectangle_t">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="Pcdouble">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- object Visibility: default -->
+<element name="Tcairo_rectangle_t">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: default -->
+<element name="Tcairo_rectangle_t.x">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: default -->
+<element name="Tcairo_rectangle_t.y">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: default -->
+<element name="Tcairo_rectangle_t.width">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: default -->
+<element name="Tcairo_rectangle_t.height">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PPcairo_rectangle_int_t">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="Pcairo_rectangle_int_t">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="Pcint">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- object Visibility: default -->
+<element name="Tcairo_rectangle_int_t">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: default -->
+<element name="Tcairo_rectangle_int_t.x">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: default -->
+<element name="Tcairo_rectangle_int_t.y">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: default -->
+<element name="Tcairo_rectangle_int_t.width">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: default -->
+<element name="Tcairo_rectangle_int_t.height">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_gobject_context_get_type">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_gobject_context_get_type.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_gobject_device_get_type">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_gobject_device_get_type.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_gobject_font_face_get_type">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_gobject_font_face_get_type.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_gobject_font_options_get_type">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_gobject_font_options_get_type.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_gobject_pattern_get_type">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_gobject_pattern_get_type.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_gobject_rectangle_get_type">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_gobject_rectangle_get_type.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_gobject_rectangle_int_get_type">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_gobject_rectangle_int_get_type.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_gobject_region_get_type">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_gobject_region_get_type.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_gobject_scaled_font_get_type">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_gobject_scaled_font_get_type.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_gobject_surface_get_type">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_gobject_surface_get_type.Result">
+<short></short>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_image_surface_create">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="LIB_CAIRO">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_version">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_version.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_version_string">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_version_string.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_create">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_create.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_reference">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_reference.Result">
+<short></short>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_destroy">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_get_reference_count">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_get_reference_count.Result">
+<short></short>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_save">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_restore">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_push_group">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_push_group_with_content">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_pop_group">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_pop_group.Result">
+<short></short>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_pop_group_to_source">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_set_operator">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_set_source">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_set_source_rgb">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_set_source_rgba">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_set_source_surface">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_set_tolerance">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_set_antialias">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_set_fill_rule">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_set_line_width">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_set_line_cap">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_set_line_join">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_set_dash">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_set_miter_limit">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_translate">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_scale">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_rotate">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_transform">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_set_matrix">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_identity_matrix">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_user_to_device">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_user_to_device_distance">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_device_to_user">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_device_to_user_distance">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_new_path">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_move_to">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_new_sub_path">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_line_to">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_curve_to">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_arc">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_arc_negative">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_rel_move_to">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_rel_line_to">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_rel_curve_to">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_rectangle">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_close_path">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_paint">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_paint_with_alpha">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_mask">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_mask_surface">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_stroke">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_stroke_preserve">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_fill">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_fill_preserve">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_copy_page">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_show_page">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_stroke_extents">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_fill_extents">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_reset_clip">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_clip">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_clip_preserve">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_clip_extents">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_font_options_create">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_font_options_create.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_font_options_copy">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_font_options_copy.Result">
+<short></short>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_font_options_destroy">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_font_options_status">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_font_options_status.Result">
+<short></short>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_font_options_merge">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_font_options_hash">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_font_options_hash.Result">
+<short></short>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_font_options_set_antialias">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_font_options_get_antialias">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_font_options_get_antialias.Result">
+<short></short>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_font_options_set_subpixel_order">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_font_options_get_subpixel_order">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_font_options_get_subpixel_order.Result">
+<short></short>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_font_options_set_hint_style">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_font_options_get_hint_style">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_font_options_get_hint_style.Result">
+<short></short>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_font_options_set_hint_metrics">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_font_options_get_hint_metrics">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_font_options_get_hint_metrics.Result">
+<short></short>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_select_font_face">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_set_font_size">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_set_font_matrix">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_get_font_matrix">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_set_font_options">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_get_font_options">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_set_font_face">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_get_font_face">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_get_font_face.Result">
+<short></short>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_set_scaled_font">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_get_scaled_font">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_get_scaled_font.Result">
+<short></short>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_show_text">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_text_path">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_font_face_reference">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_font_face_reference.Result">
+<short></short>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_font_face_destroy">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_font_face_get_reference_count">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_font_face_get_reference_count.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_font_face_status">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_font_face_status.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_font_face_get_type">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_font_face_get_type.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_scaled_font_create">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_scaled_font_create.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_scaled_font_reference">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_scaled_font_reference.Result">
+<short></short>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_scaled_font_destroy">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_scaled_font_get_reference_count">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_scaled_font_get_reference_count.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_scaled_font_status">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_scaled_font_status.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_scaled_font_get_type">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_scaled_font_get_type.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_scaled_font_get_font_face">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_scaled_font_get_font_face.Result">
+<short></short>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_scaled_font_get_font_matrix">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_scaled_font_get_ctm">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_scaled_font_get_font_options">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_get_operator">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_get_operator.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_get_source">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_get_source.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_get_tolerance">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_get_tolerance.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_get_antialias">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_get_antialias.Result">
+<short></short>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_get_current_point">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_get_fill_rule">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_get_fill_rule.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_get_line_width">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_get_line_width.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_get_line_cap">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_get_line_cap.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_get_line_join">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_get_line_join.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_get_miter_limit">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_get_miter_limit.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_get_dash_count">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_get_dash_count.Result">
+<short></short>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_get_dash">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_get_matrix">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_get_target">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_get_target.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_get_group_target">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_get_group_target.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_copy_path">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_copy_path.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_copy_path_flat">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_copy_path_flat.Result">
+<short></short>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_append_path">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_path_destroy">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_status">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_status.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_status_to_string">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_status_to_string.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_surface_create_similar">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_surface_create_similar.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_surface_create_for_rectangle">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_surface_create_for_rectangle.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_surface_reference">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_surface_reference.Result">
+<short></short>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_surface_finish">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_surface_destroy">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_surface_get_reference_count">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_surface_get_reference_count.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_surface_status">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_surface_status.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_surface_get_type">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_surface_get_type.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_surface_get_content">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_surface_get_content.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_surface_write_to_png">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_surface_write_to_png.Result">
+<short></short>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_surface_get_font_options">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_surface_flush">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_surface_mark_dirty">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_surface_mark_dirty_rectangle">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_surface_set_device_offset">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_surface_get_device_offset">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_surface_set_fallback_resolution">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_surface_get_device">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_surface_get_device.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_device_get_type">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_device_get_type.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_format_stride_for_width">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_format_stride_for_width.Result">
+<short></short>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_image_surface_create.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_image_surface_create_for_data">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_image_surface_create_for_data.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_image_surface_get_data">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_image_surface_get_data.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_image_surface_get_format">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_image_surface_get_format.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_image_surface_get_width">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_image_surface_get_width.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_image_surface_get_height">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_image_surface_get_height.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_image_surface_get_stride">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_image_surface_get_stride.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_image_surface_create_from_png">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_image_surface_create_from_png.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_pattern_create_rgb">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_pattern_create_rgb.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_pattern_create_rgba">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_pattern_create_rgba.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_pattern_create_for_surface">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_pattern_create_for_surface.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_pattern_create_linear">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_pattern_create_linear.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_pattern_create_radial">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_pattern_create_radial.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_pattern_reference">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_pattern_reference.Result">
+<short></short>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_pattern_destroy">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_pattern_get_reference_count">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_pattern_get_reference_count.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_pattern_status">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_pattern_status.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_pattern_get_type">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_pattern_get_type.Result">
+<short></short>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_pattern_add_color_stop_rgb">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_pattern_add_color_stop_rgba">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_pattern_set_matrix">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_pattern_get_matrix">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_pattern_set_extend">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_pattern_get_extend">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_pattern_get_extend.Result">
+<short></short>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_pattern_set_filter">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_pattern_get_filter">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_pattern_get_filter.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_pattern_get_rgba">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_pattern_get_rgba.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_pattern_get_surface">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_pattern_get_surface.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_pattern_get_color_stop_rgba">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_pattern_get_color_stop_rgba.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_pattern_get_color_stop_count">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_pattern_get_color_stop_count.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_pattern_get_linear_points">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_pattern_get_linear_points.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_pattern_get_radial_circles">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_pattern_get_radial_circles.Result">
+<short></short>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_matrix_init">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_matrix_init_identity">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_matrix_init_translate">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_matrix_init_scale">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_matrix_init_rotate">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_matrix_translate">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_matrix_scale">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_matrix_rotate">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_matrix_invert">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_matrix_invert.Result">
+<short></short>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_matrix_multiply">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_matrix_transform_distance">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_matrix_transform_point">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_pdf_surface_create">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_pdf_surface_create.Result">
+<short></short>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_pdf_surface_set_size">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_ps_surface_create">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_ps_surface_create.Result">
+<short></short>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_ps_surface_set_size">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_ps_surface_dsc_comment">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_ps_surface_dsc_begin_setup">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_ps_surface_dsc_begin_page_setup">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_svg_surface_create">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_svg_surface_create.Result">
+<short></short>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_debug_reset_static_data">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_region_create">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_region_create.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_region_create_rectangle">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_region_create_rectangle.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_region_create_rectangles">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_region_create_rectangles.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_region_copy">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_region_copy.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_region_reference">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_region_reference.Result">
+<short></short>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_region_destroy">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_region_status">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_region_status.Result">
+<short></short>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_region_get_extents">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_region_num_rectangles">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_region_num_rectangles.Result">
+<short></short>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_region_get_rectangle">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_region_is_empty">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_region_is_empty.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_region_contains_point">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_region_contains_point.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_region_contains_rectangle">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_region_contains_rectangle.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_region_equal">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_region_equal.Result">
+<short></short>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="cairo_region_translate">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_region_intersect">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_region_intersect.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_region_intersect_rectangle">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_region_intersect_rectangle.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_region_subtract">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_region_subtract.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_region_subtract_rectangle">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_region_subtract_rectangle.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_region_union">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_region_union.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_region_union_rectangle">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_region_union_rectangle.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_region_xor">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_region_xor.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="cairo_region_xor_rectangle">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="cairo_region_xor_rectangle.Result">
+<short></short>
+</element>
+
+</module> <!-- Lazcairo1 -->
+
+</package>
+</fpdoc-descriptions>

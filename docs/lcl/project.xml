@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<docproject>
+  <options>
+    <option name="ostarget" value="Linux"/>
+    <option name="cputarget" value="x86_64"/>
+    <option name="format" value="html"/>
+    <option name="hide-protected" value="true"/>
+    <option name="warn-no-node" value="false"/>
+    <option name="show-private" value="false"/>
+    <option name="stop-on-parser-error" value="true"/>
+    <option name="parse-impl" value="false"/>
+    <option name="dont-trim" value="false"/>
+    <option name="emit-notes" value="false"/>
+  </options>
+  <packages>
+    <package name="lcl" output="html/lcl/" content="imports/lcl.xct">
+      <units>
+        <unit file="/usr/share/lazarus/3.0.0/lcl/interfaces/gtk3/gtk3bindings/lazglib2.pas" options="-dFPGEANY_DOCS"/>
+        <unit file="/usr/share/lazarus/3.0.0/lcl/interfaces/gtk3/gtk3bindings/lazgobject2.pas" options=""/>
+        <unit file="/usr/share/lazarus/3.0.0/lcl/interfaces/gtk3/gtk3bindings/lazgio2.pas" options=""/>
+        <unit file="/usr/share/lazarus/3.0.0/lcl/interfaces/gtk3/gtk3bindings/lazgdk3.pas" options=""/>
+        <unit file="/usr/share/lazarus/3.0.0/lcl/interfaces/gtk3/gtk3bindings/lazgtk3.pas" options=""/>
+        <unit file="/usr/share/lazarus/3.0.0/lcl/interfaces/gtk3/gtk3bindings/lazatk1.pas" options=""/>
+        <unit file="/usr/share/lazarus/3.0.0/lcl/interfaces/gtk3/gtk3bindings/lazcairo1.pas" options=""/>
+        <unit file="/usr/share/lazarus/3.0.0/lcl/interfaces/gtk3/gtk3bindings/lazpango1.pas" options=""/>
+        <unit file="/usr/share/lazarus/3.0.0/lcl/interfaces/gtk3/gtk3bindings/lazgmodule2.pas" options=""/>
+        <unit file="/usr/share/lazarus/3.0.0/lcl/interfaces/gtk3/gtk3bindings/lazgdkpixbuf2.pas" options=""/>
+        <unit file="/usr/share/lazarus/3.0.0/lcl/interfaces/gtk3/gtk3bindings/lazharfbuzz0.pas" options=""/>
+      </units>
+      <descriptions>
+        <description file="lcl/units/lazglib2.xml"/>
+        <description file="lcl/units/lazgobject2.xml"/>
+        <description file="lcl/units/lazgio2.xml"/>
+        <description file="lcl/units/lazgdk3.xml"/>
+        <description file="lcl/units/lazgtk3.xml"/>
+        <description file="lcl/units/lazatk1.xml"/>
+        <description file="lcl/units/lazcairo1.xml"/>
+        <description file="lcl/units/lazpango1.xml"/>
+        <description file="lcl/units/lazgmodule2.xml"/>
+        <description file="lcl/units/lazgdkpixbuf2.xml"/>
+        <description file="lcl/units/lazharfbuzz0.xml"/>
+      </descriptions>
+      <imports/>
+    </package>
+  </packages>
+</docproject>

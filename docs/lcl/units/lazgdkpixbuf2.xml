@@ -1,0 +1,4418 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fpdoc-descriptions>
+<package name="lcl">
+
+<!--
+  ====================================================================
+    LazGdkPixbuf2
+  ====================================================================
+-->
+
+<module name="LazGdkPixbuf2">
+<short></short>
+<descr>
+</descr>
+
+<!-- uses unit Visibility: default -->
+<element name="CTypes">
+<short></short>
+</element>
+
+<!-- uses unit Visibility: default -->
+<element name="LazGModule2">
+<short></short>
+</element>
+
+<!-- uses unit Visibility: default -->
+<element name="LazGio2">
+<short></short>
+</element>
+
+<!-- uses unit Visibility: default -->
+<element name="LazGLib2">
+<short></short>
+</element>
+
+<!-- uses unit Visibility: default -->
+<element name="LazGObject2">
+<short></short>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="LazGdkPixbuf2_library">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="GDK_PIXBUF_MAJOR">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="GDK_PIXBUF_MICRO">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="GDK_PIXBUF_MINOR">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="GDK_PIXBUF_VERSION">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- enumeration type Visibility: default -->
+<element name="TGdkColorspace">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TGdkColorspace.TGdkColorspaceMinValue">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TGdkColorspace.GDK_COLORSPACE_RGB">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TGdkColorspace.TGdkColorspaceMaxValue">
+<short></short>
+</element>
+
+<!-- enumeration type Visibility: default -->
+<element name="TGdkInterpType">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TGdkInterpType.TGdkInterpTypeMinValue">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TGdkInterpType.GDK_INTERP_NEAREST">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TGdkInterpType.GDK_INTERP_TILES">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TGdkInterpType.GDK_INTERP_BILINEAR">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TGdkInterpType.GDK_INTERP_HYPER">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TGdkInterpType.TGdkInterpTypeMaxValue">
+<short></short>
+</element>
+
+<!-- enumeration type Visibility: default -->
+<element name="TGdkPixbufRotation">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TGdkPixbufRotation.TGdkPixbufRotationMinValue">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TGdkPixbufRotation.GDK_PIXBUF_ROTATE_NONE">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TGdkPixbufRotation.GDK_PIXBUF_ROTATE_COUNTERCLOCKWISE">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TGdkPixbufRotation.GDK_PIXBUF_ROTATE_UPSIDEDOWN">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TGdkPixbufRotation.GDK_PIXBUF_ROTATE_CLOCKWISE">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TGdkPixbufRotation.TGdkPixbufRotationMaxValue">
+<short></short>
+</element>
+
+<!-- enumeration type Visibility: default -->
+<element name="TGdkPixbufError">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TGdkPixbufError.TGdkPixbufErrorMinValue">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TGdkPixbufError.GDK_PIXBUF_ERROR_CORRUPT_IMAGE">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TGdkPixbufError.GDK_PIXBUF_ERROR_INSUFFICIENT_MEMORY">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TGdkPixbufError.GDK_PIXBUF_ERROR_BAD_OPTION">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TGdkPixbufError.GDK_PIXBUF_ERROR_UNKNOWN_TYPE">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TGdkPixbufError.GDK_PIXBUF_ERROR_UNSUPPORTED_OPERATION">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TGdkPixbufError.GDK_PIXBUF_ERROR_FAILED">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TGdkPixbufError.GDK_PIXBUF_ERROR_INCOMPLETE_ANIMATION">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TGdkPixbufError.TGdkPixbufErrorMaxValue">
+<short></short>
+</element>
+
+<!-- enumeration type Visibility: default -->
+<element name="TGdkPixbufFormatFlagsIdx">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TGdkPixbufFormatFlagsIdx.TGdkPixbufFormatFlagsIdxMinValue">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TGdkPixbufFormatFlagsIdx.GDK_PIXBUF_FORMAT_WRITABLE">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TGdkPixbufFormatFlagsIdx.GDK_PIXBUF_FORMAT_SCALABLE">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TGdkPixbufFormatFlagsIdx.GDK_PIXBUF_FORMAT_THREADSAFE">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TGdkPixbufFormatFlagsIdx.TGdkPixbufFormatFlagsIdxMaxValue">
+<short></short>
+</element>
+
+<!-- set type Visibility: default -->
+<element name="TGdkPixbufFormatFlags">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PPGdkColorspace">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PGdkColorspace">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PPGdkInterpType">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PGdkInterpType">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PPGdkPixbuf">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PGdkPixbuf">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PPGdkPixbufDestroyNotify">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PGdkPixbufDestroyNotify">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure type Visibility: default -->
+<element name="TGdkPixbufDestroyNotify">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PPGdkPixbufFormat">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PGdkPixbufFormat">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PPGdkPixbufRotation">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PGdkPixbufRotation">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PPGdkPixbufSaveFunc">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PGdkPixbufSaveFunc">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function type Visibility: default -->
+<element name="TGdkPixbufSaveFunc">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGdkPixbufSaveFunc.Result">
+<short></short>
+</element>
+
+<!-- object Visibility: default -->
+<element name="TGdkPixbuf">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function Visibility: default -->
+<element name="TGdkPixbuf.new">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGdkPixbuf.new.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="TGdkPixbuf.new_from_bytes">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGdkPixbuf.new_from_bytes.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="TGdkPixbuf.new_from_data">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGdkPixbuf.new_from_data.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="TGdkPixbuf.new_from_file">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGdkPixbuf.new_from_file.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="TGdkPixbuf.new_from_file_at_scale">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGdkPixbuf.new_from_file_at_scale.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="TGdkPixbuf.new_from_file_at_size">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGdkPixbuf.new_from_file_at_size.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="TGdkPixbuf.new_from_resource">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGdkPixbuf.new_from_resource.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="TGdkPixbuf.new_from_resource_at_scale">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGdkPixbuf.new_from_resource_at_scale.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="TGdkPixbuf.new_from_stream">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGdkPixbuf.new_from_stream.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="TGdkPixbuf.new_from_stream_at_scale">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGdkPixbuf.new_from_stream_at_scale.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="TGdkPixbuf.new_from_stream_finish">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGdkPixbuf.new_from_stream_finish.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="TGdkPixbuf.new_from_xpm_data">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGdkPixbuf.new_from_xpm_data.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="TGdkPixbuf.calculate_rowstride">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGdkPixbuf.calculate_rowstride.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="TGdkPixbuf.get_file_info">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGdkPixbuf.get_file_info.Result">
+<short></short>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="TGdkPixbuf.get_file_info_async">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function Visibility: default -->
+<element name="TGdkPixbuf.get_file_info_finish">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGdkPixbuf.get_file_info_finish.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="TGdkPixbuf.get_formats">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGdkPixbuf.get_formats.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="TGdkPixbuf.init_modules">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGdkPixbuf.init_modules.Result">
+<short></short>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="TGdkPixbuf.new_from_stream_async">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="TGdkPixbuf.new_from_stream_at_scale_async">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function Visibility: default -->
+<element name="TGdkPixbuf.save_to_stream_finish">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGdkPixbuf.save_to_stream_finish.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="TGdkPixbuf.add_alpha">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGdkPixbuf.add_alpha.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="TGdkPixbuf.apply_embedded_orientation">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGdkPixbuf.apply_embedded_orientation.Result">
+<short></short>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="TGdkPixbuf.composite">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="TGdkPixbuf.composite_color">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function Visibility: default -->
+<element name="TGdkPixbuf.composite_color_simple">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGdkPixbuf.composite_color_simple.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="TGdkPixbuf.copy">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGdkPixbuf.copy.Result">
+<short></short>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="TGdkPixbuf.copy_area">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function Visibility: default -->
+<element name="TGdkPixbuf.copy_options">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGdkPixbuf.copy_options.Result">
+<short></short>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="TGdkPixbuf.fill">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function Visibility: default -->
+<element name="TGdkPixbuf.flip">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGdkPixbuf.flip.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="TGdkPixbuf.get_bits_per_sample">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGdkPixbuf.get_bits_per_sample.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="TGdkPixbuf.get_byte_length">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGdkPixbuf.get_byte_length.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="TGdkPixbuf.get_colorspace">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGdkPixbuf.get_colorspace.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="TGdkPixbuf.get_has_alpha">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGdkPixbuf.get_has_alpha.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="TGdkPixbuf.get_height">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGdkPixbuf.get_height.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="TGdkPixbuf.get_n_channels">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGdkPixbuf.get_n_channels.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="TGdkPixbuf.get_option">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGdkPixbuf.get_option.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="TGdkPixbuf.get_options">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGdkPixbuf.get_options.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="TGdkPixbuf.get_pixels">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGdkPixbuf.get_pixels.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="TGdkPixbuf.get_pixels_with_length">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGdkPixbuf.get_pixels_with_length.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="TGdkPixbuf.get_rowstride">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGdkPixbuf.get_rowstride.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="TGdkPixbuf.get_width">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGdkPixbuf.get_width.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="TGdkPixbuf.new_subpixbuf">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGdkPixbuf.new_subpixbuf.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="TGdkPixbuf.read_pixel_bytes">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGdkPixbuf.read_pixel_bytes.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="TGdkPixbuf.read_pixels">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGdkPixbuf.read_pixels.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="TGdkPixbuf.remove_option">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGdkPixbuf.remove_option.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="TGdkPixbuf.rotate_simple">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGdkPixbuf.rotate_simple.Result">
+<short></short>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="TGdkPixbuf.saturate_and_pixelate">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function Visibility: default -->
+<element name="TGdkPixbuf.save_to_bufferv">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGdkPixbuf.save_to_bufferv.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="TGdkPixbuf.save_to_callbackv">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGdkPixbuf.save_to_callbackv.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="TGdkPixbuf.save_to_streamv">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGdkPixbuf.save_to_streamv.Result">
+<short></short>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="TGdkPixbuf.save_to_streamv_async">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function Visibility: default -->
+<element name="TGdkPixbuf.savev">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGdkPixbuf.savev.Result">
+<short></short>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="TGdkPixbuf.scale">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function Visibility: default -->
+<element name="TGdkPixbuf.scale_simple">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGdkPixbuf.scale_simple.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="TGdkPixbuf.set_option">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGdkPixbuf.set_option.Result">
+<short></short>
+</element>
+
+<!-- property Visibility: default -->
+<element name="TGdkPixbuf.bits_per_sample">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- property Visibility: default -->
+<element name="TGdkPixbuf.colorspace">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- property Visibility: default -->
+<element name="TGdkPixbuf.has_alpha">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- property Visibility: default -->
+<element name="TGdkPixbuf.height">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- property Visibility: default -->
+<element name="TGdkPixbuf.n_channels">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- property Visibility: default -->
+<element name="TGdkPixbuf.pixels">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- property Visibility: default -->
+<element name="TGdkPixbuf.rowstride">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- property Visibility: default -->
+<element name="TGdkPixbuf.width">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PPGdkPixbufModulePattern">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PGdkPixbufModulePattern">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- object Visibility: default -->
+<element name="TGdkPixbufFormat">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: default -->
+<element name="TGdkPixbufFormat.name">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: default -->
+<element name="TGdkPixbufFormat.signature">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: default -->
+<element name="TGdkPixbufFormat.domain">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: default -->
+<element name="TGdkPixbufFormat.description">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: default -->
+<element name="TGdkPixbufFormat.mime_types">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: default -->
+<element name="TGdkPixbufFormat.extensions">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: default -->
+<element name="TGdkPixbufFormat.flags">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: default -->
+<element name="TGdkPixbufFormat.disabled">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: default -->
+<element name="TGdkPixbufFormat.license">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function Visibility: default -->
+<element name="TGdkPixbufFormat.copy">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGdkPixbufFormat.copy.Result">
+<short></short>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="TGdkPixbufFormat.free">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function Visibility: default -->
+<element name="TGdkPixbufFormat.get_description">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGdkPixbufFormat.get_description.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="TGdkPixbufFormat.get_extensions">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGdkPixbufFormat.get_extensions.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="TGdkPixbufFormat.get_license">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGdkPixbufFormat.get_license.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="TGdkPixbufFormat.get_mime_types">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGdkPixbufFormat.get_mime_types.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="TGdkPixbufFormat.get_name">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGdkPixbufFormat.get_name.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="TGdkPixbufFormat.is_disabled">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGdkPixbufFormat.is_disabled.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="TGdkPixbufFormat.is_save_option_supported">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGdkPixbufFormat.is_save_option_supported.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="TGdkPixbufFormat.is_scalable">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGdkPixbufFormat.is_scalable.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="TGdkPixbufFormat.is_writable">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGdkPixbufFormat.is_writable.Result">
+<short></short>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="TGdkPixbufFormat.set_disabled">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PPGdkPixbufAnimation">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PGdkPixbufAnimation">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PPGdkPixbufAnimationIter">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PGdkPixbufAnimationIter">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- object Visibility: default -->
+<element name="TGdkPixbufAnimation">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function Visibility: default -->
+<element name="TGdkPixbufAnimation.new_from_file">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGdkPixbufAnimation.new_from_file.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="TGdkPixbufAnimation.new_from_resource">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGdkPixbufAnimation.new_from_resource.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="TGdkPixbufAnimation.new_from_stream">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGdkPixbufAnimation.new_from_stream.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="TGdkPixbufAnimation.new_from_stream_finish">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGdkPixbufAnimation.new_from_stream_finish.Result">
+<short></short>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="TGdkPixbufAnimation.new_from_stream_async">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function Visibility: default -->
+<element name="TGdkPixbufAnimation.get_height">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGdkPixbufAnimation.get_height.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="TGdkPixbufAnimation.get_iter">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGdkPixbufAnimation.get_iter.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="TGdkPixbufAnimation.get_static_image">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGdkPixbufAnimation.get_static_image.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="TGdkPixbufAnimation.get_width">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGdkPixbufAnimation.get_width.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="TGdkPixbufAnimation.is_static_image">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGdkPixbufAnimation.is_static_image.Result">
+<short></short>
+</element>
+
+<!-- object Visibility: default -->
+<element name="TGdkPixbufAnimationIter">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function Visibility: default -->
+<element name="TGdkPixbufAnimationIter.advance">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGdkPixbufAnimationIter.advance.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="TGdkPixbufAnimationIter.get_delay_time">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGdkPixbufAnimationIter.get_delay_time.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="TGdkPixbufAnimationIter.get_pixbuf">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGdkPixbufAnimationIter.get_pixbuf.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="TGdkPixbufAnimationIter.on_currently_loading_frame">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGdkPixbufAnimationIter.on_currently_loading_frame.Result">
+<short></short>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PPGdkPixbufAnimationClass">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PGdkPixbufAnimationClass">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- object Visibility: default -->
+<element name="TGdkPixbufAnimationClass">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: default -->
+<element name="TGdkPixbufAnimationClass.parent_class">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: default -->
+<element name="TGdkPixbufAnimationClass.is_static_image">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGdkPixbufAnimationClass.is_static_image.Result">
+<short></short>
+</element>
+
+<!-- variable Visibility: default -->
+<element name="TGdkPixbufAnimationClass.get_static_image">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGdkPixbufAnimationClass.get_static_image.Result">
+<short></short>
+</element>
+
+<!-- variable Visibility: default -->
+<element name="TGdkPixbufAnimationClass.get_size">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: default -->
+<element name="TGdkPixbufAnimationClass.get_iter">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGdkPixbufAnimationClass.get_iter.Result">
+<short></short>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PPGdkPixbufAnimationIterClass">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PGdkPixbufAnimationIterClass">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- object Visibility: default -->
+<element name="TGdkPixbufAnimationIterClass">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: default -->
+<element name="TGdkPixbufAnimationIterClass.parent_class">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: default -->
+<element name="TGdkPixbufAnimationIterClass.get_delay_time">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGdkPixbufAnimationIterClass.get_delay_time.Result">
+<short></short>
+</element>
+
+<!-- variable Visibility: default -->
+<element name="TGdkPixbufAnimationIterClass.get_pixbuf">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGdkPixbufAnimationIterClass.get_pixbuf.Result">
+<short></short>
+</element>
+
+<!-- variable Visibility: default -->
+<element name="TGdkPixbufAnimationIterClass.on_currently_loading_frame">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGdkPixbufAnimationIterClass.on_currently_loading_frame.Result">
+<short></short>
+</element>
+
+<!-- variable Visibility: default -->
+<element name="TGdkPixbufAnimationIterClass.advance">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGdkPixbufAnimationIterClass.advance.Result">
+<short></short>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PPGdkPixbufError">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PGdkPixbufError">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- record type Visibility: default -->
+<element name="TGdkPixbufModulePattern">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: default -->
+<element name="TGdkPixbufModulePattern.prefix">
+<short></short>
+</element>
+
+<!-- variable Visibility: default -->
+<element name="TGdkPixbufModulePattern.mask">
+<short></short>
+</element>
+
+<!-- variable Visibility: default -->
+<element name="TGdkPixbufModulePattern.relevance">
+<short></short>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PPGdkPixbufFormatFlags">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PGdkPixbufFormatFlags">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PPGdkPixbufLoader">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PGdkPixbufLoader">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- object Visibility: default -->
+<element name="TGdkPixbufLoader">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: default -->
+<element name="TGdkPixbufLoader.priv">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function Visibility: default -->
+<element name="TGdkPixbufLoader.new">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGdkPixbufLoader.new.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="TGdkPixbufLoader.new_with_mime_type">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGdkPixbufLoader.new_with_mime_type.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="TGdkPixbufLoader.new_with_type">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGdkPixbufLoader.new_with_type.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="TGdkPixbufLoader.close">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGdkPixbufLoader.close.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="TGdkPixbufLoader.get_animation">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGdkPixbufLoader.get_animation.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="TGdkPixbufLoader.get_format">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGdkPixbufLoader.get_format.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="TGdkPixbufLoader.get_pixbuf">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGdkPixbufLoader.get_pixbuf.Result">
+<short></short>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="TGdkPixbufLoader.set_size">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function Visibility: default -->
+<element name="TGdkPixbufLoader.write">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGdkPixbufLoader.write.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="TGdkPixbufLoader.write_bytes">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGdkPixbufLoader.write_bytes.Result">
+<short></short>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PPGdkPixbufLoaderClass">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PGdkPixbufLoaderClass">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- object Visibility: default -->
+<element name="TGdkPixbufLoaderClass">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: default -->
+<element name="TGdkPixbufLoaderClass.parent_class">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: default -->
+<element name="TGdkPixbufLoaderClass.size_prepared">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: default -->
+<element name="TGdkPixbufLoaderClass.area_prepared">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: default -->
+<element name="TGdkPixbufLoaderClass.area_updated">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: default -->
+<element name="TGdkPixbufLoaderClass.closed">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function type Visibility: default -->
+<element name="TGdkPixbufModuleLoadFunc">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGdkPixbufModuleLoadFunc.Result">
+<short></short>
+</element>
+
+<!-- function type Visibility: default -->
+<element name="TGdkPixbufModuleLoadXpmDataFunc">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGdkPixbufModuleLoadXpmDataFunc.Result">
+<short></short>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PPGdkPixbufModuleSizeFunc">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PGdkPixbufModuleSizeFunc">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure type Visibility: default -->
+<element name="TGdkPixbufModuleSizeFunc">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PPGdkPixbufModulePreparedFunc">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PGdkPixbufModulePreparedFunc">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure type Visibility: default -->
+<element name="TGdkPixbufModulePreparedFunc">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PPGdkPixbufModuleUpdatedFunc">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PGdkPixbufModuleUpdatedFunc">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure type Visibility: default -->
+<element name="TGdkPixbufModuleUpdatedFunc">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function type Visibility: default -->
+<element name="TGdkPixbufModuleBeginLoadFunc">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGdkPixbufModuleBeginLoadFunc.Result">
+<short></short>
+</element>
+
+<!-- function type Visibility: default -->
+<element name="TGdkPixbufModuleStopLoadFunc">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGdkPixbufModuleStopLoadFunc.Result">
+<short></short>
+</element>
+
+<!-- function type Visibility: default -->
+<element name="TGdkPixbufModuleIncrementLoadFunc">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGdkPixbufModuleIncrementLoadFunc.Result">
+<short></short>
+</element>
+
+<!-- function type Visibility: default -->
+<element name="TGdkPixbufModuleLoadAnimationFunc">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGdkPixbufModuleLoadAnimationFunc.Result">
+<short></short>
+</element>
+
+<!-- function type Visibility: default -->
+<element name="TGdkPixbufModuleSaveFunc">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGdkPixbufModuleSaveFunc.Result">
+<short></short>
+</element>
+
+<!-- function type Visibility: default -->
+<element name="TGdkPixbufModuleSaveCallbackFunc">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGdkPixbufModuleSaveCallbackFunc.Result">
+<short></short>
+</element>
+
+<!-- function type Visibility: default -->
+<element name="TGdkPixbufModuleSaveOptionSupportedFunc">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGdkPixbufModuleSaveOptionSupportedFunc.Result">
+<short></short>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PPGdkPixbufModule">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PGdkPixbufModule">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PPGdkPixbufModuleLoadFunc">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PGdkPixbufModuleLoadFunc">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PPGdkPixbufModuleLoadXpmDataFunc">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PGdkPixbufModuleLoadXpmDataFunc">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PPGdkPixbufModuleBeginLoadFunc">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PGdkPixbufModuleBeginLoadFunc">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PPGdkPixbufModuleStopLoadFunc">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PGdkPixbufModuleStopLoadFunc">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PPGdkPixbufModuleIncrementLoadFunc">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PGdkPixbufModuleIncrementLoadFunc">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PPGdkPixbufModuleLoadAnimationFunc">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PGdkPixbufModuleLoadAnimationFunc">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PPGdkPixbufModuleSaveFunc">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PGdkPixbufModuleSaveFunc">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PPGdkPixbufModuleSaveCallbackFunc">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PGdkPixbufModuleSaveCallbackFunc">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PPGdkPixbufModuleSaveOptionSupportedFunc">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PGdkPixbufModuleSaveOptionSupportedFunc">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- record type Visibility: default -->
+<element name="TGdkPixbufModule">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: default -->
+<element name="TGdkPixbufModule.module_name">
+<short></short>
+</element>
+
+<!-- variable Visibility: default -->
+<element name="TGdkPixbufModule.module_path">
+<short></short>
+</element>
+
+<!-- variable Visibility: default -->
+<element name="TGdkPixbufModule.module">
+<short></short>
+</element>
+
+<!-- variable Visibility: default -->
+<element name="TGdkPixbufModule.info">
+<short></short>
+</element>
+
+<!-- variable Visibility: default -->
+<element name="TGdkPixbufModule.load">
+<short></short>
+</element>
+
+<!-- variable Visibility: default -->
+<element name="TGdkPixbufModule.load_xpm_data">
+<short></short>
+</element>
+
+<!-- variable Visibility: default -->
+<element name="TGdkPixbufModule.begin_load">
+<short></short>
+</element>
+
+<!-- variable Visibility: default -->
+<element name="TGdkPixbufModule.stop_load">
+<short></short>
+</element>
+
+<!-- variable Visibility: default -->
+<element name="TGdkPixbufModule.load_increment">
+<short></short>
+</element>
+
+<!-- variable Visibility: default -->
+<element name="TGdkPixbufModule.load_animation">
+<short></short>
+</element>
+
+<!-- variable Visibility: default -->
+<element name="TGdkPixbufModule.save">
+<short></short>
+</element>
+
+<!-- variable Visibility: default -->
+<element name="TGdkPixbufModule.save_to_callback">
+<short></short>
+</element>
+
+<!-- variable Visibility: default -->
+<element name="TGdkPixbufModule.is_save_option_supported">
+<short></short>
+</element>
+
+<!-- variable Visibility: default -->
+<element name="TGdkPixbufModule._reserved1">
+<short></short>
+</element>
+
+<!-- variable Visibility: default -->
+<element name="TGdkPixbufModule._reserved2">
+<short></short>
+</element>
+
+<!-- variable Visibility: default -->
+<element name="TGdkPixbufModule._reserved3">
+<short></short>
+</element>
+
+<!-- variable Visibility: default -->
+<element name="TGdkPixbufModule._reserved4">
+<short></short>
+</element>
+
+<!-- procedure type Visibility: default -->
+<element name="TGdkPixbufModuleFillInfoFunc">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure type Visibility: default -->
+<element name="TGdkPixbufModuleFillVtableFunc">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PPGdkPixbufNonAnim">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PGdkPixbufNonAnim">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- object Visibility: default -->
+<element name="TGdkPixbufNonAnim">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function Visibility: default -->
+<element name="TGdkPixbufNonAnim.new">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGdkPixbufNonAnim.new.Result">
+<short></short>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PPGdkPixbufSimpleAnim">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PGdkPixbufSimpleAnim">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- object Visibility: default -->
+<element name="TGdkPixbufSimpleAnim">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function Visibility: default -->
+<element name="TGdkPixbufSimpleAnim.new">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGdkPixbufSimpleAnim.new.Result">
+<short></short>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="TGdkPixbufSimpleAnim.add_frame">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function Visibility: default -->
+<element name="TGdkPixbufSimpleAnim.get_loop">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGdkPixbufSimpleAnim.get_loop.Result">
+<short></short>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="TGdkPixbufSimpleAnim.set_loop">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- property Visibility: default -->
+<element name="TGdkPixbufSimpleAnim.loop">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PPGdkPixbufSimpleAnimClass">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PGdkPixbufSimpleAnimClass">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- object Visibility: default -->
+<element name="TGdkPixbufSimpleAnimClass">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PPGdkPixbufSimpleAnimIter">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PGdkPixbufSimpleAnimIter">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- object Visibility: default -->
+<element name="TGdkPixbufSimpleAnimIter">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function Visibility: default -->
+<element name="gdk_pixbuf_add_alpha">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="gdk_pixbuf_add_alpha.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="gdk_pixbuf_animation_get_height">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="gdk_pixbuf_animation_get_height.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="gdk_pixbuf_animation_get_iter">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="gdk_pixbuf_animation_get_iter.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="gdk_pixbuf_animation_get_static_image">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="gdk_pixbuf_animation_get_static_image.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="gdk_pixbuf_animation_get_type">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="gdk_pixbuf_animation_get_type.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="gdk_pixbuf_animation_get_width">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="gdk_pixbuf_animation_get_width.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="gdk_pixbuf_animation_is_static_image">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="gdk_pixbuf_animation_is_static_image.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="gdk_pixbuf_animation_iter_advance">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="gdk_pixbuf_animation_iter_advance.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="gdk_pixbuf_animation_iter_get_delay_time">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="gdk_pixbuf_animation_iter_get_delay_time.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="gdk_pixbuf_animation_iter_get_pixbuf">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="gdk_pixbuf_animation_iter_get_pixbuf.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="gdk_pixbuf_animation_iter_get_type">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="gdk_pixbuf_animation_iter_get_type.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="gdk_pixbuf_animation_iter_on_currently_loading_frame">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="gdk_pixbuf_animation_iter_on_currently_loading_frame.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="gdk_pixbuf_animation_new_from_file">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="gdk_pixbuf_animation_new_from_file.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="gdk_pixbuf_animation_new_from_resource">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="gdk_pixbuf_animation_new_from_resource.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="gdk_pixbuf_animation_new_from_stream">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="gdk_pixbuf_animation_new_from_stream.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="gdk_pixbuf_animation_new_from_stream_finish">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="gdk_pixbuf_animation_new_from_stream_finish.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="gdk_pixbuf_apply_embedded_orientation">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="gdk_pixbuf_apply_embedded_orientation.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="gdk_pixbuf_calculate_rowstride">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="gdk_pixbuf_calculate_rowstride.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="gdk_pixbuf_composite_color_simple">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="gdk_pixbuf_composite_color_simple.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="gdk_pixbuf_copy">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="gdk_pixbuf_copy.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="gdk_pixbuf_copy_options">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="gdk_pixbuf_copy_options.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="gdk_pixbuf_error_quark">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="gdk_pixbuf_error_quark.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="gdk_pixbuf_flip">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="gdk_pixbuf_flip.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="gdk_pixbuf_format_copy">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="gdk_pixbuf_format_copy.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="gdk_pixbuf_format_get_description">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="gdk_pixbuf_format_get_description.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="gdk_pixbuf_format_get_extensions">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="gdk_pixbuf_format_get_extensions.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="gdk_pixbuf_format_get_license">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="gdk_pixbuf_format_get_license.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="gdk_pixbuf_format_get_mime_types">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="gdk_pixbuf_format_get_mime_types.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="gdk_pixbuf_format_get_name">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="gdk_pixbuf_format_get_name.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="gdk_pixbuf_format_get_type">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="gdk_pixbuf_format_get_type.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="gdk_pixbuf_format_is_disabled">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="gdk_pixbuf_format_is_disabled.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="gdk_pixbuf_format_is_save_option_supported">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="gdk_pixbuf_format_is_save_option_supported.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="gdk_pixbuf_format_is_scalable">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="gdk_pixbuf_format_is_scalable.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="gdk_pixbuf_format_is_writable">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="gdk_pixbuf_format_is_writable.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="gdk_pixbuf_get_bits_per_sample">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="gdk_pixbuf_get_bits_per_sample.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="gdk_pixbuf_get_byte_length">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="gdk_pixbuf_get_byte_length.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="gdk_pixbuf_get_colorspace">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="gdk_pixbuf_get_colorspace.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="gdk_pixbuf_get_file_info">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="gdk_pixbuf_get_file_info.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="gdk_pixbuf_get_file_info_finish">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="gdk_pixbuf_get_file_info_finish.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="gdk_pixbuf_get_formats">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="gdk_pixbuf_get_formats.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="gdk_pixbuf_get_has_alpha">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="gdk_pixbuf_get_has_alpha.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="gdk_pixbuf_get_height">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="gdk_pixbuf_get_height.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="gdk_pixbuf_get_n_channels">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="gdk_pixbuf_get_n_channels.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="gdk_pixbuf_get_option">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="gdk_pixbuf_get_option.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="gdk_pixbuf_get_options">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="gdk_pixbuf_get_options.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="gdk_pixbuf_get_pixels">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="gdk_pixbuf_get_pixels.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="gdk_pixbuf_get_pixels_with_length">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="gdk_pixbuf_get_pixels_with_length.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="gdk_pixbuf_get_rowstride">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="gdk_pixbuf_get_rowstride.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="gdk_pixbuf_get_type">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="gdk_pixbuf_get_type.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="gdk_pixbuf_get_width">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="gdk_pixbuf_get_width.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="gdk_pixbuf_init_modules">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="gdk_pixbuf_init_modules.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="gdk_pixbuf_loader_close">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="gdk_pixbuf_loader_close.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="gdk_pixbuf_loader_get_animation">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="gdk_pixbuf_loader_get_animation.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="gdk_pixbuf_loader_get_format">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="gdk_pixbuf_loader_get_format.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="gdk_pixbuf_loader_get_pixbuf">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="gdk_pixbuf_loader_get_pixbuf.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="gdk_pixbuf_loader_get_type">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="gdk_pixbuf_loader_get_type.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="gdk_pixbuf_loader_new">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="gdk_pixbuf_loader_new.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="gdk_pixbuf_loader_new_with_mime_type">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="gdk_pixbuf_loader_new_with_mime_type.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="gdk_pixbuf_loader_new_with_type">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="gdk_pixbuf_loader_new_with_type.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="gdk_pixbuf_loader_write">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="gdk_pixbuf_loader_write.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="gdk_pixbuf_loader_write_bytes">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="gdk_pixbuf_loader_write_bytes.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="gdk_pixbuf_new">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="gdk_pixbuf_new.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="gdk_pixbuf_new_from_bytes">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="gdk_pixbuf_new_from_bytes.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="gdk_pixbuf_new_from_data">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="gdk_pixbuf_new_from_data.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="gdk_pixbuf_new_from_file">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="gdk_pixbuf_new_from_file.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="gdk_pixbuf_new_from_file_at_scale">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="gdk_pixbuf_new_from_file_at_scale.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="gdk_pixbuf_new_from_file_at_size">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="gdk_pixbuf_new_from_file_at_size.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="gdk_pixbuf_new_from_resource">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="gdk_pixbuf_new_from_resource.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="gdk_pixbuf_new_from_resource_at_scale">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="gdk_pixbuf_new_from_resource_at_scale.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="gdk_pixbuf_new_from_stream">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="gdk_pixbuf_new_from_stream.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="gdk_pixbuf_new_from_stream_at_scale">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="gdk_pixbuf_new_from_stream_at_scale.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="gdk_pixbuf_new_from_stream_finish">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="gdk_pixbuf_new_from_stream_finish.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="gdk_pixbuf_new_from_xpm_data">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="gdk_pixbuf_new_from_xpm_data.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="gdk_pixbuf_new_subpixbuf">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="gdk_pixbuf_new_subpixbuf.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="gdk_pixbuf_non_anim_get_type">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="gdk_pixbuf_non_anim_get_type.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="gdk_pixbuf_non_anim_new">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="gdk_pixbuf_non_anim_new.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="gdk_pixbuf_read_pixel_bytes">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="gdk_pixbuf_read_pixel_bytes.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="gdk_pixbuf_read_pixels">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="gdk_pixbuf_read_pixels.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="gdk_pixbuf_remove_option">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="gdk_pixbuf_remove_option.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="gdk_pixbuf_rotate_simple">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="gdk_pixbuf_rotate_simple.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="gdk_pixbuf_save">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="gdk_pixbuf_save.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="gdk_pixbuf_save_to_buffer">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="gdk_pixbuf_save_to_buffer.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="gdk_pixbuf_save_to_bufferv">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="gdk_pixbuf_save_to_bufferv.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="gdk_pixbuf_save_to_callback">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="gdk_pixbuf_save_to_callback.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="gdk_pixbuf_save_to_callbackv">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="gdk_pixbuf_save_to_callbackv.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="gdk_pixbuf_save_to_stream">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="gdk_pixbuf_save_to_stream.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="gdk_pixbuf_save_to_stream_finish">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="gdk_pixbuf_save_to_stream_finish.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="gdk_pixbuf_save_to_streamv">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="gdk_pixbuf_save_to_streamv.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="gdk_pixbuf_savev">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="gdk_pixbuf_savev.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="gdk_pixbuf_scale_simple">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="gdk_pixbuf_scale_simple.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="gdk_pixbuf_set_option">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="gdk_pixbuf_set_option.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="gdk_pixbuf_simple_anim_get_loop">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="gdk_pixbuf_simple_anim_get_loop.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="gdk_pixbuf_simple_anim_get_type">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="gdk_pixbuf_simple_anim_get_type.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="gdk_pixbuf_simple_anim_iter_get_type">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="gdk_pixbuf_simple_anim_iter_get_type.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="gdk_pixbuf_simple_anim_new">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="gdk_pixbuf_simple_anim_new.Result">
+<short></short>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="gdk_pixbuf_animation_new_from_stream_async">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="gdk_pixbuf_composite">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="gdk_pixbuf_composite_color">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="gdk_pixbuf_copy_area">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="gdk_pixbuf_fill">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="gdk_pixbuf_format_free">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="gdk_pixbuf_format_set_disabled">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="gdk_pixbuf_get_file_info_async">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="gdk_pixbuf_loader_set_size">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="gdk_pixbuf_new_from_stream_async">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="gdk_pixbuf_new_from_stream_at_scale_async">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="gdk_pixbuf_saturate_and_pixelate">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="gdk_pixbuf_save_to_stream_async">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="gdk_pixbuf_save_to_streamv_async">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="gdk_pixbuf_scale">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="gdk_pixbuf_simple_anim_add_frame">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="gdk_pixbuf_simple_anim_set_loop">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+</module> <!-- LazGdkPixbuf2 -->
+
+</package>
+</fpdoc-descriptions>
