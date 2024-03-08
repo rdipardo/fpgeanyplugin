@@ -1,17 +1,22 @@
 version: 2.1
 #
-# SPDX-FileCopyrightText: (c) 2023 Robert Di Pardo
+# SPDX-FileCopyrightText: (c) 2023,2024 Robert Di Pardo
 # SPDX-License-Identifier: GPL-3.0-or-later
 #
 # Permitted usage is detailed in the COPYING file.
 #
 orbs:
   lazarus: rdipardo/lazarus@3
+  win: circleci/windows@5
 jobs:
   linux-make-all:
     machine:
       image: ubuntu-2204:current
       resource_class: medium
+    environment:
+      # https://askubuntu.com/a/1431746
+      NEEDRESTART_MODE: 'l'
+      DEBIAN_FRONTEND: 'noninteractive'
     steps:
       - checkout
       - lazarus/install:
@@ -30,7 +35,33 @@ jobs:
       - run:
           name: Build package and sample project
           command: make
+  windows-lazbuild:
+    executor:
+      name: win/default
+    steps:
+      - checkout
+      - lazarus/install
+      - restore_cache:
+          keys:
+            - msys2-{{ arch }}
+            - msys2-
+      - run:
+          name: Set up msys2
+          command: .\.circleci\setup_msys2.ps1
+      - save_cache:
+          key: msys2-{{ arch }}
+          paths:
+            - C:\msys64
+      - run:
+          name: Configure GTK library path
+          shell: bash.exe
+          command: |
+            sed -e "s/\({\$LibraryPath \).*$/\1'C:\/msys64\/mingw64\/lib'}/" -i example/fpgeanyplugindemo.lpr
+      - run:
+          name: Run lazbuild.exe
+          command: lazbuild --ws=gtk3 .\example\fpgeanyplugindemo.lpr
 workflows:
   test-deploy:
     jobs:
       - linux-make-all
+      - windows-lazbuild

@@ -7,7 +7,7 @@
 #
 # Permitted usage is detailed in the COPYING file.
 #
-BASE_PATH="$(pwd)/$(dirname "$0")"
+BASE_PATH="$(dirname "$0")"
 FPC_CFG="$BASE_PATH/../gtk3.cfg"
 [ -f "$FPC_CFG" ] && exit 0
 echo "Building LCL for GTK3. To rebuild, delete $FPC_CFG".
