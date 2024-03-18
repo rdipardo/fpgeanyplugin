@@ -141,11 +141,6 @@ span.bartitle {
   color: darkblue
 }
 
-span.footer {
-  font-style: italic;
-  color: darkblue
-}
-
 /* definition list */
 dl {
  border: 3px double #ccc;
@@ -215,10 +210,6 @@ li.classtreeclosed ul { display: none; }
 
   span.bartitle {
     color: #939390
-  }
-
-  span.footer {
-    color: #82aaff
   }
 
   span.num {
