@@ -46,7 +46,7 @@ Clone the source tree and submodules::
     git clone --recursive https://github.com/rdipardo/fpgeanyplugin
 
 Run ``make`` to build the package and a sample plugin.
-See `<example/README>`_ for instructions on building with ``lazbuild``.
+See `example/README <example/README#building>`_ for instructions on building with ``lazbuild``.
 
 Run ``make geany-deps`` to transpile Geany's headers into Object Pascal.
 The transpiler script will first check out the git tag of a Geany release.

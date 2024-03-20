@@ -31,11 +31,12 @@ case "$1" in
     DEFINES=
     ;;
   'lcl' | * )
-    SRC_PATH='/usr/share/lazarus/3.0.0/lcl/interfaces/gtk3/gtk3bindings'
+    SRC_PATH=$(./resolve_paths "$2" 2>/dev/null | tr -d '[:space:]')
     UNITS=( "${LCL_UNITS[@]}" )
     DEFINES='-dFPGEANY_DOCS'
     ;;
 esac
+[ ! -d "$SRC_PATH" ] && echo "Invalid unit path: '$SRC_PATH'" && exit 2
 for unit in "${UNITS[@]}"; do
   echo -e "\nExtracting symbols from ${unit%%.*} ..."
   makeskel --disable-private --disable-arguments --disable-errors \

@@ -1,0 +1,226 @@
+/*
+  $Id: fpdoc.css,v 1.1 2003/03/17 23:03:20 michael Exp $
+
+  Default style sheet for FPDoc reference documentation
+  by Sebastian Guenther, sg@freepascal.org
+
+  Feel free to use this file as a template for your own style sheets.
+*/
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
+
+body, p, td, caption, ul, ol {
+  font-family: Nunito, sans-serif
+}
+
+h1, h2, h3, h4, h5, h6, dl {
+  font-family: Raleway, Verdana, sans-serif;
+}
+
+tt, span.kw, pre {
+  font-family: 'Roboto mono', monospace
+}
+
+body, p, th, td, caption, ul, ol, dl, tt, span.kw, pre {
+  font-size: 16px
+}
+
+.footer div {
+  font-size: 14px
+}
+
+a:link {
+  color: blue
+}
+
+a:visited {
+  color: #800080
+}
+
+a:active, a:focus, a:hover {
+  color: #880000
+}
+
+a {
+  text-decoration: none
+}
+
+a:hover {
+  text-decoration: underline
+}
+
+h1, h2, td.h2 {
+  color: #005a9c
+}
+
+/* Especially for Netscape on Linux: */
+h3, td.h3 {
+  font-size: 12pt
+}
+
+/* source fragments */
+span.code {
+  white-space: nowrap
+}
+
+/* symbols in source fragments */
+span.sym {
+  color: darkred
+}
+
+/* keywords in source fragments */
+span.kw {
+  font-weight: bold
+}
+
+/* comments in source fragments */
+span.cmt {
+  color: darkcyan;
+  font-style: italic
+}
+
+/* directives in source fragments */
+span.dir {
+  color: #b8860b;
+  font-style: italic
+}
+
+/* numbers in source fragments */
+span.num {
+  color: darkmagenta
+}
+
+/* characters (#...) in source fragments */
+span.chr {
+  color: darkcyan
+}
+
+/* strings in source fragments */
+span.str {
+  color: blue
+}
+
+/* assembler passages in source fragments */
+span.asm {
+  color: green
+}
+
+td.pre {
+  white-space: pre
+}
+
+p.cmt {
+  color: gray
+}
+
+span.warning {
+  color: red;
+  font-weight: bold
+}
+
+/* !!!: How should we define this...? */
+span.file {
+  color: darkgreen
+}
+
+table.remark {
+  background-color: #ffffc0;
+}
+
+table.bar {
+  background-color: rgba(160, 192, 255, 0.4);
+}
+
+td p {
+ margin: 0;
+}
+
+span.bartitle {
+  font-weight: bold;
+  font-style: italic;
+  color: darkblue
+}
+
+/* definition list */
+dl {
+ border: 3px double #ccc;
+ padding: 0.5em;
+}
+
+/* definition list: term */
+dt {
+ float: left;
+ clear: left;
+ width: auto; /* normally browsers default width of largest item */
+ padding-right: 20px;
+ font-weight: bold;
+ color: darkgreen;
+}
+
+/* definition list: description */
+dd {
+ margin: 0 0 0 110px;
+ padding: 0 0 0.5em 0;
+}
+
+/* for browsers in standards compliance mode */
+td p {
+  margin: 0;
+}
+
+span.toggletreeclose {
+    background: url(minus.png) center left no-repeat;
+    padding-left: 20px;
+}
+
+span.toggletreeopen {
+    background: url(plus.png) center left no-repeat;
+    padding-left: 20px;
+}
+
+ul.classtreelist li { padding-left: 0px; }
+
+ul.classtreelist { list-style-type:none; }
+
+li.classtree ul { display: block; }
+
+li.classtreeclosed ul { display: none; }
+
+@media (prefers-color-scheme: dark) {
+  html {
+    background-color: #010101;
+    color: #cccccc
+  }
+
+  a:link {
+    color: #008cff
+  }
+
+  a:visited {
+    color: #e9967a
+  }
+
+  a:active, a:focus, a:hover {
+    color: #ffbf00
+  }
+
+  h1, h2, td.h2 {
+    color: #006f69;
+  }
+
+  span.bartitle {
+    color: #939390
+  }
+
+  span.num {
+    color: #ffc600
+  }
+
+  span.str {
+    color: #addb67
+  }
+
+  span.sym {
+    color: #ac93ac
+  }
+}

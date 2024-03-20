@@ -9,17 +9,37 @@
 #
 set -e
 cd "$(dirname "$0")"
-[ ! -d 'html' ] && \
+if [ -n "$PUBLISH_DOCS" ] && [ ! -d './html' ]; then
   git clone --depth=1 -b api git@github.com:rdipardo/fpgeanyplugin.git ./html
+else
+  mkdir -p ./html
+fi
+_get_unit_path() {
+  dirname "$(lazbuild --verbose-pkgsearch __phony__.lpr | awk -F '\"' "BEGIN{IGNORECASE=1}/$1.*Success/{print \$2}")";
+}
+cat<<'PAS' > /tmp/lcl_ver
+uses lazversion, lclversion;
+begin
+  writeln(lcl_version);
+end.
+PAS
+LAZ_PATH="$(_get_unit_path 'LazUtils')/lib/$(fpc -iSP)-$(fpc -iTO)"
+LCL_PATH="$(_get_unit_path 'LCLBase')/units/$(fpc -iSP)-$(fpc -iTO)"
+LCL_VERSION="$(instantfpc -Fu"$LAZ_PATH" -Fu"$LCL_PATH" /tmp/lcl_ver 2>/dev/null)" && \
+  [ "$(echo "$LCL_VERSION" | grep -cE '^[0-9]\.')" -eq 1 ] || LCL_VERSION=$(lazbuild -v)
 for pkg in 'lcl' 'fpgeanyplugin'; do
   sed "\
     s/\${DATE}/$(date +%F)/g;\
     s/\${PUB_YEAR}/$(date +%Y)/g;\
+    s/\${LCLVER}/$LCL_VERSION/g;\
     s/\${FPDOC}/FPDoc $(fpdoc --help | awk 'BEGIN{IGNORECASE=1}/version\s+([0-9]\.){2}([0-9])/{print $2}')/" \
     "$pkg/footer.tmpl" > /tmp/footer.html
-  [ "$pkg" = 'lcl' ] && . ./scaffold.sh $pkg
+  [ "$pkg" = 'lcl' ] && . ./scaffold.sh $pkg "$LCL_PATH"
   fpdoc --package="$pkg" --project="$pkg/project.xml" --footer=/tmp/footer.html --verbose
 done
 find ./html -maxdepth 1 -type f -iname \*.html -exec sed -i '/\[<a href=\"index-[8-9].html\".*a>\]/d' {} +
+find ./html -type f -iname fpdoc.css -exec dirname {} \; -exec cp ./fpdoc.css {} \;
 touch ./html/.nojekyll && cp favicon.ico ./html 2>/dev/null
-git --git-dir=./html/.git --work-tree=./html commit -a
+[ -d './html/.git' ] && \
+  [ "$(git --git-dir=./html/.git --work-tree=./html/ status -s | grep -cE "[ADM(\?\?)]")" -ne 0 ] && \
+  cd ./html && git add . && git commit

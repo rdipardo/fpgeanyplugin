@@ -20,7 +20,7 @@ jobs:
     steps:
       - checkout
       - lazarus/install:
-          lazarus-version: '3.0.0'
+          lazarus-version: '3.2'
           platform: 'linux'
       - run:
           name: Fetch Geany source tree

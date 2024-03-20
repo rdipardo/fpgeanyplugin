@@ -1,0 +1,46 @@
+#!/usr/bin/env python3
+"""
+ Resolve the file paths to the LCL's Gtk3 interface units.
+
+ SPDX-FileCopyrightText: (c) 2024 Robert Di Pardo
+ SPDX-License-Identifier: GPL-3.0-or-later
+
+ Permitted usage is detailed in the COPYING file.
+"""
+import sys
+import xml.etree.ElementTree as xml
+from os import path
+
+DESCRIPTOR = path.join('lcl', 'project.xml')
+
+def set_unit_paths(_, lib_path, *__):
+    """
+    Write the interface unit paths to the FPDoc project file.
+    """
+    try:
+        lib_root = lib_path.replace('/', path.sep).split(fr'{path.sep }lcl{path.sep }')[0]
+        if not path.exists(lib_root):
+            raise RuntimeError(f'Invalid library path: {lib_path}')
+        lib_prefix = path.sep.join([lib_root, 'lcl', 'interfaces', 'gtk3' ,'gtk3bindings'])
+        project = xml.parse(DESCRIPTOR)
+        schema = project.getroot()
+        host_platform = schema.find('./options/option[@name="ostarget"]')
+        if host_platform is not None:
+            host_platform.set('value', sys.platform)
+        for unit in schema.iter('unit'):
+            src = path.basename(unit.attrib['file'])
+            unit.set('file', path.join(lib_prefix, src))
+        project.write(DESCRIPTOR, "utf-8", xml_declaration=True, method="xml")
+        print(lib_prefix, file=sys.stdout)
+    except (xml.ParseError, AttributeError, IndexError, IOError, RuntimeError, TypeError) as err:
+        print(repr(err), file=sys.stderr)
+        return 2
+
+    return 0
+
+
+if __name__ == '__main__':
+    if len(sys.argv) < 2 or not path.exists(DESCRIPTOR):
+        sys.exit(0)
+
+    sys.exit(set_unit_paths(*sys.argv))
