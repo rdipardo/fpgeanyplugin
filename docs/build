@@ -39,7 +39,8 @@ for pkg in 'lcl' 'fpgeanyplugin'; do
 done
 find ./html -maxdepth 1 -type f -iname \*.html -exec sed -i '/\[<a href=\"index-[8-9].html\".*a>\]/d' {} +
 find ./html -type f -iname fpdoc.css -exec dirname {} \; -exec cp ./fpdoc.css {} \;
-touch ./html/.nojekyll && cp favicon.ico ./html 2>/dev/null
+cp favicon.ico ./html 2>/dev/null
 [ -d './html/.git' ] && \
+  cp -r ../.github/ ./html && \
   [ "$(git --git-dir=./html/.git --work-tree=./html/ status -s | grep -cE "[ADM(\?\?)]")" -ne 0 ] && \
   cd ./html && git add . && git commit

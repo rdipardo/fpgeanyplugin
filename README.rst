@@ -63,5 +63,5 @@ Requirements
    :alt: CircleCI
    :target: https://circleci.com/gh/rdipardo/fpgeanyplugin
 
-.. |fpc| image:: https://img.shields.io/github/languages/top/rdipardo/fpgeanyplugin?style=flat-square&color=lightblue&label=Free%20Pascal&logo=lazarus
+.. |fpc| image:: https://img.shields.io/github/license/rdipardo/fpgeanyplugin?style=flat-square&color=lightblue&label=Free%20Pascal&logo=lazarus
    :alt: Built with Free Pascal
