@@ -39,6 +39,12 @@ esac
 [ ! -d "$SRC_PATH" ] && echo "Invalid unit path: '$SRC_PATH'" && exit 2
 for unit in "${UNITS[@]}"; do
   echo -e "\nExtracting symbols from ${unit%%.*} ..."
+  # FPDoc - Free Pascal Documentation Tool
+  # Version 3.2.2 [2021/07/09]
+  # ...
+  # Expected "Identifier" at token "file" in file .../lazglib2.pas at line 1495 column 12.
+  [ -n "$GITHUB_ACTIONS" ] && [ "$unit" == 'lazglib2.pas' ] && \
+    sed -i 's/\^\(file;\)/\^\&\1/' "$SRC_PATH/$unit"
   makeskel --disable-private --disable-arguments --disable-errors \
     --package="$1" --input="$DEFINES $SRC_PATH/$unit" \
     --output="$1/units/${unit%%.*}.xml" 1>/dev/null

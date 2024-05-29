@@ -7,13 +7,17 @@ name: Publish Docs
 
 on:
   push:
-    branches:
-      - api
+    paths:
+      - 'docs/**'
+      - '.github/workflows/fpdocs.yml'
 
 permissions:
   contents: read
   pages: write
   id-token: write
+
+env:
+  LAZARUS_VERSION: '3.2'
 
 jobs:
   deploy:
@@ -24,12 +28,29 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Restore Lazarus packages
+        id: lazarus-deb-cache
+        uses: actions/cache@v4
+        with:
+          path: '/tmp/lazarus-src'
+          key: lazarus-${{ env.LAZARUS_VERSION }}-${{ runner.os }}
+      - name: Install Lazarus ${{ env.LAZARUS_VERSION }}
+        run: |
+          curl -sSL https://bitbucket.org/rdipardo/lazarus-orb/raw/alpha/src/scripts/install_lazarus.sh | bash
+        env:
+          # https://askubuntu.com/a/1421221
+          NEEDRESTART_MODE: l
+          DEBIAN_FRONTEND: noninteractive
+      - name: Generate docs
+        run: |
+          sudo chown -R $USER /usr/share/lazarus
+          docs/build
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: '.'
+          path: './docs/html'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4

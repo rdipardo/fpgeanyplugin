@@ -9,11 +9,7 @@
 #
 set -e
 cd "$(dirname "$0")"
-if [ -n "$PUBLISH_DOCS" ] && [ ! -d './html' ]; then
-  git clone --depth=1 -b api git@github.com:rdipardo/fpgeanyplugin.git ./html
-else
-  mkdir -p ./html
-fi
+mkdir -p ./html
 _get_unit_path() {
   dirname "$(lazbuild --verbose-pkgsearch __phony__.lpr | awk -F '\"' "BEGIN{IGNORECASE=1}/$1.*Success/{print \$2}")";
 }
@@ -40,7 +36,8 @@ done
 find ./html -maxdepth 1 -type f -iname \*.html -exec sed -i '/\[<a href=\"index-[8-9].html\".*a>\]/d' {} +
 find ./html -type f -iname fpdoc.css -exec dirname {} \; -exec cp ./fpdoc.css {} \;
 cp favicon.ico ./html 2>/dev/null
+touch ./html/.nojekyll
 [ -d './html/.git' ] && \
-  cp -r ../.github/ ./html && \
   [ "$(git --git-dir=./html/.git --work-tree=./html/ status -s | grep -cE "[ADM(\?\?)]")" -ne 0 ] && \
   cd ./html && git add . && git commit
+exit 0
