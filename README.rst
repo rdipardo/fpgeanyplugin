@@ -59,9 +59,9 @@ Requirements
 * fpc >= 3.2
 * gtk >= 3.24.24
 
-.. |cci-build-status| image:: https://circleci.com/gh/rdipardo/fpgeanyplugin.svg?style=svg
-   :alt: CircleCI
-   :target: https://circleci.com/gh/rdipardo/fpgeanyplugin
+.. |cci-build-status| image:: https://github.com/rdipardo/fpgeanyplugin/actions/workflows/build.yml/badge.svg?event=push
+   :alt: Build
+   :target: https://github.com/rdipardo/fpgeanyplugin/actions/workflows/build.yml
 
 .. |fpc| image:: https://img.shields.io/github/license/rdipardo/fpgeanyplugin?style=flat-square&color=lightblue&label=Free%20Pascal&logo=lazarus
    :alt: Built with Free Pascal

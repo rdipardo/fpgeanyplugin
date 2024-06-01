@@ -1,0 +1,86 @@
+#
+# SPDX-FileCopyrightText: (c) 2024 Robert Di Pardo
+# SPDX-License-Identifier: GPL-3.0-or-later
+#
+# Permitted usage is detailed in the COPYING file.
+#
+name: Build
+
+on:
+  push:
+    paths:
+      - 'src/**'
+      - '**/*.lpk'
+      - '.github/workflows/build.yml'
+  pull_request:
+
+env:
+  LAZARUS_VERSION: '3.2'
+  ARTIFACT_NAME: fpgeanyplugindemo
+
+jobs:
+  linux-make-all:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          fetch-depth: 0
+      - name: Restore Lazarus packages
+        id: lazarus-deb-cache
+        uses: actions/cache@v4
+        with:
+          path: '/tmp/lazarus-src'
+          key: lazarus-${{ env.LAZARUS_VERSION }}-${{ runner.os }}
+      - name: Install Lazarus ${{ env.LAZARUS_VERSION }}
+        run: |
+          curl -sSL https://bitbucket.org/rdipardo/lazarus-orb/raw/alpha/src/scripts/install_lazarus.sh | bash
+        env:
+          # https://askubuntu.com/a/1421221
+          NEEDRESTART_MODE: l
+          DEBIAN_FRONTEND: noninteractive
+      - name: Build Geany
+        run: bash ../.github/build_geany.sh
+        working-directory: geany
+      - name: Build package and sample plugin
+        run: make
+      - name: Upload ${{ env.ARTIFACT_NAME }}.so
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ env.ARTIFACT_NAME }}.so
+          path: example/bin/x86_64-linux/Release/${{ env.ARTIFACT_NAME }}.so
+
+  windows-lazbuild:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Restore Lazarus installer
+        id: lazarus-exe-cache
+        uses: actions/cache@v4
+        with:
+          path: 'C:\lazarus-src'
+          key: lazarus-${{ env.LAZARUS_VERSION }}-${{ runner.os }}
+      - name: Install Lazarus ${{ env.LAZARUS_VERSION }}
+        shell: bash
+        run: |
+          curl -sSL https://bitbucket.org/rdipardo/lazarus-orb/raw/alpha/src/scripts/install_windows_lazarus.sh | bash
+          ./install.cmd
+      - name: Install GTK
+        uses: msys2/setup-msys2@v2
+        with:
+          location: 'C:\Users\Public'
+          msystem: mingw64
+          install: mingw-w64-x86_64-gtk3
+      - name: Configure GTK library path
+        shell: bash
+        run: |
+          sed -e "s/\({\$LibraryPath \).*$/\1'C:\/Users\/Public\/msys64\/mingw64\/lib'}/" -i example/fpgeanyplugindemo.lpr
+      - name: Build plugin
+        run: lazbuild --ws=gtk3 .\example\fpgeanyplugindemo.lpr
+      - name: Upload ${{ env.ARTIFACT_NAME }}.dll
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ env.ARTIFACT_NAME }}.dll
+          path: example/bin/x86_64-win64/Release/${{ env.ARTIFACT_NAME }}.dll
