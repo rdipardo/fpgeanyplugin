@@ -15,7 +15,7 @@ on:
   pull_request:
 
 env:
-  LAZARUS_VERSION: '3.2'
+  LAZARUS_VERSION: '3.4'
   ARTIFACT_NAME: fpgeanyplugindemo
 
 jobs:

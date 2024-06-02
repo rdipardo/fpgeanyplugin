@@ -17,7 +17,7 @@ permissions:
   id-token: write
 
 env:
-  LAZARUS_VERSION: '3.2'
+  LAZARUS_VERSION: '3.4'
 
 jobs:
   deploy:
