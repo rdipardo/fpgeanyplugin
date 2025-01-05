@@ -11,7 +11,7 @@ BASE_PATH="$(dirname "$0")"
 FPC_CFG="$BASE_PATH/../gtk3.cfg"
 [ -f "$FPC_CFG" ] && exit 0
 echo "Building LCL for GTK3. To rebuild, delete $FPC_CFG".
-LPK=$(lazbuild --add-package lcl --verbose | awk -F '"' '/(adding package)/{print $2}')
+LPK=$(lazbuild --add-package lcl --verbose | awk -F '"' 'BEGIN{IGNORECASE=1}/(adding package)/{print $2}')
 CMDLINE="lazbuild -B --bm=${1:-Release} $LPK --ws=gtk3 --verbose"
 OUT=$(${CMDLINE}| awk -F '"' '/(\(lazarus\) Param.*="-FU)/{print $2}')
 [ ! -f "${OUT#-FU}/gtk3int.ppu" ] && \
