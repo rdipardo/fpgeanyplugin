@@ -34,7 +34,7 @@ for pkg in 'lcl' 'fpgeanyplugin'; do
   fpdoc --package="$pkg" --project="$pkg/project.xml" --footer=/tmp/footer.html --verbose
 done
 find ./html -maxdepth 1 -type f -iname \*.html -exec sed -i '/\[<a href=\"index-[8-9].html\".*a>\]/d' {} +
-find ./html -type f -iname fpdoc.css -exec dirname {} \; -exec cp ./fpdoc.css {} \;
+find ./html -type f -iname fpdoc.css -exec sh -c 'cp ./fpdoc.css $1 && cp -r ./fonts/ `dirname $1`' _ {} \;
 cp favicon.ico ./html 2>/dev/null
 touch ./html/.nojekyll
 [ -d './html/.git' ] && \

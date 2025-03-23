@@ -19,6 +19,7 @@ LCL_UNITS=(
   'lazgmodule2.pas'
   'lazgdkpixbuf2.pas'
   'lazharfbuzz0.pas'
+  'lazxlib2.pas'
 )
 FPGEANY_UNITS=(
   'geanyplugin.pp'

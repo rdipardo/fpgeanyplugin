@@ -8,7 +8,7 @@
  Permitted usage is detailed in the COPYING file.
 """
 import sys
-import xml.etree.ElementTree as xml
+from lxml import etree as xml
 from os import path
 
 DESCRIPTOR = path.join('lcl', 'project.xml')
@@ -30,7 +30,8 @@ def set_unit_paths(_, lib_path, *__):
         for unit in schema.iter('unit'):
             src = path.basename(unit.attrib['file'])
             unit.set('file', path.join(lib_prefix, src))
-        project.write(DESCRIPTOR, "utf-8", xml_declaration=True, method="xml")
+        with open(DESCRIPTOR, 'wb') as output:
+            output.write(xml.tostring(project, encoding="utf-8", xml_declaration=True, pretty_print=True))
         print(lib_prefix, file=sys.stdout)
     except (xml.ParseError, AttributeError, IndexError, IOError, RuntimeError, TypeError) as err:
         print(repr(err), file=sys.stderr)

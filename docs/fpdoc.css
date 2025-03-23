@@ -6,8 +6,21 @@
 
   Feel free to use this file as a template for your own style sheets.
 */
-@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/Nunito-Regular.woff2') format('woff2'), url('fonts/Nunito-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('fonts/Raleway-Regular.woff2') format('woff2'), url('fonts/Raleway-Regular.ttf') format('truetype');
+}
 
 body, p, td, caption, ul, ol {
   font-family: Nunito, sans-serif
@@ -26,7 +39,7 @@ body, p, th, td, caption, ul, ol, dl, tt, span.kw, pre {
 }
 
 .footer div {
-  font-size: 14px
+  font-size: 0.88em
 }
 
 a:link {
@@ -205,7 +218,7 @@ li.classtreeclosed ul { display: none; }
   }
 
   h1, h2, td.h2 {
-    color: #006f69;
+    color: #00bf9f;
   }
 
   span.bartitle {

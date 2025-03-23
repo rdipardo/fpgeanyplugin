@@ -18,7 +18,7 @@ permissions:
   contents: read
 
 env:
-  LAZARUS_VERSION: '3.6'
+  LAZARUS_VERSION: '3.8'
   ARTIFACT_NAME: fpgeanyplugindemo
 
 jobs:
@@ -43,7 +43,7 @@ jobs:
               - '.github/workflows/fpdocs.yml'
       - name: Restore Lazarus packages
         id: lazarus-deb-cache
-        uses: actions/cache@1bd1e32a3bdc45362d1e726936510720a7c30a57 # v4.2.0
+        uses: actions/cache@d4323d4df104b026a6aa633fdb11d772146be0bf # v4.2.2
         with:
           path: '/tmp/lazarus-src'
           key: lazarus-${{ env.LAZARUS_VERSION }}-${{ runner.os }}
@@ -60,7 +60,7 @@ jobs:
       - name: Build package and sample plugin
         run: make
       - name: Upload ${{ env.ARTIFACT_NAME }}.so
-        uses: actions/upload-artifact@6f51ac03b9356f520e9adb1b1b7802705f340c2b # v4.5.0
+        uses: actions/upload-artifact@4cec3d8aa04e39d1a68397de0c4cd6fb9dce8ec1 # v4.6.1
         with:
           name: ${{ env.ARTIFACT_NAME }}.so
           path: example/bin/x86_64-linux/Release/${{ env.ARTIFACT_NAME }}.so
@@ -72,7 +72,7 @@ jobs:
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
       - name: Restore Lazarus installer
         id: lazarus-exe-cache
-        uses: actions/cache@1bd1e32a3bdc45362d1e726936510720a7c30a57 # v4.2.0
+        uses: actions/cache@d4323d4df104b026a6aa633fdb11d772146be0bf # v4.2.2
         with:
           path: 'C:\lazarus-src'
           key: lazarus-${{ env.LAZARUS_VERSION }}-${{ runner.os }}
@@ -80,7 +80,7 @@ jobs:
         run: |
           irm -Uri https://bitbucket.org/rdipardo/lazarus-orb/raw/alpha/src/scripts/install_windows_lazarus.ps1 | iex
       - name: Install GTK
-        uses: msys2/setup-msys2@d44ca8e88d8b43d56cf5670f91747359d5537f97 # v2.26.0
+        uses: msys2/setup-msys2@61f9e5e925871ba6c9e3e8da24ede83ea27fa91f # v2.27.0
         with:
           location: 'C:\Users\Public'
           msystem: mingw64
@@ -92,7 +92,7 @@ jobs:
       - name: Build plugin
         run: lazbuild --ws=gtk3 .\example\fpgeanyplugindemo.lpr
       - name: Upload ${{ env.ARTIFACT_NAME }}.dll
-        uses: actions/upload-artifact@6f51ac03b9356f520e9adb1b1b7802705f340c2b # v4.5.0
+        uses: actions/upload-artifact@4cec3d8aa04e39d1a68397de0c4cd6fb9dce8ec1 # v4.6.1
         with:
           name: ${{ env.ARTIFACT_NAME }}.dll
           path: example/bin/x86_64-win64/Release/${{ env.ARTIFACT_NAME }}.dll
@@ -102,6 +102,7 @@ jobs:
     if: ${{ needs.linux-make-all.outputs.docs-changed == 'true' }}
     uses: rdipardo/fpgeanyplugin/.github/workflows/fpdocs.yml@main
     with:
-      lazarus-version: '3.6'
+      lazarus-version: '3.8'
     permissions:
+      pages: write
       id-token: write

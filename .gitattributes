@@ -2,3 +2,5 @@
 *.inc  linguist-generated
 *.png  binary
 *.ico  binary
+*.ttf  binary
+*.woff* binary
