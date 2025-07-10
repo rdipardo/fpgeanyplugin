@@ -2,7 +2,7 @@
 #
 # Generate HTML docs for the fpgeanyplugin package and dependencies.
 #
-# SPDX-FileCopyrightText: (c) 2024 Robert Di Pardo
+# SPDX-FileCopyrightText: (c) 2024,2025 Robert Di Pardo
 # SPDX-License-Identifier: GPL-3.0-or-later
 #
 # Permitted usage is detailed in the COPYING file.
@@ -33,9 +33,10 @@ for pkg in 'lcl' 'fpgeanyplugin'; do
   [ "$pkg" = 'lcl' ] && . ./scaffold.sh $pkg "$LCL_PATH"
   fpdoc --package="$pkg" --project="$pkg/project.xml" --footer=/tmp/footer.html --verbose
 done
+find ./html -type f -iname \*.html -exec sed -i 's/\(<head>\)\(\r\n|\r|\n\)*/\1\2<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">/' {} +
 find ./html -maxdepth 1 -type f -iname \*.html -exec sed -i '/\[<a href=\"index-[8-9].html\".*a>\]/d' {} +
 find ./html -type f -iname fpdoc.css -exec sh -c 'cp ./fpdoc.css $1 && cp -r ./fonts/ `dirname $1`' _ {} \;
-cp favicon.ico ./html 2>/dev/null
+cp robots.txt favicon.ico ./html 2>/dev/null
 touch ./html/.nojekyll
 [ -d './html/.git' ] && \
   [ "$(git --git-dir=./html/.git --work-tree=./html/ status -s | grep -cE "[ADM(\?\?)]")" -ne 0 ] && \

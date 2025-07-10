@@ -2,7 +2,7 @@
 #
 # Collect symbol declarations from all used units.
 #
-# SPDX-FileCopyrightText: (c) 2024 Robert Di Pardo
+# SPDX-FileCopyrightText: (c) 2024,2025 Robert Di Pardo
 # SPDX-License-Identifier: GPL-3.0-or-later
 #
 # Permitted usage is detailed in the COPYING file.
@@ -23,6 +23,7 @@ LCL_UNITS=(
 )
 FPGEANY_UNITS=(
   'geanyplugin.pp'
+  'geanyplugin247.pp'
   'geanyplugin240.pp'
 )
 case "$1" in

@@ -10,10 +10,12 @@ fpgeanyplugin package
 
 Usage
 ------
-fpgeanyplugin currently provides two units:
+fpgeanyplugin provides the following units:
 
 +--------------------+--------------------------------------------------------+
-| ``geanyplugin``    | compatible with Geany >= 2.0 (API version 247)         |
+| ``geanyplugin``    | compatible with Geany >= 2.1                           |
++--------------------+--------------------------------------------------------+
+| ``geanyplugin247`` | compatible with Geany 2.0 (API version 247)            |
 +--------------------+--------------------------------------------------------+
 | ``geanyplugin240`` | compatible with Geany >= 1.38, < 2.0 (API version 240) |
 +--------------------+--------------------------------------------------------+
@@ -32,8 +34,10 @@ project needs to target multiple API versions, e.g.,
 
     {$macro ON}
     uses
-    {$if GEANY_API_VERSION > 246}
+    {$if GEANY_API_VERSION > 247}
       geanyplugin
+    {$elseif GEANY_API_VERSION > 240}
+      geanyplugin247
     {$else}
       geanyplugin240
     {$endif};
@@ -50,7 +54,7 @@ See `example/README <example/README#building>`_ for instructions on building wit
 
 Run ``make geany-deps`` to transpile Geany's headers into Object Pascal.
 The transpiler script will first check out the git tag of a Geany release.
-Only versions 1.38 and 2.0 are currently supported.
+Versions 1.38, 2.0 and 2.1 are supported.
 
 
 Requirements

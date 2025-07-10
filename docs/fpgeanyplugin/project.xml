@@ -16,10 +16,12 @@
     <package name="fpgeanyplugin" output="html/">
       <units>
         <unit file="../src/geanyplugin.pp" options="-dSCI_DISABLE_PROVISIONAL"/>
+        <unit file="../src/geanyplugin247.pp" options="-dSCI_DISABLE_PROVISIONAL"/>
         <unit file="../src/geanyplugin240.pp" options="-dSCI_DISABLE_PROVISIONAL"/>
       </units>
       <descriptions>
         <description file="fpgeanyplugin/units/geanyplugin.xml"/>
+        <description file="fpgeanyplugin/units/geanyplugin247.xml"/>
         <description file="fpgeanyplugin/units/geanyplugin240.xml"/>
       </descriptions>
       <imports>

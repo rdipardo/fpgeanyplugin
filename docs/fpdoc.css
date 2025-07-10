@@ -218,7 +218,7 @@ li.classtreeclosed ul { display: none; }
   }
 
   h1, h2, td.h2 {
-    color: #00bf9f;
+    color: #69697a;
   }
 
   span.bartitle {
@@ -235,5 +235,29 @@ li.classtreeclosed ul { display: none; }
 
   span.sym {
     color: #ac93ac
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  body, p, th, td, caption, ul, ol, dl, tt, span.kw, pre {
+    font-size: 3vmin;
+  }
+
+  dt {
+    padding-right: 2vmin;
+  }
+
+  dd {
+    margin: 0 0 0 80vmin;
+    padding: 0 0 1vmin 0;
+  }
+
+  span.toggletreeclose,
+  span.toggletreeopen {
+    padding-left: 2vmin;
+  }
+
+  .footer div {
+    font-size: 2.125vmin;
   }
 }

@@ -1,4 +1,4 @@
-{%MainUnit geanyplugin.pp}
+{%MainUnit geanyplugin247.pp}
 
 const
   External_library = 'libgeany-0.dll'; {Setup as you need}

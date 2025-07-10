@@ -2,14 +2,14 @@
 #
 # Generates Object Pascal source from Geany headers.
 #
-# SPDX-FileCopyrightText: (c) 2023 Robert Di Pardo
+# SPDX-FileCopyrightText: (c) 2023,2025 Robert Di Pardo
 # SPDX-License-Identifier: GPL-3.0-or-later
 #
 # Permitted usage is detailed in the COPYING file.
 #
 set -e
-# git tag of the Geany release to target ('1.38.0' or '2.0.0')
-TARGET_GEANY_VERSION="${1:-2.0.0}"
+# git tag of the Geany release to target ('1.38.0', '2.0.0' or '2.1.0')
+TARGET_GEANY_VERSION="${1:-2.1.0}"
 BASE_PATH="$(pwd)/$(dirname "$0")"
 PATCH_DIR="$BASE_PATH/../patches"
 INPUT="$BASE_PATH/../src/h2pas.in.h"
@@ -147,7 +147,8 @@ PAS
 )
 case "$TARGET_GEANY_VERSION" in
   "1.38.0" ) SCI_MSG_API='4'; TARGET_UNIT='geanyplugin240' ;;
-         * ) SCI_MSG_API='5'; TARGET_UNIT='geanyplugin' ;;
+   "2.0.0" ) SCI_MSG_API='537'; TARGET_UNIT='geanyplugin247' ;;
+         * ) SCI_MSG_API='554'; TARGET_UNIT='geanyplugin' ;;
 esac
 sed -i "1i {%MainUnit $TARGET_UNIT.pp}" -i "$TARGET.inc" "$MESSAGES"
 sed -e "/{\$ENDIF}/a ${TYPEDEFS}" -i "$TARGET.inc"

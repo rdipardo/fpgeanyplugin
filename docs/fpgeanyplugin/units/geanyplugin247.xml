@@ -5,12 +5,12 @@
 
 <!--
   ====================================================================
-    geanyplugin
+    geanyplugin247
   ====================================================================
 -->
 
-<module name="geanyplugin">
-<short>Bindings compatible with Geany &gt;= 2.1</short>
+<module name="geanyplugin247">
+<short>Bindings compatible with Geany 2.0</short>
 
 <!-- uses unit Visibility: default -->
 <element name="ctypes">
@@ -39,11 +39,6 @@
 
 <!-- uses unit Visibility: default -->
 <element name="lazgtk3">
-<short></short>
-</element>
-
-<!-- uses unit Visibility: default -->
-<element name="lazgdkpixbuf2">
 <short></short>
 </element>
 
@@ -978,15 +973,6 @@
 </seealso>
 </element>
 
-<!-- constant Visibility: default -->
-<element name="TM_ICON_NONE">
-<short></short>
-<descr>
-</descr>
-<seealso>
-</seealso>
-</element>
-
 <!-- pointer type Visibility: default -->
 <element name="PTMTagType">
 <short></short>
@@ -1117,74 +1103,6 @@
 
 <!-- enumeration value Visibility: default -->
 <element name="TTMTagType.tm_tag_max_t">
-<short></short>
-</element>
-
-<!-- pointer type Visibility: default -->
-<element name="PTMIcon">
-<short></short>
-<descr>
-</descr>
-<seealso>
-</seealso>
-</element>
-
-<!-- enumeration type Visibility: default -->
-<element name="TTMIcon">
-<short></short>
-<descr>
-</descr>
-<seealso>
-</seealso>
-</element>
-
-<!-- enumeration value Visibility: default -->
-<element name="TTMIcon.TM_ICON_CLASS">
-<short></short>
-</element>
-
-<!-- enumeration value Visibility: default -->
-<element name="TTMIcon.TM_ICON_MACRO">
-<short></short>
-</element>
-
-<!-- enumeration value Visibility: default -->
-<element name="TTMIcon.TM_ICON_MEMBER">
-<short></short>
-</element>
-
-<!-- enumeration value Visibility: default -->
-<element name="TTMIcon.TM_ICON_METHOD">
-<short></short>
-</element>
-
-<!-- enumeration value Visibility: default -->
-<element name="TTMIcon.TM_ICON_NAMESPACE">
-<short></short>
-</element>
-
-<!-- enumeration value Visibility: default -->
-<element name="TTMIcon.TM_ICON_OTHER">
-<short></short>
-</element>
-
-<!-- enumeration value Visibility: default -->
-<element name="TTMIcon.TM_ICON_STRUCT">
-<short></short>
-</element>
-
-<!-- enumeration value Visibility: default -->
-<element name="TTMIcon.TM_ICON_VAR">
-<short></short>
-</element>
-
-<!-- enumeration value Visibility: default -->
-<element name="TTMIcon.TM_ICON_NONE">
-<short></short>
-</element>
-
-<!-- enumeration value Visibility: default -->
-<element name="TTMIcon.TM_N_ICONS">
 <short></short>
 </element>
 
@@ -1337,7 +1255,7 @@
 </element>
 
 <!-- enumeration value Visibility: default -->
-<element name="TTMTagAttrType.tm_tag_attr_mtime_t">
+<element name="TTMTagAttrType.tm_tag_attr_time_t">
 <short></short>
 </element>
 
@@ -2021,46 +1939,6 @@
 </element>
 
 <!-- enumeration value Visibility: default -->
-<element name="TGeanyFiletypeID.GEANY_FILETYPES_RAKU">
-<short></short>
-</element>
-
-<!-- enumeration value Visibility: default -->
-<element name="TGeanyFiletypeID.GEANY_FILETYPES_CIL">
-<short></short>
-</element>
-
-<!-- enumeration value Visibility: default -->
-<element name="TGeanyFiletypeID.GEANY_FILETYPES_PROLOG">
-<short></short>
-</element>
-
-<!-- enumeration value Visibility: default -->
-<element name="TGeanyFiletypeID.GEANY_FILETYPES_NIM">
-<short></short>
-</element>
-
-<!-- enumeration value Visibility: default -->
-<element name="TGeanyFiletypeID.GEANY_FILETYPES_ZIG">
-<short></short>
-</element>
-
-<!-- enumeration value Visibility: default -->
-<element name="TGeanyFiletypeID.GEANY_FILETYPES_DART">
-<short></short>
-</element>
-
-<!-- enumeration value Visibility: default -->
-<element name="TGeanyFiletypeID.GEANY_FILETYPES_NIX">
-<short></short>
-</element>
-
-<!-- enumeration value Visibility: default -->
-<element name="TGeanyFiletypeID.GEANY_FILETYPES_TOML">
-<short></short>
-</element>
-
-<!-- enumeration value Visibility: default -->
 <element name="TGeanyFiletypeID.GEANY_MAX_BUILT_IN_FILETYPES">
 <short></short>
 </element>
@@ -2089,57 +1967,22 @@
 </element>
 
 <!-- enumeration value Visibility: default -->
-<element name="TGeanyFiletypeGroupID.GEANY_FILETYPE_GROUP_OTHER">
+<element name="TGeanyFiletypeGroupID.GEANY_FILETYPE_GROUP_COMPILED">
 <short></short>
 </element>
 
 <!-- enumeration value Visibility: default -->
-<element name="TGeanyFiletypeGroupID.GEANY_FILETYPE_GROUP_A_B">
+<element name="TGeanyFiletypeGroupID.GEANY_FILETYPE_GROUP_SCRIPT">
 <short></short>
 </element>
 
 <!-- enumeration value Visibility: default -->
-<element name="TGeanyFiletypeGroupID.GEANY_FILETYPE_GROUP_C">
+<element name="TGeanyFiletypeGroupID.GEANY_FILETYPE_GROUP_MARKUP">
 <short></short>
 </element>
 
 <!-- enumeration value Visibility: default -->
-<element name="TGeanyFiletypeGroupID.GEANY_FILETYPE_GROUP_D_E_F">
-<short></short>
-</element>
-
-<!-- enumeration value Visibility: default -->
-<element name="TGeanyFiletypeGroupID.GEANY_FILETYPE_GROUP_G_H_I">
-<short></short>
-</element>
-
-<!-- enumeration value Visibility: default -->
-<element name="TGeanyFiletypeGroupID.GEANY_FILETYPE_GROUP_J_K_L">
-<short></short>
-</element>
-
-<!-- enumeration value Visibility: default -->
-<element name="TGeanyFiletypeGroupID.GEANY_FILETYPE_GROUP_M_N_O">
-<short></short>
-</element>
-
-<!-- enumeration value Visibility: default -->
-<element name="TGeanyFiletypeGroupID.GEANY_FILETYPE_GROUP_P_Q">
-<short></short>
-</element>
-
-<!-- enumeration value Visibility: default -->
-<element name="TGeanyFiletypeGroupID.GEANY_FILETYPE_GROUP_R_S">
-<short></short>
-</element>
-
-<!-- enumeration value Visibility: default -->
-<element name="TGeanyFiletypeGroupID.GEANY_FILETYPE_GROUP_T_U_V_W">
-<short></short>
-</element>
-
-<!-- enumeration value Visibility: default -->
-<element name="TGeanyFiletypeGroupID.GEANY_FILETYPE_GROUP_X_Y_Z">
+<element name="TGeanyFiletypeGroupID.GEANY_FILETYPE_GROUP_MISC">
 <short></short>
 </element>
 
@@ -3205,11 +3048,6 @@
 
 <!-- variable Visibility: default -->
 <element name="TGeanySearchPrefs.find_selection_type">
-<short></short>
-</element>
-
-<!-- variable Visibility: default -->
-<element name="TGeanySearchPrefs.skip_confirmation_for_replace_in_session">
 <short></short>
 </element>
 
@@ -7133,20 +6971,6 @@
 <short></short>
 </element>
 
-<!-- function Visibility: default -->
-<element name="symbols_get_icon_pixbuf">
-<short></short>
-<descr>
-</descr>
-<seealso>
-</seealso>
-</element>
-
-<!-- function result Visibility: default -->
-<element name="symbols_get_icon_pixbuf.Result">
-<short></short>
-</element>
-
 <!-- pointer type Visibility: default -->
 <element name="PGeanyTemplatePrefs">
 <short></short>
@@ -7918,6 +7742,20 @@
 </element>
 
 <!-- function Visibility: default -->
+<element name="utils_utf8_strdown">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="utils_utf8_strdown.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
 <element name="utils_str_casecmp">
 <short></short>
 <descr>
@@ -8095,20 +7933,6 @@
 
 <!-- function result Visibility: default -->
 <element name="main_is_realized.Result">
-<short></short>
-</element>
-
-<!-- function Visibility: default -->
-<element name="geany_is_closing_all_documents">
-<short></short>
-<descr>
-</descr>
-<seealso>
-</seealso>
-</element>
-
-<!-- function result Visibility: default -->
-<element name="geany_is_closing_all_documents.Result">
 <short></short>
 </element>
 
@@ -8597,172 +8421,6 @@
 
 <!-- function result Visibility: default -->
 <element name="geany_plugin_register_proxy.Result">
-<short></short>
-</element>
-
-<!-- pointer type Visibility: default -->
-<element name="PPluginExtension">
-<short></short>
-<descr>
-</descr>
-<seealso>
-</seealso>
-</element>
-
-<!-- procedure type Visibility: default -->
-<element name="TPluginExtensionDummyProc">
-<short></short>
-<descr>
-</descr>
-<seealso>
-</seealso>
-</element>
-
-<!-- record type Visibility: default -->
-<element name="TPluginExtension">
-<short></short>
-<descr>
-</descr>
-<seealso>
-</seealso>
-</element>
-
-<!-- variable Visibility: default -->
-<element name="TPluginExtension.autocomplete_provided">
-<short></short>
-</element>
-
-<!-- function result Visibility: default -->
-<element name="TPluginExtension.autocomplete_provided.Result">
-<short></short>
-</element>
-
-<!-- variable Visibility: default -->
-<element name="TPluginExtension.autocomplete_perform">
-<short></short>
-</element>
-
-<!-- variable Visibility: default -->
-<element name="TPluginExtension.calltips_provided">
-<short></short>
-</element>
-
-<!-- function result Visibility: default -->
-<element name="TPluginExtension.calltips_provided.Result">
-<short></short>
-</element>
-
-<!-- variable Visibility: default -->
-<element name="TPluginExtension.calltips_show">
-<short></short>
-</element>
-
-<!-- variable Visibility: default -->
-<element name="TPluginExtension.goto_provided">
-<short></short>
-</element>
-
-<!-- function result Visibility: default -->
-<element name="TPluginExtension.goto_provided.Result">
-<short></short>
-</element>
-
-<!-- variable Visibility: default -->
-<element name="TPluginExtension.goto_perform">
-<short></short>
-</element>
-
-<!-- function result Visibility: default -->
-<element name="TPluginExtension.goto_perform.Result">
-<short></short>
-</element>
-
-<!-- variable Visibility: default -->
-<element name="TPluginExtension.symbol_highlight_provided">
-<short></short>
-</element>
-
-<!-- function result Visibility: default -->
-<element name="TPluginExtension.symbol_highlight_provided.Result">
-<short></short>
-</element>
-
-<!-- variable Visibility: default -->
-<element name="TPluginExtension._dummy">
-<short></short>
-</element>
-
-<!-- procedure Visibility: default -->
-<element name="plugin_extension_register">
-<short></short>
-<descr>
-</descr>
-<seealso>
-</seealso>
-</element>
-
-<!-- procedure Visibility: default -->
-<element name="plugin_extension_unregister">
-<short></short>
-<descr>
-</descr>
-<seealso>
-</seealso>
-</element>
-
-<!-- function Visibility: default -->
-<element name="plugin_extension_autocomplete_provided">
-<short></short>
-<descr>
-</descr>
-<seealso>
-</seealso>
-</element>
-
-<!-- function result Visibility: default -->
-<element name="plugin_extension_autocomplete_provided.Result">
-<short></short>
-</element>
-
-<!-- function Visibility: default -->
-<element name="plugin_extension_calltips_provided">
-<short></short>
-<descr>
-</descr>
-<seealso>
-</seealso>
-</element>
-
-<!-- function result Visibility: default -->
-<element name="plugin_extension_calltips_provided.Result">
-<short></short>
-</element>
-
-<!-- function Visibility: default -->
-<element name="plugin_extension_goto_provided">
-<short></short>
-<descr>
-</descr>
-<seealso>
-</seealso>
-</element>
-
-<!-- function result Visibility: default -->
-<element name="plugin_extension_goto_provided.Result">
-<short></short>
-</element>
-
-<!-- function Visibility: default -->
-<element name="plugin_extension_symbol_highlight_provided">
-<short></short>
-<descr>
-</descr>
-<seealso>
-</seealso>
-</element>
-
-<!-- function result Visibility: default -->
-<element name="plugin_extension_symbol_highlight_provided.Result">
 <short></short>
 </element>
 
@@ -10039,15 +9697,6 @@
 </element>
 
 <!-- constant Visibility: default -->
-<element name="SC_MASK_HISTORY">
-<short></short>
-<descr>
-</descr>
-<seealso>
-</seealso>
-</element>
-
-<!-- constant Visibility: default -->
 <element name="SC_MASK_FOLDERS">
 <short></short>
 <descr>
@@ -11083,105 +10732,6 @@
 </element>
 
 <!-- constant Visibility: default -->
-<element name="SC_STRETCH_ULTRA_CONDENSED">
-<short></short>
-<descr>
-</descr>
-<seealso>
-</seealso>
-</element>
-
-<!-- constant Visibility: default -->
-<element name="SC_STRETCH_EXTRA_CONDENSED">
-<short></short>
-<descr>
-</descr>
-<seealso>
-</seealso>
-</element>
-
-<!-- constant Visibility: default -->
-<element name="SC_STRETCH_CONDENSED">
-<short></short>
-<descr>
-</descr>
-<seealso>
-</seealso>
-</element>
-
-<!-- constant Visibility: default -->
-<element name="SC_STRETCH_SEMI_CONDENSED">
-<short></short>
-<descr>
-</descr>
-<seealso>
-</seealso>
-</element>
-
-<!-- constant Visibility: default -->
-<element name="SC_STRETCH_NORMAL">
-<short></short>
-<descr>
-</descr>
-<seealso>
-</seealso>
-</element>
-
-<!-- constant Visibility: default -->
-<element name="SC_STRETCH_SEMI_EXPANDED">
-<short></short>
-<descr>
-</descr>
-<seealso>
-</seealso>
-</element>
-
-<!-- constant Visibility: default -->
-<element name="SC_STRETCH_EXPANDED">
-<short></short>
-<descr>
-</descr>
-<seealso>
-</seealso>
-</element>
-
-<!-- constant Visibility: default -->
-<element name="SC_STRETCH_EXTRA_EXPANDED">
-<short></short>
-<descr>
-</descr>
-<seealso>
-</seealso>
-</element>
-
-<!-- constant Visibility: default -->
-<element name="SC_STRETCH_ULTRA_EXPANDED">
-<short></short>
-<descr>
-</descr>
-<seealso>
-</seealso>
-</element>
-
-<!-- constant Visibility: default -->
-<element name="SCI_STYLESETSTRETCH">
-<short></short>
-<descr>
-</descr>
-<seealso>
-</seealso>
-</element>
-
-<!-- constant Visibility: default -->
-<element name="SCI_STYLEGETSTRETCH">
-<short></short>
-<descr>
-</descr>
-<seealso>
-</seealso>
-</element>
-
-<!-- constant Visibility: default -->
 <element name="SCI_STYLESETINVISIBLEREPRESENTATION">
 <short></short>
 <descr>
@@ -11300,24 +10850,6 @@
 
 <!-- constant Visibility: default -->
 <element name="SC_ELEMENT_SELECTION_INACTIVE_BACK">
-<short></short>
-<descr>
-</descr>
-<seealso>
-</seealso>
-</element>
-
-<!-- constant Visibility: default -->
-<element name="SC_ELEMENT_SELECTION_INACTIVE_ADDITIONAL_TEXT">
-<short></short>
-<descr>
-</descr>
-<seealso>
-</seealso>
-</element>
-
-<!-- constant Visibility: default -->
-<element name="SC_ELEMENT_SELECTION_INACTIVE_ADDITIONAL_BACK">
 <short></short>
 <descr>
 </descr>
@@ -11714,141 +11246,6 @@
 
 <!-- constant Visibility: default -->
 <element name="SCI_ENDUNDOACTION">
-<short></short>
-<descr>
-</descr>
-<seealso>
-</seealso>
-</element>
-
-<!-- constant Visibility: default -->
-<element name="SCI_GETUNDOSEQUENCE">
-<short></short>
-<descr>
-</descr>
-<seealso>
-</seealso>
-</element>
-
-<!-- constant Visibility: default -->
-<element name="SCI_GETUNDOACTIONS">
-<short></short>
-<descr>
-</descr>
-<seealso>
-</seealso>
-</element>
-
-<!-- constant Visibility: default -->
-<element name="SCI_SETUNDOSAVEPOINT">
-<short></short>
-<descr>
-</descr>
-<seealso>
-</seealso>
-</element>
-
-<!-- constant Visibility: default -->
-<element name="SCI_GETUNDOSAVEPOINT">
-<short></short>
-<descr>
-</descr>
-<seealso>
-</seealso>
-</element>
-
-<!-- constant Visibility: default -->
-<element name="SCI_SETUNDODETACH">
-<short></short>
-<descr>
-</descr>
-<seealso>
-</seealso>
-</element>
-
-<!-- constant Visibility: default -->
-<element name="SCI_GETUNDODETACH">
-<short></short>
-<descr>
-</descr>
-<seealso>
-</seealso>
-</element>
-
-<!-- constant Visibility: default -->
-<element name="SCI_SETUNDOTENTATIVE">
-<short></short>
-<descr>
-</descr>
-<seealso>
-</seealso>
-</element>
-
-<!-- constant Visibility: default -->
-<element name="SCI_GETUNDOTENTATIVE">
-<short></short>
-<descr>
-</descr>
-<seealso>
-</seealso>
-</element>
-
-<!-- constant Visibility: default -->
-<element name="SCI_SETUNDOCURRENT">
-<short></short>
-<descr>
-</descr>
-<seealso>
-</seealso>
-</element>
-
-<!-- constant Visibility: default -->
-<element name="SCI_GETUNDOCURRENT">
-<short></short>
-<descr>
-</descr>
-<seealso>
-</seealso>
-</element>
-
-<!-- constant Visibility: default -->
-<element name="SCI_PUSHUNDOACTIONTYPE">
-<short></short>
-<descr>
-</descr>
-<seealso>
-</seealso>
-</element>
-
-<!-- constant Visibility: default -->
-<element name="SCI_CHANGELASTUNDOACTIONTEXT">
-<short></short>
-<descr>
-</descr>
-<seealso>
-</seealso>
-</element>
-
-<!-- constant Visibility: default -->
-<element name="SCI_GETUNDOACTIONTYPE">
-<short></short>
-<descr>
-</descr>
-<seealso>
-</seealso>
-</element>
-
-<!-- constant Visibility: default -->
-<element name="SCI_GETUNDOACTIONPOSITION">
-<short></short>
-<descr>
-</descr>
-<seealso>
-</seealso>
-</element>
-
-<!-- constant Visibility: default -->
-<element name="SCI_GETUNDOACTIONTEXT">
 <short></short>
 <descr>
 </descr>
@@ -12685,15 +12082,6 @@
 </element>
 
 <!-- constant Visibility: default -->
-<element name="SC_AUTOCOMPLETE_SELECT_FIRST_ITEM">
-<short></short>
-<descr>
-</descr>
-<seealso>
-</seealso>
-</element>
-
-<!-- constant Visibility: default -->
 <element name="SCI_AUTOCSETOPTIONS">
 <short></short>
 <descr>
@@ -12794,24 +12182,6 @@
 
 <!-- constant Visibility: default -->
 <element name="SCI_AUTOCGETMAXHEIGHT">
-<short></short>
-<descr>
-</descr>
-<seealso>
-</seealso>
-</element>
-
-<!-- constant Visibility: default -->
-<element name="SCI_AUTOCSETSTYLE">
-<short></short>
-<descr>
-</descr>
-<seealso>
-</seealso>
-</element>
-
-<!-- constant Visibility: default -->
-<element name="SCI_AUTOCGETSTYLE">
 <short></short>
 <descr>
 </descr>
@@ -15448,25 +14818,7 @@
 </element>
 
 <!-- constant Visibility: default -->
-<element name="SCI_LINEINDENT">
-<short></short>
-<descr>
-</descr>
-<seealso>
-</seealso>
-</element>
-
-<!-- constant Visibility: default -->
 <element name="SCI_BACKTAB">
-<short></short>
-<descr>
-</descr>
-<seealso>
-</seealso>
-</element>
-
-<!-- constant Visibility: default -->
-<element name="SCI_LINEDEDENT">
 <short></short>
 <descr>
 </descr>
@@ -16717,25 +16069,7 @@
 </element>
 
 <!-- constant Visibility: default -->
-<element name="SCI_CHANGESELECTIONMODE">
-<short></short>
-<descr>
-</descr>
-<seealso>
-</seealso>
-</element>
-
-<!-- constant Visibility: default -->
 <element name="SCI_GETSELECTIONMODE">
-<short></short>
-<descr>
-</descr>
-<seealso>
-</seealso>
-</element>
-
-<!-- constant Visibility: default -->
-<element name="SCI_SETMOVEEXTENDSSELECTION">
 <short></short>
 <descr>
 </descr>
@@ -17482,33 +16816,6 @@
 </element>
 
 <!-- constant Visibility: default -->
-<element name="SCI_CUTALLOWLINE">
-<short></short>
-<descr>
-</descr>
-<seealso>
-</seealso>
-</element>
-
-<!-- constant Visibility: default -->
-<element name="SCI_SETCOPYSEPARATOR">
-<short></short>
-<descr>
-</descr>
-<seealso>
-</seealso>
-</element>
-
-<!-- constant Visibility: default -->
-<element name="SCI_GETCOPYSEPARATOR">
-<short></short>
-<descr>
-</descr>
-<seealso>
-</seealso>
-</element>
-
-<!-- constant Visibility: default -->
 <element name="SCI_GETCHARACTERPOINTER">
 <short></short>
 <descr>
@@ -18068,15 +17375,6 @@
 
 <!-- constant Visibility: default -->
 <element name="SCI_ADDSELECTION">
-<short></short>
-<descr>
-</descr>
-<seealso>
-</seealso>
-</element>
-
-<!-- constant Visibility: default -->
-<element name="SCI_SELECTIONFROMPOINT">
 <short></short>
 <descr>
 </descr>
@@ -20442,7 +19740,7 @@
 </seealso>
 </element>
 
-</module> <!-- geanyplugin -->
+</module> <!-- geanyplugin247 -->
 
 </package>
 </fpdoc-descriptions>

@@ -1,7 +1,7 @@
 (*********************************************************************
-  Free Pascal bindings for Geany >= 2.1
+  Free Pascal bindings for Geany 2.0
 
-  Copyright (C) 2025 Robert Di Pardo
+  Copyright (C) 2023,2025 Robert Di Pardo
 
   This program is free software: you can redistribute it and/or
   modify it under the terms of the GNU General Public License
@@ -17,23 +17,23 @@
   Public License along with this program. If not, see
   <https://www.gnu.org/licenses/>.
 *********************************************************************)
-unit geanyplugin;
+unit geanyplugin247;
 
 interface
 
 uses
-  ctypes, lazglib2, lazgobject2, lazgio2, lazgdk3, lazgtk3, lazgdkpixbuf2;
+  ctypes, lazglib2, lazgobject2, lazgio2, lazgdk3, lazgtk3;
 
 const
-  FPGEANY_API_VERSION = 250;
+  FPGEANY_API_VERSION = 247;
   FPGEANY_ABI_VERSION = (73 shl 8);
 
 {$ifdef MsWindows}
-  {$I 'mingw/2.1.0/geanybindings.inc'}
+  {$I 'mingw/2.0.0/geanybindings.inc'}
 {$else}
-  {$I 'gcc/2.1.0/geanybindings.inc'}
+  {$I 'gcc/2.0.0/geanybindings.inc'}
 {$endif}
-{$I 'sci_554_messages.inc'}
+{$I 'sci_537_messages.inc'}
 
 implementation
 end.

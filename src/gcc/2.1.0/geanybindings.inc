@@ -1,4 +1,4 @@
-{%MainUnit geanyplugin247.pp}
+{%MainUnit geanyplugin.pp}
 
 const
   External_library = 'libgeany.so.0'; {Setup as you need}
@@ -179,6 +179,9 @@ function scintilla_send_message(var sci:TScintillaObject; iMessage:dword; wParam
 cdecl;external External_library name 'scintilla_send_message';
 procedure scintilla_release_resources;cdecl;external External_library name 'scintilla_release_resources';
 
+const
+  TM_ICON_NONE = 8;
+
 type
   PTMTagType = ^TTMTagType;
   TTMTagType = (tm_tag_undef_t := 0,tm_tag_class_t := 1,
@@ -194,6 +197,12 @@ type
                 tm_tag_other_t := 524288,tm_tag_include_t := 1048576,
                 tm_tag_max_t := 2097151);
 
+
+  PTMIcon = ^TTMIcon;
+  TTMIcon = (TM_ICON_CLASS,TM_ICON_MACRO,TM_ICON_MEMBER,
+             TM_ICON_METHOD,TM_ICON_NAMESPACE,TM_ICON_OTHER,
+             TM_ICON_STRUCT,TM_ICON_VAR,TM_ICON_NONE,
+             TM_N_ICONS := TM_ICON_NONE);
 
   PTMSourceFile = ^TTMSourceFile;
   TTMSourceFile = record
@@ -216,14 +225,14 @@ type
                     tm_tag_attr_line_t := 8,tm_tag_attr_pos_t := 16,
                     tm_tag_attr_scope_t := 32,tm_tag_attr_inheritance_t := 64,
                     tm_tag_attr_arglist_t := 128,tm_tag_attr_local_t := 256,
-                    tm_tag_attr_time_t := 512,tm_tag_attr_vartype_t := 1024,
+                    tm_tag_attr_mtime_t := 512,tm_tag_attr_vartype_t := 1024,
                     tm_tag_attr_access_t := 2048,tm_tag_attr_impl_t := 4096,
                     tm_tag_attr_lang_t := 8192,tm_tag_attr_inactive_t := 16384,
                     tm_tag_attr_flags_t := 32768,tm_tag_attr_max_t := 65535
                    );
 (* error
 {
-in declaration at line 169 *)
+in declaration at line 182 *)
 
   PTMTag = ^TTMTag;
   TTMTag = record
@@ -324,14 +333,21 @@ type
                       GEANY_FILETYPES_COFFEESCRIPT,GEANY_FILETYPES_GO,
                       GEANY_FILETYPES_ZEPHIR,GEANY_FILETYPES_BIBTEX,
                       GEANY_FILETYPES_SMALLTALK,GEANY_FILETYPES_JULIA,
-                      GEANY_FILETYPES_AU3,GEANY_MAX_BUILT_IN_FILETYPES
+                      GEANY_FILETYPES_AU3,GEANY_FILETYPES_RAKU,
+                      GEANY_FILETYPES_CIL,GEANY_FILETYPES_PROLOG,
+                      GEANY_FILETYPES_NIM,GEANY_FILETYPES_ZIG,
+                      GEANY_FILETYPES_DART,GEANY_FILETYPES_NIX,
+                      GEANY_FILETYPES_TOML,GEANY_MAX_BUILT_IN_FILETYPES
                      );
 
   PGeanyFiletypeGroupID = ^TGeanyFiletypeGroupID;
-  TGeanyFiletypeGroupID = (GEANY_FILETYPE_GROUP_NONE,GEANY_FILETYPE_GROUP_COMPILED,
-                           GEANY_FILETYPE_GROUP_SCRIPT,GEANY_FILETYPE_GROUP_MARKUP,
-                           GEANY_FILETYPE_GROUP_MISC,GEANY_FILETYPE_GROUP_COUNT
-                          );
+  TGeanyFiletypeGroupID = (GEANY_FILETYPE_GROUP_NONE,GEANY_FILETYPE_GROUP_OTHER,
+                           GEANY_FILETYPE_GROUP_A_B,GEANY_FILETYPE_GROUP_C,
+                           GEANY_FILETYPE_GROUP_D_E_F,GEANY_FILETYPE_GROUP_G_H_I,
+                           GEANY_FILETYPE_GROUP_J_K_L,GEANY_FILETYPE_GROUP_M_N_O,
+                           GEANY_FILETYPE_GROUP_P_Q,GEANY_FILETYPE_GROUP_R_S,
+                           GEANY_FILETYPE_GROUP_T_U_V_W,GEANY_FILETYPE_GROUP_X_Y_Z,
+                           GEANY_FILETYPE_GROUP_COUNT);
 
   PGeanyFiletype = ^TGeanyFiletype;
   TGeanyFiletype = record
@@ -524,6 +540,7 @@ type
     hide_find_dialog : gboolean;
     replace_and_find_by_default : gboolean;
     find_selection_type : TGeanyFindSelOptions;
+    skip_confirmation_for_replace_in_session : gboolean;
   end;
 
   PGeanyMatchInfo = ^TGeanyMatchInfo;
@@ -1158,6 +1175,8 @@ procedure stash_group_free_settings(var group:TStashGroup);cdecl;external Extern
 'stash_group_free_settings';
 function symbols_get_context_separator(ft_id:gint): Pgchar;cdecl;external External_library name
 'symbols_get_context_separator';
+function symbols_get_icon_pixbuf(icon:TTMIcon): PGdkPixbuf;cdecl;external External_library name
+'symbols_get_icon_pixbuf';
 
 type
   PGeanyTemplatePrefs = ^TGeanyTemplatePrefs;
@@ -1298,7 +1317,6 @@ function utils_spawn_sync(dir:Pgchar; argv:PPgchar; env:PPgchar; flags:TGSpawnFl
 function utils_spawn_async(dir:Pgchar; argv:PPgchar; env:PPgchar; flags:TGSpawnFlags; child_setup:TGSpawnChildSetupFunc;
                            user_data:gpointer; var child_pid:TGPid; var error:PGError): gboolean;cdecl;external
 External_library name 'utils_spawn_async';
-function utils_utf8_strdown(str:Pgchar): Pgchar;cdecl;external External_library name 'utils_utf8_strdown';
 function utils_str_casecmp(s1:Pgchar; s2:Pgchar): gint;cdecl;external External_library name 'utils_str_casecmp';
 function utils_get_date_time(format:Pgchar; var time_to_use:time_t): Pgchar;cdecl;external External_library name
 'utils_get_date_time';
@@ -1324,6 +1342,7 @@ procedure main_reload_configuration;cdecl;external External_library name 'main_r
 procedure main_locale_init(locale_dir:Pgchar; gettext_package:Pgchar);cdecl;external External_library name
 'main_locale_init';
 function main_is_realized: gboolean;cdecl;external External_library name 'main_is_realized';
+function geany_is_closing_all_documents: gboolean;cdecl;external External_library name 'geany_is_closing_all_documents';
 
 type
   PPluginInfo = ^TPluginInfo;
@@ -1418,6 +1437,33 @@ type
 
 function geany_plugin_register_proxy(var plugin:TGeanyPlugin; extensions:PPgchar): gint;cdecl;external External_library
 name 'geany_plugin_register_proxy';
+
+type
+  PPluginExtension = ^TPluginExtension;
+  TPluginExtensionDummyProc = procedure; cdecl;
+  TPluginExtension = record
+    autocomplete_provided : function (var doc:TGeanyDocument; data:gpointer): gboolean;cdecl;
+    autocomplete_perform : procedure (var doc:TGeanyDocument; force:gboolean; data:gpointer);cdecl;
+    calltips_provided : function (var doc:TGeanyDocument; data:gpointer): gboolean;cdecl;
+    calltips_show : procedure (var doc:TGeanyDocument; force:gboolean; data:gpointer);cdecl;
+    goto_provided : function (var doc:TGeanyDocument; data:gpointer): gboolean;cdecl;
+    goto_perform : function (var doc:TGeanyDocument; pos:gint; definition:gboolean; data:gpointer): gboolean;cdecl;
+    symbol_highlight_provided : function (var doc:TGeanyDocument; data:gpointer): gboolean;cdecl;
+    _dummy : array[0..99] of TPluginExtensionDummyProc;
+  end;
+
+procedure plugin_extension_register(var extension:TPluginExtension; ext_name:Pgchar; priority:gint; data:gpointer);cdecl
+;external External_library name 'plugin_extension_register';
+procedure plugin_extension_unregister(var extension:TPluginExtension);cdecl;external External_library name
+'plugin_extension_unregister';
+function plugin_extension_autocomplete_provided(var doc:TGeanyDocument; var ext:TPluginExtension): gboolean;cdecl;
+external External_library name 'plugin_extension_autocomplete_provided';
+function plugin_extension_calltips_provided(var doc:TGeanyDocument; var ext:TPluginExtension): gboolean;cdecl;external
+External_library name 'plugin_extension_calltips_provided';
+function plugin_extension_goto_provided(var doc:TGeanyDocument; var ext:TPluginExtension): gboolean;cdecl;external
+External_library name 'plugin_extension_goto_provided';
+function plugin_extension_symbol_highlight_provided(var doc:TGeanyDocument; var ext:TPluginExtension): gboolean;cdecl;
+external External_library name 'plugin_extension_symbol_highlight_provided';
 function geany_api_version: gint;cdecl;external External_library name 'geany_api_version';
 procedure plugin_add_toolbar_item(var plugin:TGeanyPlugin; var item:TGtkToolItem);cdecl;external External_library name
 'plugin_add_toolbar_item';

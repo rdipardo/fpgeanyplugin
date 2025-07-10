@@ -1,7 +1,7 @@
 #
 # Builds the fpgeanyplugin package and sample project.
 #
-# SPDX-FileCopyrightText: (c) 2023 Robert Di Pardo
+# SPDX-FileCopyrightText: (c) 2023,2025 Robert Di Pardo
 # SPDX-License-Identifier: GPL-3.0-or-later
 #
 # Permitted usage is detailed in the COPYING file.
@@ -9,7 +9,7 @@
 .PHONY: all clean deps plugin clean-deps geany-deps
 
 PACKAGE = fpgeanyplugin
-GEANY_VERSION_TAG ?= 2.0.0
+GEANY_VERSION_TAG ?= 2.1.0
 
 PPC ?= /usr/bin/ppcx64
 PPCFLAGS = -MObjFPC

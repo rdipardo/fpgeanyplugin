@@ -32,16 +32,20 @@
     </CompilerOptions>
     <Description Value="Free Pascal bindings for Geany&apos;s plugin API"/>
     <License Value="GPL-3.0"/>
-    <Version Release="1"/>
-    <Files Count="2">
+    <Version Release="2"/>
+    <Files Count="3">
       <Item1>
         <Filename Value="src\geanyplugin.pp"/>
         <UnitName Value="geanyplugin"/>
       </Item1>
       <Item2>
+        <Filename Value="src\geanyplugin247.pp"/>
+        <UnitName Value="geanyplugin247"/>
+      </Item2>
+      <Item3>
         <Filename Value="src\geanyplugin240.pp"/>
         <UnitName Value="geanyplugin240"/>
-      </Item2>
+      </Item3>
     </Files>
     <CompatibilityMode Value="True"/>
     <LazDoc Paths="docs\fpgeanyplugin\units;docs\lcl\units"/>

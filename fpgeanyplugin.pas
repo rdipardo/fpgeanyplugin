@@ -8,7 +8,7 @@ unit fpgeanyplugin;
 interface
 
 uses
-  geanyplugin, geanyplugin240;
+  geanyplugin, geanyplugin247, geanyplugin240;
 
 implementation
 
