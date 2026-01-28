@@ -15,18 +15,18 @@
   <packages>
     <package name="lcl" output="html/lcl/" content="imports/lcl.xct">
       <units>
-        <unit file="/usr/share/lazarus/4.2.0/lcl/interfaces/gtk3/gtk3bindings/lazglib2.pas" options="-dFPGEANY_DOCS"/>
-        <unit file="/usr/share/lazarus/4.2.0/lcl/interfaces/gtk3/gtk3bindings/lazgobject2.pas" options=""/>
-        <unit file="/usr/share/lazarus/4.2.0/lcl/interfaces/gtk3/gtk3bindings/lazgio2.pas" options=""/>
-        <unit file="/usr/share/lazarus/4.2.0/lcl/interfaces/gtk3/gtk3bindings/lazgdk3.pas" options=""/>
-        <unit file="/usr/share/lazarus/4.2.0/lcl/interfaces/gtk3/gtk3bindings/lazgtk3.pas" options=""/>
-        <unit file="/usr/share/lazarus/4.2.0/lcl/interfaces/gtk3/gtk3bindings/lazatk1.pas" options=""/>
-        <unit file="/usr/share/lazarus/4.2.0/lcl/interfaces/gtk3/gtk3bindings/lazcairo1.pas" options=""/>
-        <unit file="/usr/share/lazarus/4.2.0/lcl/interfaces/gtk3/gtk3bindings/lazpango1.pas" options=""/>
-        <unit file="/usr/share/lazarus/4.2.0/lcl/interfaces/gtk3/gtk3bindings/lazgmodule2.pas" options=""/>
-        <unit file="/usr/share/lazarus/4.2.0/lcl/interfaces/gtk3/gtk3bindings/lazgdkpixbuf2.pas" options=""/>
-        <unit file="/usr/share/lazarus/4.2.0/lcl/interfaces/gtk3/gtk3bindings/lazharfbuzz0.pas" options=""/>
-        <unit file="/usr/share/lazarus/4.2.0/lcl/interfaces/gtk3/gtk3bindings/lazxlib2.pas" options=""/>
+        <unit file="/usr/share/lazarus/4.4.0/lcl/interfaces/gtk3/gtk3bindings/lazglib2.pas" options="-dFPGEANY_DOCS"/>
+        <unit file="/usr/share/lazarus/4.4.0/lcl/interfaces/gtk3/gtk3bindings/lazgobject2.pas" options=""/>
+        <unit file="/usr/share/lazarus/4.4.0/lcl/interfaces/gtk3/gtk3bindings/lazgio2.pas" options=""/>
+        <unit file="/usr/share/lazarus/4.4.0/lcl/interfaces/gtk3/gtk3bindings/lazgdk3.pas" options=""/>
+        <unit file="/usr/share/lazarus/4.4.0/lcl/interfaces/gtk3/gtk3bindings/lazgtk3.pas" options=""/>
+        <unit file="/usr/share/lazarus/4.4.0/lcl/interfaces/gtk3/gtk3bindings/lazatk1.pas" options=""/>
+        <unit file="/usr/share/lazarus/4.4.0/lcl/interfaces/gtk3/gtk3bindings/lazcairo1.pas" options=""/>
+        <unit file="/usr/share/lazarus/4.4.0/lcl/interfaces/gtk3/gtk3bindings/lazpango1.pas" options=""/>
+        <unit file="/usr/share/lazarus/4.4.0/lcl/interfaces/gtk3/gtk3bindings/lazgmodule2.pas" options=""/>
+        <unit file="/usr/share/lazarus/4.4.0/lcl/interfaces/gtk3/gtk3bindings/lazgdkpixbuf2.pas" options=""/>
+        <unit file="/usr/share/lazarus/4.4.0/lcl/interfaces/gtk3/gtk3bindings/lazharfbuzz0.pas" options=""/>
+        <unit file="/usr/share/lazarus/4.4.0/lcl/interfaces/gtk3/gtk3bindings/lazxlib2.pas" options=""/>
       </units>
       <descriptions>
         <description file="lcl/units/lazglib2.xml"/>

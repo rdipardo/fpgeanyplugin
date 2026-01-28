@@ -1,5 +1,5 @@
 #
-# SPDX-FileCopyrightText: (c) 2024,2025 Robert Di Pardo
+# SPDX-FileCopyrightText: (c) 2024,2025,2026 Robert Di Pardo
 # SPDX-License-Identifier: GPL-3.0-or-later
 #
 # Permitted usage is detailed in the COPYING file.
@@ -18,7 +18,7 @@ permissions:
   contents: read
 
 env:
-  LAZARUS_VERSION: '4.2'
+  LAZARUS_VERSION: '4.4'
   ARTIFACT_NAME: fpgeanyplugindemo
 
 jobs:
@@ -28,22 +28,21 @@ jobs:
       docs-changed: ${{ steps.changes.outputs.paths }}
     steps:
       - name: Checkout
-        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
         with:
+          persist-credentials: false
           submodules: recursive
           fetch-depth: 0
       - name: Run fpdocs file filter
-        uses: dorny/paths-filter@de90cc6fb38fc0963ad72b210f1f284cd68cea36 # v3.0.2
         id: changes
-        with:
-          base: ${{ github.ref_name }}
-          filters: |
-            paths:
-              - 'docs/**'
-              - '.github/workflows/fpdocs.yml'
+        run: |
+          case "$(git log -1 --name-status --no-merges | grep -cE '^M.*(/fpdocs.yml$|docs/)')" in
+            '0' ) echo 'paths=false' >> "$GITHUB_OUTPUT" ;;
+             *  ) echo 'paths=true' >> "$GITHUB_OUTPUT" ;;
+          esac
       - name: Restore Lazarus packages
         id: lazarus-deb-cache
-        uses: actions/cache@5a3ec84eff668545956fd18022155c47e93e2684 # v4.2.3
+        uses: actions/cache@8b402f58fbc84540c8b491a91e594a4576fec3d7 # v5.0.2
         with:
           path: '/tmp/lazarus-src'
           key: lazarus-${{ env.LAZARUS_VERSION }}-${{ runner.os }}
@@ -60,7 +59,7 @@ jobs:
       - name: Build package and sample plugin
         run: make
       - name: Upload ${{ env.ARTIFACT_NAME }}.so
-        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6.0.0
         with:
           name: ${{ env.ARTIFACT_NAME }}.so
           path: example/bin/x86_64-linux/Release/${{ env.ARTIFACT_NAME }}.so
@@ -69,10 +68,12 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
+        with:
+          persist-credentials: false
       - name: Restore Lazarus installer
         id: lazarus-exe-cache
-        uses: actions/cache@5a3ec84eff668545956fd18022155c47e93e2684 # v4.2.3
+        uses: actions/cache@8b402f58fbc84540c8b491a91e594a4576fec3d7 # v5.0.2
         with:
           path: 'C:\lazarus-src'
           key: lazarus-${{ env.LAZARUS_VERSION }}-${{ runner.os }}
@@ -80,7 +81,7 @@ jobs:
         run: |
           irm -Uri https://bitbucket.org/rdipardo/lazarus-orb/raw/alpha/src/scripts/install_windows_lazarus.ps1 | iex
       - name: Install GTK
-        uses: msys2/setup-msys2@40677d36a502eb2cf0fb808cc9dec31bf6152638 # v2.28.0
+        uses: msys2/setup-msys2@4f806de0a5a7294ffabaff804b38a9b435a73bda # v2.30.0
         with:
           location: 'C:\Users\Public'
           msystem: mingw64
@@ -92,7 +93,7 @@ jobs:
       - name: Build plugin
         run: lazbuild --ws=gtk3 .\example\fpgeanyplugindemo.lpr
       - name: Upload ${{ env.ARTIFACT_NAME }}.dll
-        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6.0.0
         with:
           name: ${{ env.ARTIFACT_NAME }}.dll
           path: example/bin/x86_64-win64/Release/${{ env.ARTIFACT_NAME }}.dll
@@ -102,7 +103,4 @@ jobs:
     if: ${{ needs.linux-make-all.outputs.docs-changed == 'true' }}
     uses: rdipardo/fpgeanyplugin/.github/workflows/fpdocs.yml@main
     with:
-      lazarus-version: '4.2'
-    permissions:
-      pages: write
-      id-token: write
+      lazarus-version: '4.4'

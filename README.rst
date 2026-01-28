@@ -26,8 +26,8 @@ callable from your Object Pascal code.
 
 .. _Geany's plugin API: https://www.geany.org/manual/reference
 
-Since they implement different versions of the same interface, you cannot
-include both units in the same file. Use a conditional expression if your
+Since they implement different versions of the same interface, you should not 
+include more than one unit in the same file. Use a conditional expression if your
 project needs to target multiple API versions, e.g.,
 
 .. code-block:: pascal
