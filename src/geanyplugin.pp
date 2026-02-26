@@ -22,7 +22,12 @@ unit geanyplugin;
 interface
 
 uses
-  ctypes, lazglib2, lazgobject2, lazgio2, lazgdk3, lazgtk3, lazgdkpixbuf2;
+  ctypes,
+{$ifdef NoDefaultIntf}
+  glib2, gobject2, gio2, gdk3, gtk3, gdkpixbuf2
+{$else}
+  lazglib2, lazgobject2, lazgio2, lazgdk3, lazgtk3, lazgdkpixbuf2
+{$endif};
 
 const
   FPGEANY_API_VERSION = 250;

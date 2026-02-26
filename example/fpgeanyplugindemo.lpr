@@ -32,7 +32,11 @@ library fpgeanyplugindemo;
 {$endif}
 
 uses
-lazglib2, lazgobject2, lazgtk3,
+{$ifdef NoDefaultIntf}
+  glib2, gobject2, gtk3,
+{$else}
+  lazglib2, lazgobject2, lazgtk3,
+{$endif}
 {$ifdef FPGEANY_LEGACY_API}
   geanyplugin240
 {$else}

@@ -40,8 +40,6 @@ jobs:
           key: lazarus-${{ inputs.lazarus-version }}-${{ runner.os }}
       - name: Install Lazarus ${{ inputs.lazarus-version }}
         run: |
-          sudo apt-get -qq update
-          sudo apt-get -qqy install python3-lxml
           curl -sSL https://bitbucket.org/rdipardo/lazarus-orb/raw/alpha/src/scripts/install_lazarus.sh | bash
         env:
           # https://askubuntu.com/a/1421221

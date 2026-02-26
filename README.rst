@@ -3,10 +3,20 @@ fpgeanyplugin package
 
 |fpc| |cci-build-status|
 
-:WARNING: This package depends on the LCL's `GTK3 interface`_, which is still
-          considered alpha quality
+:NOTE: This package depends on the LCL's `GTK3 interface`_ by default.
 
-.. _GTK3 interface: https://wiki.lazarus.freepascal.org/Roadmap#General_status_of_LCL_interfaces
+       To build against a community-developed alternative (such as ``@mazen.neifer``'s `GTK3 bindings`_),
+       provide the path to the library units in a ``gtk3.cfg`` file at the root of the source tree, e.g.,
+
+       .. code-block:: sh
+
+           # ./gtk3.cfg
+           -Fu<path>/<to>/<your>/<alternative>/gtk3bindings/
+
+       Then run ``NODEFAULTINTF=1 make``.
+
+.. _GTK3 interface: https://wiki.lazarus.freepascal.org/GTK3_Interface
+.. _GTK3 bindings: https://gitlab.com/gtk4pas/gtk3bindings
 
 Usage
 ------

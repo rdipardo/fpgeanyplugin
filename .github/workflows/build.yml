@@ -18,7 +18,7 @@ permissions:
   contents: read
 
 env:
-  LAZARUS_VERSION: '4.4'
+  LAZARUS_VERSION: '4.6'
   ARTIFACT_NAME: fpgeanyplugindemo
 
 jobs:
@@ -103,7 +103,7 @@ jobs:
     if: ${{ needs.linux-make-all.outputs.docs-changed == 'true' }}
     uses: rdipardo/fpgeanyplugin/.github/workflows/fpdocs.yml@main
     with:
-      lazarus-version: '4.4'
+      lazarus-version: '4.6'
     permissions:
       contents: read
       pages: write     # to deploy to Pages

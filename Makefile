@@ -13,9 +13,15 @@ GEANY_VERSION_TAG ?= 2.1.0
 
 PPC ?= /usr/bin/ppcx64
 PPCFLAGS = -MObjFPC
-DEFINES = -dLCL -dLCLgtk3
+DEFINES = -dLCL
 VERBOSITY = -l -vewnibq -vm5023
 BUILD_MODE = Release
+
+ifdef NODEFAULTINTF
+	DEFINES += -dNoDefaultIntf
+else
+	DEFINES += -dLCLgtk3
+endif
 
 ifdef DEBUG
 	PPCFLAGS += -Scagi -CirotR -O1 -g -gl -gh -Xg -gt
