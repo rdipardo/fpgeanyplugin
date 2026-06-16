@@ -18,7 +18,7 @@ permissions:
   contents: read
 
 env:
-  LAZARUS_VERSION: '4.6'
+  LAZARUS_VERSION: '4.8'
   ARTIFACT_NAME: fpgeanyplugindemo
 
 jobs:
@@ -28,7 +28,7 @@ jobs:
       docs-changed: ${{ steps.changes.outputs.paths }}
     steps:
       - name: Checkout
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6.0.3
         with:
           persist-credentials: false
           submodules: recursive
@@ -42,7 +42,7 @@ jobs:
           esac
       - name: Restore Lazarus packages
         id: lazarus-deb-cache
-        uses: actions/cache@668228422ae6a00e4ad889ee87cd7109ec5666a7 # v5.0.4
+        uses: actions/cache@27d5ce7f107fe9357f9df03efb73ab90386fccae # v5.0.5
         with:
           path: '/tmp/lazarus-src'
           key: lazarus-${{ env.LAZARUS_VERSION }}-${{ runner.os }}
@@ -68,12 +68,12 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6.0.3
         with:
           persist-credentials: false
       - name: Restore Lazarus installer
         id: lazarus-exe-cache
-        uses: actions/cache@668228422ae6a00e4ad889ee87cd7109ec5666a7 # v5.0.4
+        uses: actions/cache@27d5ce7f107fe9357f9df03efb73ab90386fccae # v5.0.5
         with:
           path: 'C:\lazarus-src'
           key: lazarus-${{ env.LAZARUS_VERSION }}-${{ runner.os }}
@@ -81,7 +81,7 @@ jobs:
         run: |
           irm -Uri https://bitbucket.org/rdipardo/lazarus-orb/raw/alpha/src/scripts/install_windows_lazarus.ps1 | iex
       - name: Install GTK
-        uses: msys2/setup-msys2@cafece8e6baf9247cf9b1bf95097b0b983cc558d # v2.31.0
+        uses: msys2/setup-msys2@66cd2cce69caa17b53920067426061ca1de3a884 # v2.32.0
         with:
           location: 'C:\Users\Public'
           msystem: mingw64
